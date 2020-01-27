@@ -1,0 +1,43 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "my project",
+  "main": "index.js",
+  "scripts": {
+    "test": "This utility will walk you through creating a package.json file.",
+    "build": "webpack",
+    "dev": "webpack-dev-server --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "This utility will walk you through creating a package.json file."
+  },
+  "keywords": [
+    "It",
+    "only",
+    "covers",
+    "the",
+    "most",
+    "common",
+    "items",
+    "and",
+    "tries",
+    "to",
+    "guess",
+    "sensible",
+    "defaults."
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  }
+}
