@@ -4,43 +4,47 @@ const path = require('path')
 
 
 module.exports = {
-    mode:"development",
-    entry: './src/index.js',
-    output: {
-        filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
-        //publicpath: '/dist'
-        
-      },
-      module: {
-        rules: [
-          {
-            test: /\.s[ac]ss$/i,
-            use: [
-              // Creates `style` nodes from JS strings
-              'style-loader',
-              // Translates CSS into CommonJS
-              'css-loader',
-              // Compiles Sass to CSS
-              'sass-loader',
-            ],
-          },
-          {
-            test: /\.pug$/,
-            loader: 'pug-loader'
-          },
+
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    //publicpath: '/dist'
+
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          'style-loader',
+          // Translates CSS into CommonJS
+          'css-loader',
+          // Compiles Sass to CSS
+          'sass-loader',
         ],
       },
-      devServer: {
-        overlay: true //вывод ошибок в браузере
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
       },
-      plugins: [
-    
-        new HtmlWebpackPlugin({
-          filename: "index.html",
-          template: './src/index.pug'
-        }),
-      ],
-    
-  }
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+        loader: "file-loader"
+      }
+    ],
+  },
+  devServer: {
+    overlay: true //вывод ошибок в браузере
+  },
+  plugins: [
+
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: './src/index.pug'
+    }),
+  ],
+
+}
 
