@@ -1,0 +1,11 @@
+@import 'blocks/color.scss';
+
+.button_gradient-background {
+    background: $gradient-color;
+    border-style: none;
+}
+
+.button_gradient-background:active {
+    opacity: 0.5;
+    
+}

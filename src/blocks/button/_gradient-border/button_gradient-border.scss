@@ -1,0 +1,35 @@
+@import 'blocks/color.scss';
+
+.button {
+&_gradient-border {
+    background: $gradient-color;
+    position: relative;
+    //padding:2px;
+    //box-sizing: border-box;
+    // width: 99px;
+    // height: 44px;
+    // border-radius: 22px;
+    //margin-bottom:2px;
+    
+    
+}
+&__wrap {
+    background-color: $color_white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;  
+}
+}
+.button_gradient-border > .button__wrap {
+    border-radius: 22px;
+    
+}
+
+.button_gradient-border:active {
+    opacity: 0.5;
+}
