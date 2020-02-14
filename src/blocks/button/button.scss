@@ -1,13 +1,16 @@
 .button {
     display:block;
-    //position: absolute;
     width: 99px;
     height: 44px;
-    //left: 980px;
-    //top: 262px;
     border-radius: 22px;
     border-style: none;
     box-sizing: border-box;
+    font-family: Montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
 }
 
 .button:focus {
