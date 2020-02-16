@@ -1,0 +1,26 @@
+@import 'blocks/color.scss';
+
+.simple-button {
+    //position: absolute;
+    display: block;
+    width: 61px;
+    height: 15px;
+    font-family: Montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color:$color_purple;
+    
+    padding: 0;
+    
+    border-style: none;
+    outline: none;
+    background:none;
+
+&:active {
+    color:$cobalt-blue50;
+}
+    
+}

@@ -1,0 +1,28 @@
+@import 'blocks/color.scss';
+
+.button-arrow {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    height: 44px;
+    display: flex;
+    //align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    /* Primary Gradient */
+
+    background: $gradient-color;
+    border-radius: 22px;
+    
+    border-style: none;
+    outline: none;
+
+&:active {
+    opacity: 0.5;
+}
+
+}
+

@@ -1,0 +1,16 @@
+@import 'blocks/color.scss';
+
+.button-arrow__text {
+    position: absolute;
+    font-family: Montserrat-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color:$color_white;
+    /* identical to box height */
+    
+
+    text-align: center;
+    text-transform: uppercase;
+}
