@@ -1,0 +1,41 @@
+@import 'blocks/color.scss';
+
+
+.toggle-slider {
+    
+    position: absolute;
+    cursor: pointer;
+    outline:none;
+    border: 1px solid $dark-shade25;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+&::before {
+    content: "";
+    
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    background: $dark-shade25;
+    left: 3px; // почему
+    top:3px;// не работал
+    bottom: 3px;// flex
+    transition: .4s;
+    
+}
+}
+
+input:checked +  .toggle-slider::before {
+    transform: translateX(20px);
+    background: $gradient-color;
+}
+
+input:checked +  .toggle-slider {
+    
+    border-color: $color_purple;
+}
