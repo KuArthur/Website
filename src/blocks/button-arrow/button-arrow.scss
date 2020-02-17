@@ -6,14 +6,9 @@
     max-width: 320px;
     height: 44px;
     display: flex;
-    //align-content: space-between;
     justify-content: center;
     align-items: center;
     
-    
-
-    /* Primary Gradient */
-
     background: $gradient-color;
     border-radius: 22px;
     
@@ -25,4 +20,16 @@
 }
 
 }
+
+.__arrow-icon {
+	position: absolute;
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	padding-left:276px;
+	line-height: 24px;
+	color: white;
+ 
+  }
 
