@@ -1,0 +1,44 @@
+@import 'blocks/color.scss';
+
+.text-field_subscription input {
+    display:block;
+    position: relative;
+    width: 267px;
+    height: 44px;
+    padding-left:15px;
+
+   // background: $color_white;
+    border:1px solid $dark-shade25;
+    box-sizing: border-box;
+    border-radius: 4px;
+    outline:none;
+
+&::placeholder {
+   
+
+    font-family: Montserrat-thin;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: $dark-shade25;
+}
+}
+
+.__arrow-icon_subscription {
+    position: absolute;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+/* Primary Gradient */
+    color: $gradient-color;
+   // -webkit-background-clip: text;
+   // -webkit-text-fill-color: transparent;
+}
+
