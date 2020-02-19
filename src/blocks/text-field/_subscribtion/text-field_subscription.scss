@@ -3,10 +3,12 @@
 .text-field_subscription{
  position: relative;
  display:block;
+ 
+ 
 }
 
-.text-field_subscription input {
-   // display:block;
+.text-field__input_subscription {
+    display:block;
     position: absolute;
     width: 267px;
     height: 44px;
@@ -17,6 +19,13 @@
     box-sizing: border-box;
     border-radius: 4px;
     outline:none;
+
+    color: $dark-shade75;
+    font-family: Montserrat-regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
 
 &::placeholder {
    
@@ -31,23 +40,13 @@
 }
 
 .arrow_subscription {
-    // width:44px;
-    // height:44px;
-    // position: absolute;
-    // font-family: 'Material Icons';
-    // font-style: normal;
-    // font-weight: normal;
+    position: absolute;
     font-size: 24px;
     line-height: 24px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     padding-left: 223px;
-    
-    
-
+    outline: none;
 /* Primary Gradient */
-    background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_blue 100%);
+    background: $gradient-color;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
