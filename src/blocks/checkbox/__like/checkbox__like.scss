@@ -1,6 +1,6 @@
 @import 'blocks/color.scss';
 
-.checkbox-like {
+.checkbox_like {
     display:flex;
     justify-content: left;
     align-items: center;
@@ -53,17 +53,17 @@
 }
 }
 
-input:checked + .checkbox-like::before {
+input:checked + .checkbox_like::before {
     content: "favorite";
     color:$color_purple;
 }
 
-input:checked + .checkbox-like::after {
+input:checked + .checkbox_like::after {
     content: "3";
     color:$color_purple;
 }
 
-input:checked + .checkbox-like {
+input:checked + .checkbox_like {
     
     border-color:$color_purple;
 }
