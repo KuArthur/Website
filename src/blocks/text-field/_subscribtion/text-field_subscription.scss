@@ -1,26 +1,22 @@
 @import 'blocks/color.scss';
 
 .text-field_subscription{
- //position: relative;
- display:block;
- 
- 
- 
+    position: relative;
+    display:block;
+    width: 267px;
+    height: 44px;
 }
 
 .text-field__input_subscription {
     display:block;
     position: absolute;
-    width: 267px;
-    height: 44px;
+    width:100%;
+    height:100%;
     padding-left:15px;
-
-   // background: $color_white;
     border:1px solid $dark-shade25;
     box-sizing: border-box;
     border-radius: 4px;
     outline:none;
-
     color: $dark-shade75;
     font-family: Montserrat-regular;
     font-style: normal;
@@ -29,8 +25,6 @@
     line-height: 24px;
 
 &::placeholder {
-   
-
     font-family: Montserrat-thin;
     font-style: normal;
     font-weight: bold;
@@ -41,10 +35,11 @@
 }
 
 .arrow_subscription {
-    //position: absolute;
+    position: absolute;
     font-size: 24px;
     line-height: 24px;
-    padding-left: 223px;
+    right:0;
+    top:0;
     outline: none;
 /* Primary Gradient */
     background: $gradient-color;
