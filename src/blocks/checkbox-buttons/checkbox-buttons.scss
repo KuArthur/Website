@@ -1,5 +1,5 @@
 .checkbox-buttons__div {
-    position: relative;
+   // position: relative;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,7 +10,8 @@
 }
 
 .checkbox-buttons {
-    //display: block;
+    cursor: pointer;
+    display: flex;
     //position: absolute;
     font-family: Montserrat;
     font-style: normal;
@@ -19,15 +20,19 @@
     line-height: 18px;
     color: $dark-shade50;
     width:auto;
+    margin-bottom: 10px;
+    //align-items: flex-start;
+    max-width:192px;
     
 
 &::before {
     content: "";
-    position: absolute;
-    cursor: pointer;
+   // position: absolute;
     width: 20px;
     height: 20px;
-    
+    margin-right: 9px; 
+    min-width: 20px;
+    min-height: 20px;
     
 /* Dark 25% */
 
@@ -52,6 +57,6 @@
 }
 
 .checkbox-buttons__input:checked + .checkbox-buttons::before {
-    background: url(/src/icons/done.svg) no-repeat center;
+    background: url(/src/icons/done.svg) no-repeat center 3px;
     border-color:$color_purple;
 }

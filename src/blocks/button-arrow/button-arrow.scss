@@ -22,9 +22,10 @@
 }
 
 .arrow_button {
-	
+	position: absolute;
 	font-size: 24px;  /* Preferred icon size */
-	padding-left:276px;
+    right: 0;
+    top: 0;
 	line-height: 24px;
 	color: $color_white;
  
