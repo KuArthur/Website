@@ -36,22 +36,6 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-// &:hover~&::before {
-//     content: "star";
-//     background: $gradient-color;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-
-// &.rate__input:checked~&::before {
-//     content: "star";
-//     background: $gradient-color;
-//     -webkit-background-clip: text;
-//     -webkit-text-fill-color: transparent;
-// }
-// }
-
-
 }
 
 .rate__star:hover:before,
