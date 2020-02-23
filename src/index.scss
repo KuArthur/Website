@@ -19,15 +19,17 @@
 @import "blocks/pagination/pagination.scss";
 @import "blocks/pagination/__arrow/pagination__arrow.scss";
 @import "blocks/pagination/__link/pagination__link.scss";
+@import "blocks/radio-buttons/radio-buttons.scss";
 
 @import "blocks/typo/typo.scss";
 @import "blocks/typo/_size/typo_size_m.scss";
 @import "blocks/typo/_size/typo_size_s.scss";
 @import "blocks/typo/_theme/typo_theme_default.scss";
 @import "blocks/typo/_theme/typo_theme_light.scss";
+@import "blocks/typo/_theme/typo_theme_extralight.scss";
 
 
 @import "fonts/style.scss";
-@import "icons/icons-style.scss"
-//@import "blocks/color.scss";
+@import "icons/icons-style.scss";
+@import "blocks/color.scss";
 
