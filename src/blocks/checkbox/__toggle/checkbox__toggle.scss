@@ -1,7 +1,7 @@
 @import 'blocks/color.scss';
 
 
-.checkbox_toggle-slider {
+.checkbox__toggle-slider {
     
     position: absolute;
     cursor: pointer;
@@ -30,12 +30,12 @@
 }
 }
 
-input:checked +  .checkbox_toggle-slider::before {
+input:checked +  .checkbox__toggle-slider::before {
     transform: translateX(20px);
     background: $gradient-color;
 }
 
-input:checked +  .checkbox_toggle-slider {
+input:checked +  .checkbox__toggle-slider {
     
     border-color: $color_purple;
 }

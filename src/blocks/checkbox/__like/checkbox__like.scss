@@ -1,6 +1,6 @@
 @import 'blocks/color.scss';
 
-.checkbox_like {
+.checkbox__like {
     display:flex;
     justify-content: left;
     align-items: center;
@@ -40,9 +40,9 @@
     width: 6px;
     height: 13px;
     position: absolute;
-    font-family: Montserrat-thin;
+    font-family: Montserrat;
     font-style: normal;
-    font-weight: bolder;
+    font-weight: normal;
     font-size: 10px;
     line-height: 12px;
     color:$dark-shade25;
@@ -53,17 +53,17 @@
 }
 }
 
-input:checked + .checkbox_like::before {
+input:checked + .checkbox__like::before {
     content: "favorite";
     color:$color_purple;
 }
 
-input:checked + .checkbox_like::after {
+input:checked + .checkbox__like::after {
     content: "3";
     color:$color_purple;
 }
 
-input:checked + .checkbox_like {
+input:checked + .checkbox__like {
     
     border-color:$color_purple;
 }

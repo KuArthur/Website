@@ -1,0 +1,10 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: auto;
+}
+
+.pagination__link-wrap {
+  display: flex;
+}

@@ -1,0 +1,28 @@
+.pagination__link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    //color: $dark-shade50;
+    color: inherit;
+  
+    &:visited {
+      color: $dark-shade50;
+      text-decoration: none;
+    }
+  
+    &:active {
+      text-decoration: none;
+      color: $dark-shade50;
+    
+    }
+  
+    &:focus {
+      background: $gradient-color;
+      font-weight: bold;
+      color:$color_white;
+    }
+  }

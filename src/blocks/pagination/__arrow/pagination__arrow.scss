@@ -1,0 +1,8 @@
+.pagination__arrow {
+   // position: absolute;
+    right: 0;
+    background: $gradient-color-green;
+    &:focus {
+        background: $gradient-color-green;
+    }
+}

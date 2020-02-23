@@ -1,10 +1,11 @@
-$color_dark-shade: #1F2041;
-$color_purple: #BC9CFF;
-$color_green: #6FCF97;
-$color_blue: #8BA4F9;
-$color_white: #FFFFFF;
-$dark-shade25: rgba(31, 32, 65, 0.25); 
-$dark-shade50: rgba(31, 32, 65, 0.5); 
+$color_dark-shade: #1f2041;
+$color_purple: #bc9cff;
+$color_green: #6fcf97;
+$color_blue: #8ba4f9;
+$color_white: #fff;
+$dark-shade25: rgba(31, 32, 65, 0.25);
+$dark-shade50: rgba(31, 32, 65, 0.5);
 $dark-shade75: rgba(31, 32, 65, 0.75);
 $dark-shade5: rgba(31, 32, 65, 0.05);
 $gradient-color: -webkit-linear-gradient(180deg, $color_purple 0%, $color_blue 100%);
+$gradient-color-green: -webkit-linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
