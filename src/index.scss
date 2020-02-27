@@ -16,12 +16,15 @@
 @import "blocks/rate/__input/rate__input.scss";
 @import "blocks/checkbox-buttons/__text/checkbox-buttons__text.scss";
 @import "blocks/checkbox-buttons/checkbox-buttons.scss";
+@import "blocks/checkbox-buttons/_rich/checkbox-buttons_rich.scss";
 @import "blocks/pagination/pagination.scss";
 @import "blocks/pagination/__arrow/pagination__arrow.scss";
 @import "blocks/pagination/__link/pagination__link.scss";
 @import "blocks/radio-buttons/radio-buttons.scss";
 
 @import "blocks/typo/typo.scss";
+@import "blocks/typo/_bold/typo_bold.scss";
+@import "blocks/typo/_normal/typo_normal.scss";
 @import "blocks/typo/_size/typo_size_m.scss";
 @import "blocks/typo/_size/typo_size_s.scss";
 @import "blocks/typo/_theme/typo_theme_default.scss";
