@@ -14,3 +14,18 @@ html
     include blocks/radio-buttons/radio-buttons.pug
     include blocks/checkbox-buttons/_rich/checkbox-buttons_rich.pug
     
+    +button_gradient-background('click me')
+    +button_gradient-border('click me')
+    +simple-button('click me')
+    +button-arrow('перейти к оплате')
+    
+    +checkbox-rich('Широкий коридор','Ширина коридоров в номере\nне менее 91 см.','hall')
+    +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист\nи проводит до номера.','help')
+
+    +checkbox('Можно курить','smoke')
+    +checkbox('Можно с питомцами','pet')
+    +checkbox('Можно пригласить гостей (до 10 человек)','guest')
+
+    .radio-buttons
+        +radio('Мужчина','man','gender')
+        +radio('Женщина','woman','gender')

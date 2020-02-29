@@ -1,4 +1,5 @@
 link(rel="stylesheet", href="index.scss")
-button.button-arrow
-    span.button-arrow__text Перейти к оплате
-    .arrow.button-arrow__arrow="arrow_forward"
+mixin button-arrow(text)
+    button.button-arrow
+        span.button-arrow__text=text
+        .arrow.button-arrow__arrow="arrow_forward"

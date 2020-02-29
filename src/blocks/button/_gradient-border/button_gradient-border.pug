@@ -1,3 +1,4 @@
 link(rel="stylesheet", href="index.scss")
-button.button.button_gradient-border.typo.typo_size_s.typo_bold
-    span.button__wrap click me
+mixin button_gradient-border(text) 
+    button.button.button_gradient-border.typo.typo_size_s.typo_bold
+        span.button__wrap=text
