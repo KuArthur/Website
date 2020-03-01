@@ -40,6 +40,11 @@ module.exports = {
   },
   plugins: [
 
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
+
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: './src/index.pug'

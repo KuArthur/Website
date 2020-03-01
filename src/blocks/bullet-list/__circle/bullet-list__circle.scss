@@ -1,0 +1,9 @@
+@import 'blocks/color.scss';
+
+.bullet-list__circle {
+    width: 10.43px;
+    height: 10px;
+    background-color: $dark-shade25;
+    border-radius: 50%;
+    margin-right: 10px;
+}

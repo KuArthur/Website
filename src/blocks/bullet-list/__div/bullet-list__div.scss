@@ -1,0 +1,9 @@
+.bullet-list__div {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

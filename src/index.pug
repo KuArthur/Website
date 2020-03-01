@@ -13,6 +13,7 @@ html
     include blocks/pagination/pagination.pug
     include blocks/radio-buttons/radio-buttons.pug
     include blocks/checkbox-buttons/_rich/checkbox-buttons_rich.pug
+    include blocks/bullet-list/bullet-list.pug
     
     +button_gradient-background('click me')
     +button_gradient-border('click me')
@@ -29,3 +30,6 @@ html
     .radio-buttons
         +radio('Мужчина','man','gender')
         +radio('Женщина','woman','gender')
+    +bullet-list("Нельзя с питомцами")
+    +bullet-list("Без вечеринок и мероприятий")
+    +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
