@@ -1,0 +1,15 @@
+.icon-text-list__icon {
+    width: 48px;
+    height: 48px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 41px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: $gradient-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
