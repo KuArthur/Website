@@ -15,8 +15,13 @@ html
     include blocks/checkbox-buttons/_rich/checkbox-buttons_rich.pug
     include blocks/bullet-list/bullet-list.pug
     include blocks/icon-text-list/icon-text-list.pug
+    include blocks/review/review.pug
 
-    
+
+
+    +toggle("Получать спецпредложения")
+    +like()
+
     +button_gradient-background('click me')
     +button_gradient-border('click me')
     +simple-button('click me')
@@ -24,7 +29,7 @@ html
     
     +checkbox-rich('Широкий коридор','Ширина коридоров в номере\nне менее 91 см.','hall')
     +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист\nи проводит до номера.','help')
-
+    
     +checkbox('Можно курить','smoke')
     +checkbox('Можно с питомцами','pet')
     +checkbox('Можно пригласить гостей (до 10 человек)','guest')
@@ -32,10 +37,12 @@ html
     .radio-buttons
         +radio('Мужчина','man','gender')
         +radio('Женщина','woman','gender')
+    .bullet
+        +bullet-list("Нельзя с питомцами")
+        +bullet-list("Без вечеринок и мероприятий")
+        +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
+    .wrap
+        +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
+        +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
 
-    +bullet-list("Нельзя с питомцами")
-    +bullet-list("Без вечеринок и мероприятий")
-    +bullet-list("Время прибытия — после 13:00, а выезд до 12:00")
-
-    +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
-    +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
+    +review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')

@@ -1,0 +1,10 @@
+.review__photo {
+    width: 47.67px;
+    height: 48px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-shade10;
+    border-radius: 32px;
+    background: url(/src/blocks/review/__photo/user1.svg) no-repeat center 28%;
+    margin-bottom: 12px;
+}

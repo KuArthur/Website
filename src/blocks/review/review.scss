@@ -1,0 +1,8 @@
+@import"blocks/review/__photo/review__photo.scss";
+@import"blocks/review/__text-div/review__text-div.scss";
+@import"blocks/review/__comment/review__comment.scss";
+@import"blocks/review/__left-column/review__left-column.scss";
+
+.review {
+    display: flex;
+}

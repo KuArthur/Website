@@ -40,10 +40,10 @@ module.exports = {
   },
   plugins: [
 
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
-    }),
+    // new webpack.ProvidePlugin({
+    //   $: 'jquery',
+    //   jQuery: 'jquery'
+    // }),
 
     new HtmlWebpackPlugin({
       filename: "index.html",

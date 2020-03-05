@@ -1,0 +1,10 @@
+link(rel="stylesheet", href="index.scss")
+mixin review(name, date, comment)
+    .review
+        .review__left-column
+            .review__photo
+            +like()
+        .review__text-div
+            span.typo.typo_bold.typo_size_m.typo_theme_default=name
+            span.typo.typo_normal.typo_size_m.typo_theme_default=date
+            span.review__comment.typo.typo_theme_default.typo_normal=comment

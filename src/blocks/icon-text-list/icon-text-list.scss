@@ -3,6 +3,13 @@
 @import"blocks/icon-text-list/__line/icon-text-list__line.scss";
 
 .icon-text-list {
-    display:inline-flex;
-    align-items: center;
+    &:last-child {
+    margin-top:23px;
+    }
+    &__wrap {
+        display:inline-flex;
+        align-items: center;
+    }
+
 }
+

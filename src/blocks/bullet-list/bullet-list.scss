@@ -1,2 +1,11 @@
 @import"blocks/bullet-list/__circle/bullet-list__circle.scss";
-@import"blocks/bullet-list/__div/bullet-list__div.scss"
+
+.bullet-list {
+    display: flex;
+    align-items: center;
+    margin-bottom:10px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

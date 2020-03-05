@@ -2,10 +2,4 @@ link(rel="stylesheet", href="index.scss")
 mixin checkbox(text,id)
     .checkbox-buttons__div    
         input.checkbox-buttons__input(type="checkbox" id=id)
-        label.checkbox-buttons(for=id)=text
-    //- input.checkbox-buttons__input(type="checkbox" id="pet")
-    //- label.checkbox-buttons(for="pet") Можно с питомцами
-    
-    //- input.checkbox-buttons__input(type="checkbox" id="guest")
-    //- label.checkbox-buttons(for="guest") Можно пригласить гостей (до 10 человек)
-    
+        label.checkbox-buttons.typo.typo_theme_light.typo_normal.typo_size_m(for=id)=text
