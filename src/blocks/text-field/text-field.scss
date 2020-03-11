@@ -3,8 +3,8 @@
 .text-field__input {
     display:block;
     position: relative;
-    width: 100%;
-    max-width: 320px;
+    width: 100%; // после
+    max-width: 320px;// убрать
     height: 44px;
     outline:none;
     border: 1px solid $dark-shade25;
@@ -19,12 +19,6 @@
     
 }
 &::placeholder {
-   
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     line-height: 18px;
     color: $dark-shade25;
 }

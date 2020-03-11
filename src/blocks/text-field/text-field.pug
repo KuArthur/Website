@@ -1,2 +1,3 @@
 link(rel="stylesheet", href="index.scss")
-input.text-field__input.typo.typo_normal.typo_size_m.typo_theme_default(type="text" placeholder="Email")
+mixin text-field(placeholder)
+    input.text-field__input.typo.typo_normal.typo_size_m.typo_theme_default(type="text" placeholder=placeholder)
