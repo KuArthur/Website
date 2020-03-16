@@ -33,6 +33,18 @@ module.exports = {
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
         loader: "file-loader"
+      },
+      {
+        test: /\.m?js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+                '@babel/preset-env'
+        ]
+          }
+        }
       }
     ],
   },
@@ -40,17 +52,16 @@ module.exports = {
     overlay: true //вывод ошибок в браузере
   },
   plugins: [
-
+    new HtmlWebpackPlugin({
+      filename: "index.html",
+      template: './src/index.pug'
+    }),
+    
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
 
-    }),
-
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: './src/index.pug'
     }),
   ],
 
