@@ -84,7 +84,7 @@
 {
     display: inline-flex;
     flex-direction: column;
-    width: 262px;
+    width: 266px;
     // justify-content: flex-end;
     align-items: flex-end;
 
@@ -119,4 +119,10 @@
     left: 0;
     margin-left: 0;
     box-sizing: border-box;
+}
+
+.irs--flat .irs-handle {
+    top: 22px;
+    width: 12px;
+    height: 18px;
 }

@@ -18,6 +18,7 @@ html
     include blocks/review/review.pug
     include blocks/logo/logo.pug
     include blocks/slider/slider.pug
+    include blocks/counter/counter.pug
 
 
     +toggle("Получать спецпредложения")
@@ -50,3 +51,5 @@ html
     +logo()
     +text-field("Email")
     +slider()
+    .counter
+        +counter()

@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
-
+const autoprefixer = require('autoprefixer');
 const path = require('path')
 
 
