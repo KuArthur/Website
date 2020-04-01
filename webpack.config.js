@@ -6,7 +6,10 @@ const path = require('path')
 
 module.exports = {
 
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    formElements: './src/pages/form-elements/form-elements.js'
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -55,6 +58,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: './src/index.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "pages/form-elements.html",
+      template:'./src/pages/form-elements/form-elements.pug'
     }),
     
     new webpack.ProvidePlugin({

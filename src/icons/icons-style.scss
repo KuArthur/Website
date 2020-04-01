@@ -2,9 +2,9 @@
   font-family: 'Material Icons';
   src:
     local('☺'),
-    url('icons/MaterialIcons-Regular.woff') format('woff'),
-    url('icons/MaterialIcons-Regular.ttf') format('truetype'),
-    url('icons/MaterialIcons-Regular.svg') format('svg');
+    url('/src/icons/MaterialIcons-Regular.woff') format('woff'),
+    url('/src/icons/MaterialIcons-Regular.ttf') format('truetype'),
+    url('/src/icons/MaterialIcons-Regular.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

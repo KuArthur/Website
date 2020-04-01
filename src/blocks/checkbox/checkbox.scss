@@ -1,7 +1,7 @@
-@import 'blocks/color.scss';
-@import"blocks/checkbox/__like/checkbox__like.scss";
-@import"blocks/checkbox/__toggle/checkbox__toggle.scss";
-@import"blocks/checkbox/__toggle/_text/checkbox__toggle_text.scss";
+@import "../../color.scss";
+@import"./src/blocks/checkbox/__like/checkbox__like.scss";
+@import"./src/blocks/checkbox/__toggle/checkbox__toggle.scss";
+@import"./src/blocks/checkbox/__toggle/_text/checkbox__toggle_text.scss";
 
 .checkbox {
     display:flex;

@@ -76,9 +76,9 @@
 //   }
 
   //РАБОЧЕЕ
-@import "../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
-@import 'blocks/color.scss';
-@import 'blocks/slider/__range-number/slider__range-number.scss';
+@import "../../../node_modules/ion-rangeslider/css/ion.rangeSlider.css";
+@import "../../color.scss";
+@import './src/blocks/slider/__range-number/slider__range-number.scss';
 
 .slider
 {
