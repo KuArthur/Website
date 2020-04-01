@@ -8,7 +8,8 @@ module.exports = {
 
   entry: {
     index: './src/index.js',
-    formElements: './src/pages/form-elements/form-elements.js'
+    formElements: './src/pages/form-elements/form-elements.js',
+    colorAndTypes: './src/pages/color-and-types/color-and-types.js'
   },
   output: {
     filename: '[name].js',
@@ -62,6 +63,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "pages/form-elements.html",
       template:'./src/pages/form-elements/form-elements.pug'
+    }),
+    new HtmlWebpackPlugin({
+      filename: "pages/color-and-types.html",
+      template:'./src/pages/color-and-types/color-and-types.pug'
     }),
     
     new webpack.ProvidePlugin({

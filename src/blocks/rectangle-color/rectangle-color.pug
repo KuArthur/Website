@@ -1,0 +1,20 @@
+link(rel="stylesheet", href="index.css")
+
+mixin rectangle-color (color,head,text)
+    -
+        const colors = {
+            'dark-shade-100': 'dark-shade-100',
+            'dark-shade-75': 'dark-shade-75',
+            'dark-shade-50': 'dark-shade-50',
+            'dark-shade-25': 'dark-shade-25',
+            'dark-shade-5': 'dark-shade-5',
+            'purple': 'purple',
+            'green': 'green'
+        }
+
+        let classname = colors[color] || colors["green"]
+    .rectangle-color
+        div(class=classname).rectangle-color__rectangle
+        .rectangle-color__text.typo.typo_size_l.typo_theme_dark
+            span.typo_bold=head
+            span.typo_normal=text
