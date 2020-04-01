@@ -4,7 +4,7 @@ mixin review(name, date, comment)
         .review__left-column
             .review__photo
             +like()
-        .review__text-div
-            span.typo.typo_bold.typo_size_m.typo_theme_default=name
-            span.typo.typo_normal.typo_size_m.typo_theme_default=date
-            span.review__comment.typo.typo_theme_default.typo_normal=comment
+        .review__text-div.typo_montserrat.typo_theme_default
+            span.typo_bold.typo_size_m=name
+            span.typo_normal.typo_size_m=date
+            span.review__comment.typo_normal=comment
