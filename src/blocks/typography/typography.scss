@@ -1,0 +1,19 @@
+@import "../../color.scss";
+.typography {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.typography__left {
+    margin-right: 30px;
+    color:$dark-shade25;
+    //text-align: right;
+}
+
+.typography__right {
+    //text-align: left;
+}

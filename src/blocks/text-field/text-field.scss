@@ -12,16 +12,15 @@
     border-radius: 4px;
     padding-left:15px;
 
-    line-height: 24px;
-&:hover,
-:focus {
-    border-color: $dark-shade50;
-    
-}
-&::placeholder {
-    line-height: 18px;
-    color: $dark-shade25;
-}
+    &:hover,
+    :focus {
+        border-color: $dark-shade50;
+        
+    }
+    &::placeholder {
+        line-height: 18px;
+        color: $dark-shade25;
+    }
 }
 
 

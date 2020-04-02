@@ -1,10 +1,19 @@
 link(rel="stylesheet", href="index.scss")
 mixin review(name, date, comment)
+    //- .review
+    //-     .review__left-column
+    //-         .review__photo
+    //-         +like()
+    //-     .review__text-div.typo_montserrat.typo_theme_default
+    //-         span.typo_bold.typo_size_m=name
+    //-         span.typo_normal.typo_size_m=date
+    //-         span.review__comment.typo_normal.typo_size_m.typo_height_m=comment
     .review
-        .review__left-column
+        .review__first-line.typo_montserrat.typo_theme_default
             .review__photo
+            .review__text-div
+                span.typo_bold.typo_size_m=name
+                span.typo_normal.typo_size_m=date
+        .review__second-line.typo_montserrat.typo_theme_default
             +like()
-        .review__text-div.typo_montserrat.typo_theme_default
-            span.typo_bold.typo_size_m=name
-            span.typo_normal.typo_size_m=date
-            span.review__comment.typo_normal=comment
+            span.review__comment.typo_normal.typo_size_m.typo_height_m=comment

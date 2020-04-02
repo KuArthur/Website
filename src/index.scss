@@ -24,6 +24,7 @@
 @import "blocks/slider/slider.scss";
 @import "blocks/counter/counter.scss";
 @import "blocks/rectangle-color/rectangle-color.scss";
+@import "blocks/typography/typography.scss";
 
 @import "blocks/typo/typo.scss";
 @import "blocks/typo/_bold/typo_bold.scss";
@@ -31,11 +32,14 @@
 @import "blocks/typo/_size/typo_size_m.scss";
 @import "blocks/typo/_size/typo_size_s.scss";
 @import "blocks/typo/_size/typo_size_l.scss";
+@import "blocks/typo/_size/typo_size_xl.scss";
 @import "blocks/typo/_theme/typo_theme_default.scss";
 @import "blocks/typo/_theme/typo_theme_light.scss";
 @import "blocks/typo/_theme/typo_theme_extralight.scss";
 @import "blocks/typo/_theme/typo_theme_dark.scss";
-
+@import "blocks/typo/_height/typo_height_s.scss";
+@import "blocks/typo/_height/typo_height_m.scss";
+@import "blocks/typo/_height/typo_height_l.scss";
 
 @import "fonts/Montserrat/style-montserrat.scss";
 @import "fonts/Quicksand/style-quicksand.scss";

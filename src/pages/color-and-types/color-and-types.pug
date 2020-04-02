@@ -3,9 +3,15 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="color-and-types.css")
         title Color and Types
     body
     include \..\..\blocks/rectangle-color/rectangle-color.pug
+    include \..\..\blocks/logo/logo.pug
+    include \..\..\\blocks/typography/typography.pug
+
+    .logo
+        +logo()
     .rectangle
         +rectangle-color("dark-shade-100", "Dark Shade 100%", "#1F2041")
         +rectangle-color("dark-shade-75", "Dark Shade 75%", "#1F2041")
@@ -14,3 +20,8 @@ html(lang="en")
         +rectangle-color("dark-shade-5", "Dark Shade 5%", "#1F2041")
         +rectangle-color("purple", "Purple", "#bc9cff")
         +rectangle-color("green", "Green", "#6fcf97")
+    .typograph
+        +typo('H1',"H1",'This one is the sub-section or widget title')
+        +typo('H2',"H2",'hello,bitch')
+        +typo('H3',"H3",'hello,bitch')
+        +typo('Body',"Body",'hello,bitch')

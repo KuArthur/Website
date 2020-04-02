@@ -5,4 +5,21 @@
 
 .review {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: baseline;
+    
+}
+
+.review__first-line {
+    display: flex;
+    align-items: center;
+}
+
+.review__second-line {
+    margin-left:4px;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 10px;
 }

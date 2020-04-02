@@ -1,0 +1,14 @@
+link(rel="stylesheet", href="index.scss")
+mixin typo (variation,left,right)
+    -
+        const variations = {
+            'H1': 'typo_quicksand typo_bold typo_size_xl typo_height_l typo_theme_dark',
+            'H2': 'typo_quicksand typo_bold typo_size_l typo_height_m typo_theme_dark',
+            'H3': 'typo_montserrat typo_bold typo_size_s typo_height_s typo_theme_dark',
+            'Body': 'typo_montserrat typo_bold typo_size_m typo_height_m typo_theme_default',
+        }
+
+        let classname = variations[variation] || variation['Body']
+    div(class=classname).typography
+        span.typography__left.typo_normal=left
+        span.typography__right=right

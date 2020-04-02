@@ -1,8 +1,9 @@
 @import"./src/blocks/bullet-list/__circle/bullet-list__circle.scss";
+@import"./src/blocks/bullet-list/__text/bullet-list__text.scss";
 
 .bullet-list {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom:10px;
 
     &:last-child {
