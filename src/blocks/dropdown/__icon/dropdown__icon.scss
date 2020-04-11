@@ -1,0 +1,19 @@
+.dropdown__icon {
+    cursor: pointer;
+    position: absolute;
+    width:44px;
+    height:44px;
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-shade75;
+    right:0;
+    top:0;
+    bottom: 0;
+    outline: none;
+}

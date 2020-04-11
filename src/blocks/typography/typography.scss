@@ -11,9 +11,14 @@
 .typography__left {
     margin-right: 30px;
     color:$dark-shade25;
-    //text-align: right;
+    text-align: right;
+    width: 100%;
+    max-width: 37px;
 }
 
 .typography__right {
-    //text-align: left;
+    text-align: left;
+    width: 100%;
+    max-width: 340px;
+    
 }

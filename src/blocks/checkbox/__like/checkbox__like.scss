@@ -14,6 +14,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     transition: .4s;
+    cursor: pointer;
 
 &::before {
     content: "favorite_border";

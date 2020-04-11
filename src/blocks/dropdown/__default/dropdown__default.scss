@@ -1,0 +1,12 @@
+@import "../../color.scss";
+.dropdown__default {
+    cursor: pointer;
+    position: absolute;
+    width: 266px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid $dark-shade25;
+    //background: url(/src/blocks/dropdown/__icon/keyboard_arrow_down-black-18dp.svg) no-repeat 100% 50%;
+    border-radius: 2px 2px 0 0;
+    outline: none;
+}

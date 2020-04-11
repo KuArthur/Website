@@ -27,4 +27,8 @@
       font-weight: bold;
       color:$color_white;
     }
+
+    &:last-child:focus {
+      background: $gradient-color-green;
+    }
   }
