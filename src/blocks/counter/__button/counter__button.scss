@@ -1,0 +1,18 @@
+.counter__button {
+    cursor: pointer;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $dark-shade25;
+    box-sizing: border-box;
+    border-radius: 22px;
+    outline: none;
+    right: 0;
+    background: $color_white;
+    font-size: 18px;
+    line-height: 22px;
+    color: $dark-shade50;
+    &:first-child {
+        left: 0;
+    }
+}

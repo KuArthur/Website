@@ -25,7 +25,6 @@
 @import "blocks/counter/counter.scss";
 @import "blocks/rectangle-color/rectangle-color.scss";
 @import "blocks/typography/typography.scss";
-
 @import "blocks/typo/typo.scss";
 @import "blocks/typo/_bold/typo_bold.scss";
 @import "blocks/typo/_normal/typo_normal.scss";
@@ -41,13 +40,11 @@
 @import "blocks/typo/_height/typo_height_m.scss";
 @import "blocks/typo/_height/typo_height_l.scss";
 @import "blocks/dropdown/dropdown.scss";
-
+@import '/node_modules/lib/item-quantity-dropdown.css';
 @import "fonts/Montserrat/style-montserrat.scss";
 @import "fonts/Quicksand/style-quicksand.scss";
 @import "icons/icons-style.scss";
 @import "blocks/color.scss";
-
 // body {
 //     background-color: lightgray;
 // }
-

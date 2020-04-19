@@ -1,8 +1,12 @@
 @import "./__default/dropdown__default.scss";
 @import "./__icon/dropdown__icon.scss";
-
+@import "./__expanded/dropdown__expanded.scss";
+@import "./__expanded/__counter/dropdown__expanded__counter.scss";
 .dropdown {
     width: 266px;
-    position:relative;
-    
+    position: relative;
+}
+
+.counta {
+    margin-bottom: 7px;
 }

@@ -1,63 +1,66 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "my project",
-  "main": "index.js",
-  "scripts": {
-    "test": "This utility will walk you through creating a package.json file.",
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server --open --mode development"
-  },
-  "repository": {
-    "type": "git",
-    "url": "This utility will walk you through creating a package.json file."
-  },
-  "keywords": [
-    "It",
-    "only",
-    "covers",
-    "the",
-    "most",
-    "common",
-    "items",
-    "and",
-    "tries",
-    "to",
-    "guess",
-    "sensible",
-    "defaults."
-  ],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.4.2",
-    "file-loader": "^5.0.2",
-    "html-webpack-plugin": "^3.2.0",
-    "jquery-ui": "^1.12.1",
-    "node-sass": "^4.13.1",
-    "path": "^0.12.7",
-    "pug": "^2.0.4",
-    "pug-loader": "^2.4.0",
-    "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.3",
-    "stylelint": "^13.2.0",
-    "stylelint-config-standard": "^20.0.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
-  },
-  "dependencies": {
-    "autoprefixer": "^9.7.5",
-    "ion-rangeslider": "^2.3.1",
-    "jquery": "^3.4.1",
-    "jquery-ui-dist": "^1.12.1",
-    "postcss-loader": "^3.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "name": "website",
+    "version": "1.0.0",
+    "description": "my project",
+    "main": "index.js",
+    "scripts": {
+        "test": "This utility will walk you through creating a package.json file.",
+        "build": "webpack --mode production",
+        "dev": "webpack-dev-server --open --mode development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "This utility will walk you through creating a package.json file."
+    },
+    "keywords": [
+        "It",
+        "only",
+        "covers",
+        "the",
+        "most",
+        "common",
+        "items",
+        "and",
+        "tries",
+        "to",
+        "guess",
+        "sensible",
+        "defaults."
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "babel-loader": "^8.0.6",
+        "css-loader": "^3.4.2",
+        "eslint": "^6.8.0",
+        "eslint-loader": "^4.0.0",
+        "file-loader": "^5.0.2",
+        "html-webpack-plugin": "^3.2.0",
+        "item-quantity-dropdown": "^2.1.0",
+        "jquery-ui": "^1.12.1",
+        "node-sass": "^4.13.1",
+        "path": "^0.12.7",
+        "pug": "^2.0.4",
+        "pug-loader": "^2.4.0",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.1.3",
+        "stylelint": "^13.2.0",
+        "stylelint-config-standard": "^20.0.0",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.10",
+        "webpack-dev-server": "^3.10.1"
+    },
+    "dependencies": {
+        "autoprefixer": "^9.7.5",
+        "ion-rangeslider": "^2.3.1",
+        "jquery": "^3.4.1",
+        "jquery-ui-dist": "^1.12.1",
+        "postcss-loader": "^3.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions"
+    ]
 }
