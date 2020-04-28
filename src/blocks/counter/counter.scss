@@ -5,9 +5,7 @@
 @import "./__text/counter__text.scss";
 @import "./__wrap/counter__wrap.scss";
 .counter {
-    position: relative;
     display: flex;
     height: 30px;
-    width: 100%;
-    justify-content: center;
+    justify-content: space-between;
 }

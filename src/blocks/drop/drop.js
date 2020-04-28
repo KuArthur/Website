@@ -1,9 +1,7 @@
 import $ from 'jquery';
 import "jquery-ui";
-import 'item-quantity-dropdown';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.css';
-require('item-quantity-dropdown');
-require('item-quantity-dropdown/lib/item-quantity-dropdown.css');
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js';
+
 
 $(document).ready(() => {
     $('.iqdropdown').iqDropdown({

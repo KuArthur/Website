@@ -1,27 +1,70 @@
 import $ from 'jquery';
 import "jquery-ui";
 
-$(document).ready(function() {
-    $('button').click(function(e) {
-        var button_classes, value = +$('.js-counter__input').val();
-        button_classes = $(e.currentTarget).prop('class');
-        if (button_classes.indexOf('js-counter__button-plus') !== -1) {
-            value = (value) + 1;
-        } else {
-            value = (value) - 1;
-        }
-        value = value < 0 ? 0 : value;
-        $('.counter__input').val(value);
-        if (value !== 0) {
-            $(".js-counter__button-minus").removeClass("counter__button_status-disabled");
-        } else {
-            $(".js-counter__button-minus").addClass("counter__button_status-disabled");
-        }
+function Counter(counterDom, options = {}) {
+    const self = {};
+    const counter = $(counterDom);
 
-    });
-    $('.js-counter__input').click(function() {
+    // Classnames of elements;
+    const cn = {
+        input: 'counter__input',
+        minus: 'counter__button_type_minus',
+        plus: 'counter__button_type_plus',
+        disabled: 'counter__button_status-disabled',
+    }
+
+    // Options
+    self.min = options.min || 0;
+    self.max = options.max || 5;
+
+    // Elements
+    self.input = counter.find(`.${cn.input}`);
+    self.minus = counter.find(`.${cn.minus}`);
+    self.plus = counter.find(`.${cn.plus}`);
+
+    // Events
+    $(self.minus).click(onButtonClick);
+    $(self.plus).click(onButtonClick);
+    $(self.input).click(onInputClick);
+
+    function isButtonDisabled(button) {
+        return $(button).hasClass(cn.disabled);
+    }
+
+    function updateButtonsStatus() {
+        const value = self.input.val();
+        const { minus, plus } = self;
+
+        value <= self.min ?
+            minus.addClass(cn.disabled) :
+            minus.removeClass(cn.disabled)
+
+        value >= self.max ?
+            plus.addClass(cn.disabled) :
+            plus.removeClass(cn.disabled);
+    }
+
+    function onInputClick() {
         $(this).focus().select();
+    }
 
+    function onButtonClick(e) {
+        if (isButtonDisabled(this)) {
+            return;
+        }
+
+        const delta = Number(this.dataset.delta);
+        const newValue = Number(self.input.val()) + delta;
+
+        self.input.val(newValue);
+
+        updateButtonsStatus();
+    }
+}
+
+
+$(document).ready(function() {
+    $('.counter').each((i, counter) => {
+        new Counter(counter);
     });
-
 });
