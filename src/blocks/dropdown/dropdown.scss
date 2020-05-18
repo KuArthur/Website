@@ -2,9 +2,12 @@
 @import "./__icon/dropdown__icon.scss";
 @import "./__expanded/dropdown__expanded.scss";
 @import "./__expanded/__counter/dropdown__expanded__counter.scss";
+@import "./_width/dropdown_width_s.scss";
+@import "./_width/dropdown_width_m.scss";
+@import "./__expanded/_status/dropdown__expanded_status_enabled.scss";
 .dropdown {
-    width: 266px;
     position: relative;
+    height: 44px;
 }
 
 .counta {

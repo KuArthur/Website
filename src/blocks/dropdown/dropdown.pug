@@ -1,12 +1,10 @@
 include \..\..\blocks/counter/counter.pug
 link(rel="stylesheet", href="index.scss")
-mixin dropdown
-    .dropdown
-        button.dropdown__default
-        //- input(type="text" readonly)
+mixin dropdown(size)
+    div.dropdown(class ="dropdown_width_" + size)
+        button.dropdown__default.js-dropdown__default
         .dropdown__icon keyboard_arrow_down
-
-    .dropdown__expanded
+    div.dropdown__expanded.js-dropdown__expanded(class ="dropdown_width_" + size)
         +counter('СПАЛЬНИ','1')         
         +counter('КРОВАТИ','2')
         +counter('ВАННЫЕ КОМНАТЫ','3')

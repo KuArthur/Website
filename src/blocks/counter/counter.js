@@ -7,9 +7,9 @@ function Counter(counterDom, options = {}) {
 
     // Classnames of elements;
     const cn = {
-        input: 'counter__input',
-        minus: 'counter__button_type_minus',
-        plus: 'counter__button_type_plus',
+        input: 'js-counter__input',
+        minus: 'js-counter__button_type_minus',
+        plus: 'js-counter__button_type_plus',
         disabled: 'counter__button_status-disabled',
     }
 
@@ -68,3 +68,5 @@ $(document).ready(function() {
         new Counter(counter);
     });
 });
+
+export { Counter };
