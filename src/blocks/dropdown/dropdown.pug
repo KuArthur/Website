@@ -2,10 +2,10 @@ include \..\..\blocks/counter/counter.pug
 link(rel="stylesheet", href="index.scss")
 mixin dropdown(size)
     div.dropdown(class ="dropdown_width_" + size)
-        button.dropdown__default.js-dropdown__default
+        input.dropdown__default.js-dropdown__default.typo_montserrat.typo_size_m.typo_normal.typo_theme_default.typo_height_m(value='' readonly)
         .dropdown__icon keyboard_arrow_down
-    div.dropdown__expanded.js-dropdown__expanded(class ="dropdown_width_" + size)
-        +counter('СПАЛЬНИ','1')         
-        +counter('КРОВАТИ','2')
-        +counter('ВАННЫЕ КОМНАТЫ','3')
+        div.dropdown__expanded.js-dropdown__expanded(class ="dropdown_width_" + size)
+            +counter('СПАЛЬНИ','1')         
+            +counter('КРОВАТИ','2')
+            +counter('ВАННЫЕ КОМНАТЫ','3')
         

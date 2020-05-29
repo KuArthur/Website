@@ -1,5 +1,5 @@
 mixin counter(text,id)
-    .counter
+    .counter(data-type=text)
         .counter__text.typo_montserrat.typo_bold.typo_theme_dark.typo_height_s.typo_size_s=text
         .counter__wrap
             button.counter__button.js-counter__button_type_minus.counter__button_status-disabled.js-counter__button_status-disabled.typo.typo_normal(title='Down' data-input-id=id data-delta=-1) -

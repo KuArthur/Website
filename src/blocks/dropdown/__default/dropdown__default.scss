@@ -11,8 +11,12 @@
     border-radius: 2px 2px 0 0;
     outline: none;
     background: $color-white;
-    &:hover,
-     :focus {
+    &:focus {
         border-color: $dark-shade50;
     }
+    ;
+}
+
+input[value].dropdown__default {
+    padding-left: 15px;
 }

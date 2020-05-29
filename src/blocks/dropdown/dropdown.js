@@ -1,11 +1,89 @@
 import '../counter/counter';
 import { Counter } from "../counter/counter";
+import Block from '../block/block';
 
-const dropdown = document.querySelector('.dropdown');
-const dropdownButton = document.querySelector('.js-dropdown__default');
-const dropdownContent = document.querySelector('.js-dropdown__expanded');
-let dropdownIcon = document.querySelector('.dropdown__icon');;
+class Dropdown extends Block {
+    constructor(domElem) {
+        super('dropdown', domElem);
 
-dropdown.onclick = function(event) {
-    dropdownContent.classList.toggle("dropdown__expanded_status_enabled");
+        this.dropdownContent = this.domElem.querySelector('.js-dropdown__expanded');
+        this.dropdownButton = this.domElem.querySelector('.js-dropdown__default');
+        this.icon = this.domElem.querySelector('.dropdown__icon');
+
+        this.counters = [];
+        this.domElem.querySelectorAll('.counter').forEach(el => this.counters.push(el.getBlockInstance('counter')));
+
+        this.counters.forEach(counter => counter.on('value-change', this.onValueChanged.bind(this)));
+
+        this.dropdownButton.addEventListener('click', this.onClick.bind(this));
+        this.icon.addEventListener('click', this.onClick.bind(this));
+    }
+
+    updateText() {
+        const text = this.counters.map((counter) => {
+            const value = counter.getValue();
+
+            if (value === '0') return;
+
+            switch (counter.type) {
+                case 'СПАЛЬНИ':
+                    counter.type = this.getNoun(value, 'СПАЛЬНЯ', 'СПАЛЬНИ', 'СПАЛЬНЕЙ')
+                    break;
+                case 'КРОВАТИ':
+                    counter.type = this.getNoun(value, 'КРОВАТЬ', 'КРОВАТИ', 'КРОВАТЕЙ')
+                    break;
+                case 'ВАННЫЕ КОМНАТЫ':
+                    counter.type = this.getNoun(value, 'ВАННАЯ КОМНАТА', 'ВАННЫЕ КОМНАТЫ', 'ВАННЫХ КОМНАТ')
+                    break;
+
+            }
+
+            console.log(counter.type + 'sss')
+            return value + ' ' + counter.type
+        }).filter(Boolean).join(', ');
+
+        console.log(text);
+
+
+        console.log(this.dropdownButton);
+        this.dropdownButton.value = text;
+    }
+
+    onValueChanged() {
+        this.updateText();
+    }
+
+    onClick(e, target) {
+        this.drop();
+    }
+
+    drop() {
+        this.dropdownContent.classList.toggle("dropdown__expanded_status_enabled");
+    }
+
+    getNoun(number, one, two, five) {
+        let n = Math.abs(number);
+        n %= 100;
+        if (n >= 5 && n <= 20) {
+            return five;
+        }
+        n %= 10;
+        if (n === 1) {
+            return one;
+        }
+        if (n >= 2 && n <= 4) {
+            return two;
+        }
+        return five;
+    }
+
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const arr = document.querySelectorAll('.dropdown');
+
+    for (let domElem of arr) {
+        console.log(domElem)
+        new Dropdown(domElem)
+    }
+})
