@@ -1,0 +1,13 @@
+@import "./__text/expandable-checklist__text.scss";
+@import "./__items/expandable-checklist__items.scss";
+@import "./__items/_status/expandable-checklist__items_status_enabled.scss";
+@import "./__icon/expandable-checklist__icon.scss";
+.expandable-checklist {
+    width: 266px;
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+    }
+}

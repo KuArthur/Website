@@ -9,7 +9,6 @@ class Dropdown extends Block {
         this.dropdownContent = this.domElem.querySelector('.js-dropdown__expanded');
         this.dropdownButton = this.domElem.querySelector('.js-dropdown__default');
         this.icon = this.domElem.querySelector('.dropdown__icon');
-
         this.counters = [];
         this.domElem.querySelectorAll('.counter').forEach(el => this.counters.push(el.getBlockInstance('counter')));
 
@@ -22,36 +21,40 @@ class Dropdown extends Block {
     updateText() {
         const text = this.counters.map((counter) => {
             const value = counter.getValue();
-
+            let item;
             if (value === '0') return;
+            console.log(value);
 
             switch (counter.type) {
                 case 'СПАЛЬНИ':
-                    counter.type = this.getNoun(value, 'СПАЛЬНЯ', 'СПАЛЬНИ', 'СПАЛЬНЕЙ')
+                    item = this.getNoun(value, 'спальня', 'спальни', 'спальней')
                     break;
                 case 'КРОВАТИ':
-                    counter.type = this.getNoun(value, 'КРОВАТЬ', 'КРОВАТИ', 'КРОВАТЕЙ')
+                    item = this.getNoun(value, 'кровать', 'кровати', 'кроватей')
                     break;
                 case 'ВАННЫЕ КОМНАТЫ':
-                    counter.type = this.getNoun(value, 'ВАННАЯ КОМНАТА', 'ВАННЫЕ КОМНАТЫ', 'ВАННЫХ КОМНАТ')
+                    item = this.getNoun(value, 'ванная комната', 'ванные комнаты', 'ванных комнат')
                     break;
 
             }
 
-            console.log(counter.type + 'sss')
-            return value + ' ' + counter.type
+            return value + ' ' + item
         }).filter(Boolean).join(', ');
 
         console.log(text);
 
-
         console.log(this.dropdownButton);
         this.dropdownButton.value = text;
+
     }
 
     onValueChanged() {
         this.updateText();
     }
+
+    // updateValueCounter() {
+    //     return this.valueCounter
+    // }
 
     onClick(e, target) {
         this.drop();
@@ -63,18 +66,20 @@ class Dropdown extends Block {
 
     getNoun(number, one, two, five) {
         let n = Math.abs(number);
-        n %= 100;
-        if (n >= 5 && n <= 20) {
+        while (n != 0) {
+            n %= 100;
+            if (n >= 5 && n <= 20) {
+                return five;
+            }
+            n %= 10;
+            if (n === 1) {
+                return one;
+            }
+            if (n >= 2 && n <= 4) {
+                return two;
+            }
             return five;
         }
-        n %= 10;
-        if (n === 1) {
-            return one;
-        }
-        if (n >= 2 && n <= 4) {
-            return two;
-        }
-        return five;
     }
 
 }
