@@ -1,61 +1,8 @@
 @import "../../color.scss";
-
-.checkbox-buttons__div {
-    //position: relative;
-    display:flex;
+@import "./__div/checkbox-buttons__div.scss";
+@import "./__input/checkbox-buttons__input.scss";
+.checkbox-buttons {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-}
-
-.checkbox-buttons {
-    cursor: pointer;
-    display: flex;
-    //position: absolute;
-    //font-family: Montserrat;
-    //font-style: normal;
-    // font-weight: normal;
-    // font-size: 14px;
-    line-height: 18px;
-    //color: $dark-shade50;
-    width:auto;
-    margin-bottom: 10px;
-    //align-items: flex-start;
-    max-width:192px;
-    
-
-&::before {
-    content: "";
-   // position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-right: 9px; 
-    min-width: 20px;
-    min-height: 20px;
-    
-/* Dark 25% */
-
-    border: 1px solid $dark-shade25;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-
-}
-
-// .checkbox-buttons label:nth-child(2n) {
-//     margin-top: 10.56px;
-//     margin-bottom: 10.56px;
-// }
-
-.checkbox-buttons__input {
-   // position: absolute;
-    display:none;
-    outline: none;
-
-}
-
-.checkbox-buttons__input:checked + .checkbox-buttons::before {
-    background: url(/src/icons/done.svg) no-repeat center 3px;
-    border-color:$color_purple;
 }

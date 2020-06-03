@@ -1,5 +1,7 @@
 link(rel="stylesheet", href="index.scss")
-mixin checkbox(text,id)
-    .checkbox-buttons__div    
-        input.checkbox-buttons__input(type="checkbox" id=id)
-        label.checkbox-buttons.typo_montserrat.typo_theme_light.typo_normal.typo_size_m(for=id)=text
+mixin checkbox(text)
+    .checkbox-buttons
+        label
+            input.checkbox-buttons__input(type="checkbox")
+            span.checkbox-buttons__div.typo_montserrat.typo_theme_light.typo_normal.typo_size_m=text
+        
