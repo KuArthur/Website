@@ -5,6 +5,7 @@
 @import "./_width/dropdown_width_s.scss";
 @import "./_width/dropdown_width_m.scss";
 @import "./__expanded/_status/dropdown__expanded_status_enabled.scss";
+@import "./__buttons/dropdown__buttons.scss";
 .dropdown {
     position: relative;
     height: 44px;

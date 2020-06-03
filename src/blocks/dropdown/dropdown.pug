@@ -1,4 +1,5 @@
 include \..\..\blocks/counter/counter.pug
+include \..\..\blocks/simple-button/simple-button.pug
 link(rel="stylesheet", href="index.scss")
 mixin dropdown(size)
     div.dropdown(class ="dropdown_width_" + size)
@@ -8,4 +9,7 @@ mixin dropdown(size)
             +counter('СПАЛЬНИ','1')         
             +counter('КРОВАТИ','2')
             +counter('ВАННЫЕ КОМНАТЫ','3')
+            .dropdown__buttons
+                +simple-button('очистить').js-clear-button
+                +simple-button('применить').js-accept-button
         

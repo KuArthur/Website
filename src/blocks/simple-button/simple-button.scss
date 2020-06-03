@@ -1,21 +1,16 @@
 @import "../../color.scss";
-
 .simple-button {
     //position: absolute;
+    cursor: pointer;
     display: block;
-    width: 61px;
     height: 15px;
     text-transform: uppercase;
-    color:$color_purple;
-    
+    color: $color_purple;
     padding: 0;
-    
     border-style: none;
     outline: none;
-    background:none;
-
-&:active {
-    color:$dark-shade50;
-}
-    
+    background: none;
+    &:active {
+        color: $dark-shade50;
+    }
 }
