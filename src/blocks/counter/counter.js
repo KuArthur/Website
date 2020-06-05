@@ -59,6 +59,9 @@ class Counter extends Block {
     getValue(a) {
         return this.input.value;
     }
+    setValue(value) {
+        this.input.value = value;
+    }
 
 }
 

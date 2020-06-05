@@ -8,7 +8,10 @@ class Dropdown extends Block {
 
         this.dropdownContent = this.domElem.querySelector('.js-dropdown__expanded');
         this.dropdownButton = this.domElem.querySelector('.js-dropdown__default');
-        this.icon = this.domElem.querySelector('.dropdown__icon');
+        this.icon = this.domElem.querySelector('.js-dropdown__icon');
+        this.dropdownClear = this.domElem.querySelector('.js-dropdown__buttons_clear');
+        this.dropdownApply = this.domElem.querySelector('.js-dropdown__buttons_apply');
+        this.dropdownButtons = this.domElem.querySelector('.js-dropdown__buttons')
         this.counters = [];
         this.domElem.querySelectorAll('.counter').forEach(el => this.counters.push(el.getBlockInstance('counter')));
 
@@ -16,6 +19,9 @@ class Dropdown extends Block {
 
         this.dropdownButton.addEventListener('click', this.onClick.bind(this));
         this.icon.addEventListener('click', this.onClick.bind(this));
+
+        this.dropdownClear && this.dropdownClear.addEventListener('click', this.clear.bind(this));
+
     }
 
     updateText() {
@@ -35,9 +41,17 @@ class Dropdown extends Block {
                 case 'ВАННЫЕ КОМНАТЫ':
                     item = this.getNoun(value, 'ванная комната', 'ванные комнаты', 'ванных комнат')
                     break;
+                case 'ВЗРОСЛЫЕ':
+                    item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+                    break;
+                case 'ДЕТИ':
+                    item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+                    break;
+                case 'МЛАДЕНЦЫ':
+                    item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+                    break;
 
             }
-
             return value + ' ' + item
         }).filter(Boolean).join(', ');
 
@@ -45,16 +59,14 @@ class Dropdown extends Block {
 
         console.log(this.dropdownButton);
         this.dropdownButton.value = text;
-
+        if (this.dropdownClear && this.dropdownButton.value === '') this.dropdownClear.classList.remove('dropdown__buttons_clear_status_enabled')
     }
 
     onValueChanged() {
+        this.dropdownClear && this.dropdownClear.classList.add('dropdown__buttons_clear_status_enabled')
         this.updateText();
-    }
 
-    // updateValueCounter() {
-    //     return this.valueCounter
-    // }
+    }
 
     onClick(e, target) {
         this.drop();
@@ -81,6 +93,43 @@ class Dropdown extends Block {
             return five;
         }
     }
+
+    clear() {
+
+        const counterValue = this.counters.map((counter) => {
+            let value = counter.setValue('0')
+            return value;
+        });
+
+        this.dropdownButton.value = ''
+        this.dropdownClear.classList.remove('dropdown__buttons_clear_status_enabled');
+    }
+
+    // updateTextGuest() {
+    //     const text = this.counters.map((counter) => {
+    //         const value = counter.getValue();
+    //         let item;
+    //         if (value === '0') return;
+    //         console.log(value);
+
+    //         switch (counter.type) {
+    //             case 'ВЗРОСЛЫЕ':
+    //                 item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+    //                 break;
+    //             case 'ДЕТИ':
+    //                 item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+    //                 break;
+    //             case 'МЛАДЕНЦЫ':
+    //                 item = this.getNoun(value, 'гость', 'гостя', 'гостей')
+    //                 break;
+
+    //         }
+    //         return counter.setValue(value) + ' ' + item
+    //     }).filter(Boolean);
+
+    //     this.dropdownButton.value = text;
+    //     if (this.dropdownButton.value === '') this.dropdownClear.classList.remove('dropdown__expanded__buttons_clear_status_enabled')
+    // }
 
 }
 
