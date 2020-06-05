@@ -56,11 +56,13 @@ class Counter extends Block {
         this.domElem.dataset.type = text;
     }
 
-    getValue(a) {
-        return this.input.value;
+    getValue() {
+        return Number(this.input.value);
     }
+
     setValue(value) {
-        this.input.value = value;
+        this.input.value = String(value);
+        this.updateButtonStatus();
     }
 
 }

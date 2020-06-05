@@ -1,14 +1,14 @@
 include \..\..\blocks/counter/counter.pug
 include \..\..\blocks/simple-button/simple-button.pug
 link(rel="stylesheet", href="index.scss")
-mixin dropdown(count1,count2,count3,text,vis)
-    .dropdown
+mixin dropdown(count1,count2,count3,text,vis, mix)
+    div.dropdown(class=mix)
         input.dropdown__default.js-dropdown__default.typo_montserrat.typo_size_m.typo_normal.typo_theme_default.typo_height_m(value='' readonly placeholder=text)
         .dropdown__icon.js-dropdown__icon keyboard_arrow_down
         .dropdown__expanded.js-dropdown__expanded
-            +counter(count1,'1')         
-            +counter(count2,'2')
-            +counter(count3,'3')
+            +counter(count1)         
+            +counter(count2)
+            +counter(count3)
             if vis
                 .dropdown__buttons.js-dropdown__buttons
                     .dropdown__buttons_clear.js-dropdown__buttons_clear.typo_theme_light
