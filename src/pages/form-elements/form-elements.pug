@@ -21,7 +21,13 @@ html
     include \..\..\blocks/counter/counter.pug
     include \..\..\blocks/dropdown/dropdown.pug
     include \..\..\blocks/expandable-checklist/expandable-checklist.pug
+    include \..\..\blocks/dropdowns-calendar/dropdowns-calendar.pug
+
+    .calendar
+        +dropdowns-calendar('date dropdown','date dropdown')
     
+    .rating-star
+        +rate-star('checked')
     +toggle("Получать спецпредложения")
     +like()
 

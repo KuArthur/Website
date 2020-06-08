@@ -17,6 +17,8 @@ class Dropdown extends Block {
         this.dropdownButton.addEventListener('click', this.onClick.bind(this));
         this.icon.addEventListener('click', this.onClick.bind(this));
 
+
+
     }
 
     updateText() {

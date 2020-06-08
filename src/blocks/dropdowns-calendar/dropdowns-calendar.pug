@@ -1,0 +1,18 @@
+link(rel='stylesheet' href='index.scss')
+link(href='/node_modules/air-datepicker/dist/css/datepicker.min.css' rel='stylesheet' type='text/css')
+script(src='/node_modules/air-datepicker/dist/js/datepicker.min.js')
+
+mixin dropdowns-calendar(nameFrom, nameTo)
+    .dropdowns-calendar.js-dropdowns-calendar
+        .aa
+            .dropdowns-calendar__wrap
+                .typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark.dropdowns-calendar__name=nameFrom
+                .dropdowns-calendar__input
+                    input.dropdowns-calendar__date.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ')
+                    .dropdowns-calendar__icon keyboard_arrow_down
+            .dropdowns-calendar__wrap
+                .typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark.dropdowns-calendar__name=nameTo
+                .dropdowns-calendar__input
+                    input.dropdowns-calendar__date.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ')
+                    .dropdowns-calendar__icon keyboard_arrow_down
+        .dropdowns-calendar__calendar.js-dropdowns-calendar__calendar(type="text"  data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
