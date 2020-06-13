@@ -184,6 +184,14 @@
     
     .datepicker--nav[class] {
         border-bottom: none;
+        padding-top: 0;
+    }
+    
+    .datepicker--nav-action {
+        margin-left: 11px;
+        &:last-child {
+            margin-right: 11px;
+        }
     }
     
     .datepicker--nav-title,
@@ -209,6 +217,7 @@
     
     .datepicker--days-names[class] {
         justify-content: center;
+        margin-top: 2px;
     }
     
     .datepicker--day-name[class] {
@@ -233,7 +242,7 @@
         width: 100%;
     }
     
-    .datepicker--cells-days[class] {
+    .datepicker--cells.datepicker--cells-days[class] {
         justify-content: center;
     }
     
