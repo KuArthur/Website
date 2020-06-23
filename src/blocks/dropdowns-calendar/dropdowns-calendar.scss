@@ -137,6 +137,7 @@
     //     display: none;
     // }
     .dropdowns-calendar {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -172,16 +173,15 @@
     }
     
     .datepicker[class] {
-        width: 100%;
+        width: 320px;
         box-sizing: border-box;
-        height: 100%;
+        height: 369px;
     }
     
-    .datepicker-inline[class] {
-        max-height: 369px;
-        height: 100%;
-    }
-    
+    // .datepicker-inline[class] {
+    //     max-height: 369px;
+    //     height: 100%;
+    // }
     .datepicker--nav[class] {
         border-bottom: none;
         padding-top: 0;
@@ -244,6 +244,8 @@
     
     .datepicker--cells.datepicker--cells-days[class] {
         justify-content: center;
+        height: 200px;
+        padding-bottom: 5px;
     }
     
     .datepicker--cell-day[class] {
@@ -425,3 +427,71 @@
         line-height: 15px;
         color: $color_white;
     }
+    
+    .datepicker--buttons[class] {
+        display: flex;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0 20px;
+        border-top: none;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: inherit;
+        border-style: none;
+        outline: none;
+        background: none;
+        height: 40px;
+    }
+    
+    .datepicker.active[class] {
+        left: 0 !important;
+    }
+    
+    .datepicker--button[class] {
+        display: inline;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        cursor: pointer;
+        height: 15px;
+        text-transform: uppercase;
+        color: inherit;
+        padding: 0;
+        border-style: none;
+        outline: none;
+        background: none;
+        width: auto;
+        &:active {
+            color: $dark-shade50;
+        }
+        &:hover {
+            opacity: 0.35;
+            background: none;
+        }
+        &:first-child {
+            color: $color_purple;
+        }
+    }
+    
+    .dropdowns-calendar__button-apply {
+        color: $color_purple;
+    }
+    
+    // .dropdowns-calendar__button-clear {
+    //     color: $dark-shade50;
+    // }
+    .datepicker--pointer {
+        display: none;
+    }
+    
+    // .datepicker--button[class] {
+    //     display: none;
+    // }

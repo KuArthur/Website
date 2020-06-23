@@ -8,11 +8,11 @@ mixin dropdowns-calendar(nameFrom, nameTo)
             .dropdowns-calendar__wrap
                 .typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark.dropdowns-calendar__name=nameFrom
                 .dropdowns-calendar__input
-                    input.dropdowns-calendar__date.js-dropdowns-calendar__date-from.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ')
+                    input.dropdowns-calendar__date.js-dropdowns-calendar__date-from.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ' readonly)
                     .dropdowns-calendar__icon keyboard_arrow_down
             .dropdowns-calendar__wrap
                 .typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark.dropdowns-calendar__name=nameTo
                 .dropdowns-calendar__input
-                    input.dropdowns-calendar__date.js-dropdowns-calendar__date-to.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ')
+                    input.dropdowns-calendar__date.js-dropdowns-calendar__date-to.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type='text' placeholder='ДД.ММ.ГГГГ' readonly )
                     .dropdowns-calendar__icon keyboard_arrow_down
-        .dropdowns-calendar__calendar.js-dropdowns-calendar__calendar(type="text"  data-range="true" data-multiple-dates-separator=" - " class="datepicker-here")
+        .dropdowns-calendar__calendar.js-dropdowns-calendar__calendar(type="text" class="datepicker-here")
