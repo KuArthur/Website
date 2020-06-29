@@ -1,8 +1,4 @@
-.dropdowns {
-    display: flex;
-    flex-shrink: 0;
-}
-
+@import "../../color.scss";
 .dropdown_width_m {
     max-width: 320px !important;
     width: 100%;
@@ -16,4 +12,40 @@
 .calendar {
     max-width: 320px;
     width: 100%;
+}
+
+.inscription {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.inscription-element {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $color_dark-shade;
+}
+
+.inscription-status {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+    color: $dark-shade50;
+}
+
+.text-field_width {
+    max-width: 320px;
+    width: 100%;
+}
+
+.text-field_status_hover {
+    border-color: $dark-shade50;
 }

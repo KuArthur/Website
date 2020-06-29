@@ -22,53 +22,85 @@ html
     include \..\..\blocks/dropdown/dropdown.pug
     include \..\..\blocks/expandable-checklist/expandable-checklist.pug
     include \..\..\blocks/dropdowns-calendar/dropdowns-calendar.pug
-
-    .calendar
-        +dropdowns-calendar('date dropdown','date dropdown')
-
-    .calendar
-        +dropdowns-calendar('date dropdown2','date dropdown2')
-    .rating-star
-        +rate-star('checked')
-    +toggle("Получать спецпредложения")
-    +like()
-
-    +button_gradient-background('click me')
-    +button_gradient-border('click me')
-    +simple-button('click me')
-    +button-arrow('перейти к оплате')
+    include \..\..\blocks/dropdown-calendar/dropdown-calendar.pug
     
-    +checkbox-rich('Широкий коридор','Ширина коридоров в номере не\u00A0менее 91 см.','hall')
-    +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист и\u00A0проводит до номера.','help')
-    
-    +checkbox('Можно курить','smoke')
-    +checkbox('Можно с питомцами','pet')
-    +checkbox('Можно пригласить гостей (до 10 человек)','guest')
+    //- .logo
+    //-     +logo()
+    .first-row
+        .first-row__first-column
+            .text-field_width
+                .inscription
+                    .inscription-element text field
+                    .inscription-status default
+                +text-field('Email')
+            .text-field_width
+                .inscription
+                    .inscription-element text field
+                    .inscription-status hover / focus
+                +text-field('Email','This is pretty awesome')
+            .dropdown_width_m
+                .inscription
+                    .inscription-element dropdown
+                    .inscription-status default
+                +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
+            .text-field_width
+                .inscription
+                    .inscription-element masked text field
+                    .inscription-status default
+                +text-field('ДД.ММ.ГГГГ')
+            .calendar
+                +dropdowns-calendar('date dropdown','date dropdown')
+        .first-row__second-column
+        .first-row__third-column
+    .second-row
+        .second-row__first-column
+        .second-row__second-column
+        .second-row__third-column
 
-    .radio-buttons
-        +radio('Мужчина','man','gender')
-        +radio('Женщина','woman','gender')
-    .bullet
-        +bullet-list("Нельзя с питомцами")
-        +bullet-list("Без вечеринок и мероприятий")
-        +bullet-list("Время прибытия — после 13:00, а\u00A0выезд до 12:00")
-    .wrap
-        +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
-        +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
+    //- .calendar
+    //-     +dropdowns-calendar('date dropdown','date dropdown')
 
-    +review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-    +logo()
-    +text-field("Email")
-    +slider()
+    //- //- .calendar
+    //- //-     +dropdowns-calendar('date dropdown2','date dropdown2')
+    //- .rating-star
+    //-     +rate-star('checked')
+    //- +toggle("Получать спецпредложения")
+    //- +like()
+
+    //- +button_gradient-background('click me')
+    //- +button_gradient-border('click me')
+    //- +simple-button('click me')
+    //- +button-arrow('перейти к оплате')
     
-    +counter()
-    .dropdowns
-        .dropdown_width_s
-            +dropdown('СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ', undefined, undefined, 'dropdown-items')
-        .dropdown_width_m
-            +dropdown('ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ','Сколько гостей','видно', 'dropdown-guest')
+    //- +checkbox-rich('Широкий коридор','Ширина коридоров в номере не\u00A0менее 91 см.','hall')
+    //- +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист и\u00A0проводит до номера.','help')
+    
+    //- +checkbox('Можно курить','smoke')
+    //- +checkbox('Можно с питомцами','pet')
+    //- +checkbox('Можно пригласить гостей (до 10 человек)','guest')
+
+    //- .radio-buttons
+    //-     +radio('Мужчина','man','gender')
+    //-     +radio('Женщина','woman','gender')
+    //- .bullet
+    //-     +bullet-list("Нельзя с питомцами")
+    //-     +bullet-list("Без вечеринок и мероприятий")
+    //-     +bullet-list("Время прибытия — после 13:00, а\u00A0выезд до 12:00")
+    //- .wrap
+    //-     +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
+    //-     +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
+
+    //- +review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+    //- +logo()
+    //- +text-field("Email")
+    //- +slider()
+    
+    //- .dropdowns
+    //-     .dropdown_width_s
+    //-         +dropdown('СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ', undefined, undefined, 'dropdown-items')
+    //-     .dropdown_width_m
+    //-         +dropdown('ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ','Сколько гостей','видно', 'dropdown-guest')
         
-    +expandable-checklist('expandable checkbox list')
-    +expandable-checklist('expandable checkbox')
-    
+    //- +expandable-checklist('expandable checkbox list')
+    //- +dropdown-calendar()
     

@@ -1,27 +1,21 @@
 @import "../../color.scss";
-
-.text-field__input {
-    display:block;
+.text-field {
     position: relative;
-    width: 100%; // после
-    max-width: 320px;// убрать
+    width: inherit; // подумать,как исправить
+    // width: 100%; // после
+    // max-width: 320px;// убрать
     height: 44px;
-    outline:none;
+    outline: none;
     border: 1px solid $dark-shade25;
     box-sizing: border-box;
     border-radius: 4px;
-    padding-left:15px;
-
+    padding-left: 15px;
     &:hover,
-    :focus {
+     :focus {
         border-color: $dark-shade50;
-        
     }
     &::placeholder {
         line-height: 18px;
         color: $dark-shade25;
     }
 }
-
-
-

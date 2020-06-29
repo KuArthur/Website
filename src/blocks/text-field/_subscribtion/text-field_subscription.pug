@@ -1,3 +1,4 @@
-label.text-field_subscription
-    input.text-field__input_subscription.typo_montserrat.typo_normal.typo_size_m.typo_theme_default.typo_height_m(type="text" placeholder="Email")
+mixin text-field_subscription(placeholder)
+    label.text-field_subscription
+    input.text-field_subscription-input.typo_montserrat.typo_normal.typo_size_m.typo_theme_default.typo_height_m(type="text" placeholder=placeholder)
     .arrow.arrow_subscription="arrow_forward"
