@@ -1,8 +1,11 @@
 link(rel="stylesheet", href="index.scss")
-mixin toggle(text)
+mixin toggle(text,check)
     .checkbox
         label.checkbox__wrap
-            input(type="checkbox")
+            if check
+                input(type="checkbox" checked)
+            else
+                input(type="checkbox")
             span.checkbox__toggle-slider
         span.checkbox__toggle_text.typo_montserrat.typo_size_m.typo_normal.typo_theme_default.typo_height_m=text
 

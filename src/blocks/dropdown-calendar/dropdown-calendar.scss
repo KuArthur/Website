@@ -2,7 +2,8 @@
 @import "./__icon/dropdown-calendar__icon.scss";
 .dropdown-calendar {
     position: relative;
-    max-width: 266px;
+    width: inherit;
+    height: 44px;
 }
 
 // .dropdown-calendar__width {

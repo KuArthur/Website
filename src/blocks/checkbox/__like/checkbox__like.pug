@@ -1,7 +1,10 @@
 link(rel="stylesheet", href="index.scss")
-mixin like(text)
+mixin like(check)
     .checkbox
         label.checkbox__wrap.typo_montserrat.typo_theme_extralight.typo_normal
-            input(type="checkbox")
+            if check
+                input(type="checkbox" checked)
+            else
+                input(type="checkbox")
             span.checkbox__like
         //- span.checkbox__like_text.typo.typo_theme_default.typo_normal=text

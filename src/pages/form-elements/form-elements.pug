@@ -28,29 +28,92 @@ html
     //-     +logo()
     .first-row
         .first-row__first-column
-            .text-field_width
-                .inscription
-                    .inscription-element text field
-                    .inscription-status default
-                +text-field('Email')
-            .text-field_width
-                .inscription
-                    .inscription-element text field
-                    .inscription-status hover / focus
-                +text-field('Email','This is pretty awesome')
-            .dropdown_width_m
-                .inscription
-                    .inscription-element dropdown
-                    .inscription-status default
-                +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
-            .text-field_width
-                .inscription
-                    .inscription-element masked text field
-                    .inscription-status default
-                +text-field('ДД.ММ.ГГГГ')
-            .calendar
-                +dropdowns-calendar('date dropdown','date dropdown')
+            .first-group
+                .first-group__element.form-elements-text-field_width
+                    .inscription
+                        .inscription__element text field
+                        .inscription__status default
+                    +text-field('Email')
+                
+                .first-group__element.form-elements-text-field_width
+                    .inscription
+                        .inscription__element text field
+                        .inscription__status hover / focus
+                    +text-field('Email','This is pretty awesome')
+                
+                .first-group__element.form-elements-dropdown_width_m
+                    .inscription
+                        .inscription__element dropdown
+                        .inscription__status default
+                    +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
+                
+                .first-group__element.form-elements-text-field_width
+                    .inscription
+                        .inscription__element masked text field
+                        .inscription__status default
+                    +text-field('ДД.ММ.ГГГГ')
+            
+            .second-group
+                .group_gap_big.group__element.form-elements-calendar
+                    +dropdowns-calendar('date dropdown','date dropdown')
+                
+                .group_gap_big.group__element.form-elements-filter-date-dropdown
+                    .inscription
+                        .inscription__element filter date dropdown
+                    +dropdown-calendar()
+                
+                .group_gap_big.group__element.form-elements-text-field-subscription_width
+                    .inscription
+                        .inscription__element subscribtion text field
+                    +text-field_subscription('Email')
+        
         .first-row__second-column
+            .group_gap_big.group__element.form-elements-checkbox
+                .inscription_gap_big.inscription
+                        .inscription__element checkbox buttons
+                .form-elements-checkbox__checkbox-group
+                    .form-elements-checkbox__checkbox-item
+                        +checkbox('Можно курить')
+                    .form-elements-checkbox__checkbox-item
+                        +checkbox('Можно с питомцами')
+                    .form-elements-checkbox__checkbox-item
+                        +checkbox('Можно пригласить\u00A0гостей (до 10 человек)')
+            
+            .group_gap_big.group__element.form-elements-radio
+                .inscription_gap_big.inscription
+                        .inscription__element radio buttons
+                .form-elements-radio__radio-group
+                    .form-elements-radio__radio-item
+                        +radio('Мужчина','man','gender')
+                    .form-elements-radio__radio-item
+                        +radio('Женщина','woman','gender')
+            
+            .group_gap_big.group__element.form-elements-toggle
+                .inscription_gap_big.inscription
+                        .inscription__element toggle
+                .form-elements-toggle__toggle-item
+                    +toggle("Получать спецпредложения",'checked')
+                .form-elements-toggle__toggle-item
+                    +toggle("Получать спецпредложения")
+            
+            .group_gap_big.group__element.form-elements-like
+                .inscription_gap_big.inscription
+                        .inscription__element like button
+                .form-elements-like__like-group
+                    .form-elements-like__like-item
+                        +like()
+                    .form-elements-like__like-item
+                        +like('checked')
+            
+            .group_gap_big.group__element.form-elements-rate
+                .inscription_gap_big.inscription
+                        .inscription__element rate button
+                .form-elements-rate__rate-group
+                    .form-elements-rate__rate-item
+                        +rate-star()
+                    .form-elements-rate__rate-item
+                        +rate-star('2')
+                
         .first-row__third-column
     .second-row
         .second-row__first-column

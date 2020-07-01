@@ -1,16 +1,26 @@
 @import "../../color.scss";
-.dropdown_width_m {
+.first-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-elements-dropdown_width_m {
     max-width: 320px !important;
     width: 100%;
 }
 
-.dropdown_width_s {
+.form-elements-dropdown_width_s {
     max-width: 266px !important;
     width: 100%;
 }
 
-.calendar {
+.form-elements-calendar {
     max-width: 320px;
+    width: 100%;
+}
+
+.form-elements-filter-date-dropdown {
+    max-width: 266px;
     width: 100%;
 }
 
@@ -20,7 +30,7 @@
     margin-bottom: 5px;
 }
 
-.inscription-element {
+.inscription__element {
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
@@ -30,7 +40,11 @@
     color: $color_dark-shade;
 }
 
-.inscription-status {
+.inscription_gap_big.inscription {
+    margin-bottom: 16px;
+}
+
+.inscription__status {
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -41,11 +55,70 @@
     color: $dark-shade50;
 }
 
-.text-field_width {
+.form-elements-text-field_width {
     max-width: 320px;
     width: 100%;
 }
 
-.text-field_status_hover {
+.form-elements-text-field_status_hover {
     border-color: $dark-shade50;
+}
+
+.form-elements-text-field-subscription_width {
+    max-width: 266px;
+    width: 100%;
+}
+
+.form-elements-radio__radio-group {
+    display: flex;
+}
+
+.form-elements-checkbox__checkbox-item {
+    margin-bottom: 10px;
+    &:last-child {
+        margin-bottom: 0;
+        max-width: 222px;
+    }
+}
+
+.form-elements-radio__radio-item:last-child {
+    margin-left: 20px;
+}
+
+.form-elements-toggle__toggle-item:last-child {
+    margin-top: 14px;
+}
+
+.form-elements-like__like-group {
+    display: flex;
+}
+
+.form-elements-like__like-item:last-child {
+    margin-left: 10px;
+}
+
+.form-elements-rate__rate-group {
+    display: flex;
+}
+
+.form-elements-rate__rate-item:last-child {
+    margin-left: 20px;
+}
+
+.first-group__element {
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.second-group {
+    margin-top: 40px;
+}
+
+.group_gap_big.group__element {
+    margin-bottom: 40px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
