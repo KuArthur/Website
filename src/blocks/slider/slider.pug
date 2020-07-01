@@ -7,7 +7,9 @@ link(rel='stylesheet' href='index.scss')
 //-     div(id="slider-range")
 
 //- рабочее
-mixin slider()
+mixin slider(text)
     .slider
-        .slider__range-number.typo_montserrat.typo_normal.typo_size_s.typo_theme_light.typo_height_s
+        .slider__text-group
+            .slider__text.typo_montserrat.typo_bold.typo_size_s.typo_theme_dark.typo_height_s=text
+            .slider__range-number.typo_montserrat.typo_normal.typo_size_s.typo_theme_light.typo_height_s
         input(type="text" class="js-range-slider" name="my_range" value="")

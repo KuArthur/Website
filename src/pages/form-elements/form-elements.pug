@@ -112,9 +112,40 @@ html
                     .form-elements-rate__rate-item
                         +rate-star()
                     .form-elements-rate__rate-item
-                        +rate-star('2')
-                
+                        +rate-star('2')    
+        
         .first-row__third-column
+            .form-elements-slider
+                +slider('RANGE SLIDER')
+            .form-elements__button
+                .inscription_gap_big.inscription
+                            .inscription__element Buttons
+                .group_gap_mid.group__element.form-elements__button_gradient-group
+                    .form-elements__button_gradient-item
+                        +button_gradient-background('click me')
+                    .form-elements__button_gradient-item
+                        +button_gradient-background('click me','active')
+                
+                .group_gap_mid.group__element.form-elements__button_gradient-group
+                    .form-elements__button_gradient-item
+                        +button_gradient-border('click me')
+                    .form-elements__button_gradient-item
+                        +button_gradient-border('click me','active')
+                    
+                .group_gap_mid.group__element.form-elements__button_simple-group
+                    .form-elements__button_simple-item
+                        +simple-button('click me','typo_theme_purple')
+                    .form-elements__button_simple-item
+                        +simple-button('click me','typo_theme_light')
+               
+                .group_gap_big.group__element.form-elements__button_arrow
+                    +button-arrow('перейти к оплате')
+                
+                .group_gap_big.group__element.form-elements__pagination
+                    .inscription_gap_big.inscription
+                            .inscription__element pagination
+                    +pagination
+
     .second-row
         .second-row__first-column
         .second-row__second-column

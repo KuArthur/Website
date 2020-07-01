@@ -1,4 +1,9 @@
 link(rel="stylesheet", href="index.scss")
-mixin button_gradient-border(text) 
-    button.button.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s
-        span.button__wrap=text
+mixin button_gradient-border(text,active) 
+    if active
+        button.button.button_gradient-border_active.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s
+            span.button__wrap=text
+    else
+        button.button.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s
+            span.button__wrap=text
+        
