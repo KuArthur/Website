@@ -1,5 +1,7 @@
 import "../../../node_modules/air-datepicker/src/js/air-datepicker";
-import {get } from "jquery";
+import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
+import {get
+} from "jquery";
 
 class Calendar {
     constructor(elem) {
@@ -55,7 +57,9 @@ class Calendar {
     }
     closeCalendarOutside(e) {
         let target = e.target;
-        if (!target === this.start) { this.dateList.hide() }
+        if (!target === this.start) {
+            this.dateList.hide()
+        }
     }
 
 }

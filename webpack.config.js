@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
-const path = require('path')
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 
 module.exports = {
@@ -12,39 +13,87 @@ module.exports = {
         colorAndTypes: './src/pages/color-and-types/color-and-types.js'
     },
     output: {
-        filename: '[name].js',
+        filename: 'scripts/[name].js',
         path: path.resolve(__dirname, 'dist'),
         //publicpath: '/dist'
 
     },
     module: {
         rules: [{
-                test: /\.s[ac]ss$/i,
+                test: /\.css$/,
+                use: [
+                    'style-loader', {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            },
+
+            {
+                test: /\.scss$/,
                 use: [
                     // Creates `style` nodes from JS strings
-                    'style-loader',
+                    {
+                        loader: 'style-loader'
+                    }, {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
                     // Translates CSS into CommonJS
-                    'css-loader',
-                    // Compiles Sass to CSS
-                    'sass-loader',
-                ],
-            },
-            {
+                    {
+                        loader: 'css-loader'
+                    }, {
+                        loader: 'postcss-loader'
+                    }, {
+                        loader: 'resolve-url-loader'
+                    }, {
+                        // Compiles Sass to CSS
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
+                ]
+            }, {
                 test: /\.pug$/,
                 loader: 'pug-loader'
             },
+            // {
+            //     test: /\.(jpeg|jpg|png|gif)$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         name: '[path][name].[ext]',
+            //         outputPath: 'img',
+            //         publicPath: "./src/icons"
+            //     }
+            // },
+
             {
-                test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-                loader: "file-loader"
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/',
+                    publicPath: "./../fonts"
+
+                }
             },
+
+            // {
+            //     test: /\.svg$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         name: '[path][name].[ext]',
+            //         publicPath: "./src/icons"
+            //     }
+            // }, 
             {
                 // ESLint
                 enforce: 'pre',
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
                 loader: 'eslint-loader',
-            },
-            {
+            }, {
                 test: /\.m?js$/,
                 exclude: /(node_modules|bower_components)/,
                 use: {
@@ -73,6 +122,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "pages/color-and-types.html",
             template: './src/pages/color-and-types/color-and-types.pug'
+        }),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
         }),
 
         new webpack.ProvidePlugin({

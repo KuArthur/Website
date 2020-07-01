@@ -6,7 +6,8 @@
     "scripts": {
         "test": "This utility will walk you through creating a package.json file.",
         "build": "webpack --mode production",
-        "dev": "webpack-dev-server --open --mode development"
+        "dev": "webpack-dev-server --open --mode development",
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
@@ -40,6 +41,7 @@
         "html-webpack-plugin": "^3.2.0",
         "item-quantity-dropdown": "^2.1.0",
         "jquery-ui": "^1.12.1",
+        "mini-css-extract-plugin": "^0.9.0",
         "node-sass": "^4.13.1",
         "path": "^0.12.7",
         "pug": "^2.0.4",
@@ -55,10 +57,12 @@
     "dependencies": {
         "air-datepicker": "^2.2.3",
         "autoprefixer": "^9.7.5",
+        "gh-pages": "^3.1.0",
         "ion-rangeslider": "^2.3.1",
         "jquery": "^3.4.1",
         "jquery-ui-dist": "^1.12.1",
-        "postcss-loader": "^3.0.0"
+        "postcss-loader": "^3.0.0",
+        "resolve-url-loader": "^3.1.1"
     },
     "browserslist": [
         "> 1%",

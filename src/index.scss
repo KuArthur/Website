@@ -24,6 +24,11 @@
 @import "blocks/slider/slider.scss";
 @import "blocks/counter/counter.scss";
 @import "blocks/rectangle-color/rectangle-color.scss";
+@import "blocks/dropdown/dropdown.scss";
+@import "blocks/expandable-checklist/expandable-checklist.scss";
+@import 'blocks/dropdown-calendar/dropdown-calendar.scss';
+@import "blocks/dropdowns-calendar/dropdowns-calendar.scss";
+//fonts
 @import "blocks/typography/typography.scss";
 @import "blocks/typo/typo.scss";
 @import "blocks/typo/_bold/typo_bold.scss";
@@ -40,16 +45,13 @@
 @import "blocks/typo/_height/typo_height_s.scss";
 @import "blocks/typo/_height/typo_height_m.scss";
 @import "blocks/typo/_height/typo_height_l.scss";
-@import "blocks/dropdown/dropdown.scss";
-@import "blocks/expandable-checklist/expandable-checklist.scss";
-@import 'blocks/dropdown-calendar/dropdown-calendar.scss';
-//fonts
+//fonts style
 @import "fonts/Montserrat/style-montserrat.scss";
 @import "fonts/Quicksand/style-quicksand.scss";
 @import "fonts/OpenSans/style-opensans.scss";
-@import "icons/icons-style.scss";
+@import "fonts/MaterialIcons/icons-style.scss";
+//colors
 @import "blocks/color.scss";
-@import "blocks/dropdowns-calendar/dropdowns-calendar.scss";
 // body {
 //     background-color: lightgray;
 // }

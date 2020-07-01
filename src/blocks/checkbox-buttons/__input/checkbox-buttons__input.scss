@@ -5,6 +5,6 @@
 }
 
 .checkbox-buttons__input:checked+.checkbox-buttons__div::before {
-    background: url(/src/icons/done.svg) no-repeat center 3px;
+    background: url('../done.svg') no-repeat center 3px;
     border-color: $color_purple;
 }
