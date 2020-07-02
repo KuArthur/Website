@@ -41,12 +41,12 @@
         width: 320px;
         box-sizing: border-box;
         height: 369px;
+        
     }
     
-    // .datepicker-inline[class] {
-    //     max-height: 369px;
-    //     height: 100%;
-    // }
+    .datepicker-inline[class] {
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    }
     .datepicker--nav[class] {
         border-bottom: none;
         padding-top: 0;

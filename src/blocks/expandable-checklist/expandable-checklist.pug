@@ -1,15 +1,27 @@
 include \..\..\blocks/checkbox-buttons/checkbox-buttons.pug
 link(rel="stylesheet", href="index.scss")
 
-mixin expandable-checklist(text)
+mixin expandable-checklist(text,status)
     .expandable-checklist
-        .expandable-checklist__button
-            .expandable-checklist__text.typo_montserrat.typo_bold.typo_size_s.typo_height_s=text
-            .expandable-checklist__icon keyboard_arrow_down
-        .expandable-checklist__items.js-expandable-checklist__items
-            +checkbox('Завтрак', 'breackfast')
-            +checkbox('Письменный стол', 'table')
-            +checkbox('Стул для кормления', 'chair')
-            +checkbox('Кроватка', 'bed')
-            +checkbox('Телевизор', 'tv')
-            +checkbox('Шампунь', 'shampoo')
+        if status
+            .expandable-checklist__button
+                .expandable-checklist__text.typo_montserrat.typo_bold.typo_size_s.typo_height_s=text
+                .expandable-checklist__icon keyboard_arrow_up
+            .expandable-checklist__items.expandable-checklist__items_status_enabled.js-expandable-checklist__items
+                +checkbox('Завтрак', 'breackfast')
+                +checkbox('Письменный стол', 'table')
+                +checkbox('Стул для кормления', 'chair')
+                +checkbox('Кроватка', 'bed')
+                +checkbox('Телевизор', 'tv')
+                +checkbox('Шампунь', 'shampoo')
+        else
+            .expandable-checklist__button
+                .expandable-checklist__text.typo_montserrat.typo_bold.typo_size_s.typo_height_s=text
+                .expandable-checklist__icon keyboard_arrow_down
+            .expandable-checklist__items.js-expandable-checklist__items
+                +checkbox('Завтрак', 'breackfast')
+                +checkbox('Письменный стол', 'table')
+                +checkbox('Стул для кормления', 'chair')
+                +checkbox('Кроватка', 'bed')
+                +checkbox('Телевизор', 'tv')
+                +checkbox('Шампунь', 'shampoo')

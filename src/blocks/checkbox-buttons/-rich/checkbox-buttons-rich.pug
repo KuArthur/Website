@@ -1,10 +1,10 @@
 link(rel="stylesheet", href="index.scss")
 mixin checkbox-rich(head,description,id)
     .checkbox-buttons
-        .checkbox-buttons_rich-div.typo_montserrat
+        .checkbox-buttons-rich__div.typo_montserrat
             input.checkbox-buttons__input(type="checkbox" id=id)
             label.checkbox-buttons__div.checkbox-buttons_rich.typo_theme_default.typo_bold.typo_size_m(for=id)=head
-            span.checkbox-buttons_rich-text.typo_theme_light.typo_normal.typo_size_s.typo_height=description
+            span.checkbox-buttons-rich__text.typo_theme_light.typo_normal.typo_size_s.typo_height=description
     //- .checkbox-buttons_rich-div  
     //-     input.checkbox-buttons__input(type="checkbox" id="help")
     //-     label.checkbox-buttons.checkbox-buttons_rich.typo_theme_default.typo_bold(for="help") Помощник для инвалидов

@@ -1,16 +1,36 @@
 @import "../../color.scss";
+.form-elements {
+    margin: 143px 141px 131px 141px;
+}
 .first-row {
     display: flex;
     justify-content: space-between;
 }
 
+.second-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.third-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.third-row__second-column {
+    display:flex;
+    justify-content: start;
+}
+
 .form-elements-dropdown_width_m {
-    max-width: 320px !important;
+    max-width: 320px;
     width: 100%;
 }
 
 .form-elements-dropdown_width_s {
-    max-width: 266px !important;
+    max-width: 266px;
     width: 100%;
 }
 
@@ -22,6 +42,14 @@
 .form-elements-filter-date-dropdown {
     max-width: 266px;
     width: 100%;
+}
+
+.form-elements-expandable-checklist {
+    max-width: 266px;
+    width: 100%;
+    &:last-child {
+        margin-top: 34px;
+    }
 }
 
 .inscription {
@@ -74,9 +102,8 @@
 }
 
 .form-elements-checkbox__checkbox-item {
-    margin-bottom: 10px;
+    
     &:last-child {
-        margin-bottom: 0;
         max-width: 222px;
     }
 }
@@ -130,17 +157,44 @@
     width: 100%;
 }
 
-.first-group__element {
+.form-elements-rich-checkbox {
+    margin-top: 272px;
+    width:100%;
+    max-width: 266px;
+}
+
+.form-elements-bullet-list {
+    max-width: 271px;
+    width: 100%;
+    margin-top: 272px;
+}
+
+.form-elements-review {
+    max-width: 707px;
+    width:100%;
+}
+
+.group__element {
     margin-bottom: 20px;
     &:last-child {
         margin-bottom: 0;
     }
 }
 
-.second-group {
+.first-row__first-column-second-group {
     margin-top: 40px;
 }
 
+.second-row__first-column-second-group {
+    margin-top: 174px;
+}
+
+.group_gap_extra.group__element {
+    margin-bottom: 49px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
 .group_gap_big.group__element {
     margin-bottom: 40px;
     &:last-child {

@@ -3,6 +3,7 @@
 @import"./src/blocks/icon-text-list/__line/icon-text-list__line.scss";
 
 .icon-text-list {
+    display: block;
     &:last-child {
     margin-top:23px;
     }
