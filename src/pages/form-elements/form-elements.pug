@@ -25,222 +25,177 @@ html
     include \..\..\blocks/dropdown-calendar/dropdown-calendar.pug
     
     .form-elements
-        .first-row
-            .first-row__first-column
-                .first-row__first-column-first-group
-                    .group__element.form-elements-text-field_width
+        .row
+            .column
+                .column__section
+                    .form-elements__element.form-elements__element_size_m
                         .inscription
                             .inscription__element text field
                             .inscription__status default
                         +text-field('Email')
                     
-                    .group__element.form-elements-text-field_width
+                    .form-elements__element.form-elements__element_size_m
                         .inscription
                             .inscription__element text field
                             .inscription__status hover / focus
                         +text-field('Email','This is pretty awesome')
                     
-                    .group__element.form-elements-dropdown_width_m
+                    .form-elements__element.form-elements__element_size_m
                         .inscription
                             .inscription__element dropdown
                             .inscription__status default
                         +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
                     
-                    .group__element.form-elements-text-field_width
+                    .form-elements__element.form-elements__element_size_m
                         .inscription
                             .inscription__element masked text field
                             .inscription__status default
                         +text-field('ДД.ММ.ГГГГ')
                 
-                .first-row__first-column-second-group
-                    .group_gap_big.group__element.form-elements-calendar
+
+                //- Тут две секции, и у второй нужен отступ
+                //- Хотя лучше через css, column__section:last-child { margin-top: 228px }
+                .column__section
+                    .form-elements__element.form-elements__element_size_m
                         +dropdowns-calendar('date dropdown','date dropdown')
+                    //- бля здесь уже есть group, тогда сверху будет section
                     
-                    .group_gap_big.group__element.form-elements-filter-date-dropdown
+                    .form-elements__element.form-elements__element_size_s
                         .inscription
                             .inscription__element filter date dropdown
                         +dropdown-calendar()
                     
-                    .group_gap_big.group__element.form-elements-text-field-subscription_width
+                    .form-elements__element.form-elements__element_size_s
                         .inscription
                             .inscription__element subscribtion text field
                         +text-field_subscription('Email')
             
-            .first-row__second-column
-                .group_gap_big.group__element.form-elements-checkbox
+            .column
                     .inscription_gap_big.inscription
                             .inscription__element checkbox buttons
-                    .form-elements-checkbox__checkbox-group
+                    .form-elements__element.form-elements__element_gap_l
                         +checkbox('Можно курить')
                         +checkbox('Можно с питомцами')
-                        .form-elements-checkbox__checkbox-item
+                        .form-elements__checkbox
                             +checkbox('Можно пригласить\u00A0гостей (до 10 человек)')
                 
-                .group_gap_big.group__element.form-elements-radio
+                
                     .inscription_gap_big.inscription
                             .inscription__element radio buttons
-                    .form-elements-radio__radio-group
-                        .form-elements-radio__radio-item
+                    .form-elements__element.form-elements__element_gap_l.form-elements__element_layout_flex
+                        .form-elements__radio
                             +radio('Мужчина','man','gender')
-                        .form-elements-radio__radio-item
+                        .form-elements__radio
                             +radio('Женщина','woman','gender')
                 
-                .group_gap_big.group__element.form-elements-toggle
+                
                     .inscription_gap_big.inscription
                             .inscription__element toggle
-                    .form-elements-toggle__toggle-item
-                        +toggle("Получать спецпредложения",'checked')
-                    .form-elements-toggle__toggle-item
-                        +toggle("Получать спецпредложения")
+                    .form-elements__element.form-elements__element_gap_l
+                        .form-elements__toggle
+                            +toggle("Получать спецпредложения",'checked')
+                        .form-elements__toggle
+                            +toggle("Получать спецпредложения")
                 
-                .group_gap_big.group__element.form-elements-like
+                
                     .inscription_gap_big.inscription
                             .inscription__element like button
-                    .form-elements-like__like-group
-                        .form-elements-like__like-item
+                    .form-elements__element.form-elements__element_gap_l.form-elements__element_layout_flex
+                        .form-elements__like
                             +like()
-                        .form-elements-like__like-item
+                        .form-elements__like
                             +like('checked')
                 
-                .group_gap_big.group__element.form-elements-rate
+                
                     .inscription_gap_big.inscription
                             .inscription__element rate button
-                    .form-elements-rate__rate-group
-                        .form-elements-rate__rate-item
+                    .form-elements__element.form-elements__element_gap_m.form-elements__element_layout_flex
+                        .form-elements__rate
                             +rate-star()
-                        .form-elements-rate__rate-item
+                        .form-elements__rate
                             +rate-star('2')    
             
-            .first-row__third-column
-                .form-elements-slider
+            .column
+                .form-elements__element.form-elements__element_size_s.form-elements__element_gap_l
                     +slider('RANGE SLIDER')
-                .form-elements__button
+                .form-elements__element
                     .inscription_gap_big.inscription
                                 .inscription__element Buttons
-                    .group_gap_mid.group__element.form-elements__button_gradient-group
-                        .form-elements__button_gradient-item
+                    .form-elements__element.form-elements__element_gap_m.form-elements__element_layout_flex
+                        .form-elements__button-gradient
                             +button_gradient-background('click me')
-                        .form-elements__button_gradient-item
+                        .form-elements__button-gradient
                             +button_gradient-background('click me','active')
                     
-                    .group_gap_mid.group__element.form-elements__button_gradient-group
-                        .form-elements__button_gradient-item
+                    .form-elements__element.form-elements__element_gap_m.form-elements__element_layout_flex
+                        .form-elements__button-gradient
                             +button_gradient-border('click me')
-                        .form-elements__button_gradient-item
+                        .form-elements__button-gradient
                             +button_gradient-border('click me','active')
                         
-                    .group_gap_mid.group__element.form-elements__button_simple-group
-                        .form-elements__button_simple-item
+                    .form-elements__element.form-elements__element_gap_m.form-elements__element_layout_flex
+                        .form-elements__button-simple
                             +simple-button('click me','typo_theme_purple')
-                        .form-elements__button_simple-item
+                        .form-elements__button-simple
                             +simple-button('click me','typo_theme_light')
                 
-                    .group_gap_big.group__element.form-elements__button_arrow
+                    .form-elements__element.form-elements__element_gap_l.form-elements__element_size_m
                         +button-arrow('перейти к оплате')
                     
-                    .group_gap_big.group__element.form-elements__pagination
+                    .form-elements__element.form-elements__element_gap_l.form-elements__pagination
                         .inscription_gap_big.inscription
                                 .inscription__element pagination
                         +pagination
 
-        .second-row
-            .second-row__first-column
-                .second-row__first-column-first-group
-                    .group__element.form-elements-dropdown_width_s
-                        .inscription
-                            .inscription__element dropdown
-                            .inscription__status default
-                        +dropdown({items:['СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], mix:'dropdown-items'})
-                    
-                    .group__element.form-elements-dropdown_width_s
-                        .inscription
-                            .inscription__element dropdown
-                            .inscription__status expanded
-                        +dropdown({items:['СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], mix:'dropdown-items',expanded:'enabled'})
+        .row
+            .column
+                .form-elements__element.form-elements__element_size_s
+                    .inscription
+                        .inscription__element dropdown
+                        .inscription__status default
+                    +dropdown({items:['СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], mix:'dropdown-items'})
                 
-                .second-row__first-column-second-group
-                    .form-elements-expandable-checklist
+                .form-elements__element.form-elements__element_size_s
+                    .inscription
+                        .inscription__element dropdown
+                        .inscription__status expanded
+                    +dropdown({items:['СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], mix:'dropdown-items',expanded:'enabled'})
+                
+                .form-elements__expandable
+                    .form-elements__element.form-elements__element_size_s
                         +expandable-checklist('expandable checkbox list')
-                    .form-elements-expandable-checklist
+                    .form-elements__element.form-elements__element_size_s
                         +expandable-checklist('expandable checkbox list','enabled')
             
-            .second-row__second-column
-                .form-elements-dropdown_width_m
-                        .inscription
-                            .inscription__element dropdown
-                        +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest',expanded:'enabled'})
+            .column
+                .form-elements__element.form-elements__element_size_m
+                    .inscription
+                        .inscription__element dropdown
+                    +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest',expanded:'enabled'})
                 
-                .form-elements-rich-checkbox
+                .form-elements__element.form-elements__element_size_s.form-elements__rich-checkbox
                     .inscription_gap_big.inscription
                             .inscription__element rich checkbox buttons
                     +checkbox-rich('Широкий коридор','Ширина коридоров в номере не\u00A0менее 91 см.','hall')
                     +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист и\u00A0проводит до номера.','help')
                     
-            .second-row__third-column
-                .form-elements-dropdown_width_m
+            .column
+                .form-elements__element.form-elements__element_size_m
                         .inscription
                             .inscription__element dropdown
                         +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest',expanded:'enabled'})
-                .form-elements-bullet-list
+                .form-elements__bullet-list
                     .inscription_gap_big.inscription
                             .inscription__element bullet list
                     +bullet-list("Нельзя с питомцами")
                     +bullet-list("Без вечеринок и мероприятий")
                     +bullet-list("Время прибытия — после 13:00, а\u00A0выезд до 12:00")
-        .third-row
-            .third-row__first-column
-                .form-elements-icon-text-list
+        .row
+            .column
+                .form-elements__element
                     +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
                     +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
 
-            .third-row__second-column
-                .form-elements-review
+            .column
+                .form-elements__review
                     +review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-
-    //- .calendar
-    //-     +dropdowns-calendar('date dropdown','date dropdown')
-
-    //- //- .calendar
-    //- //-     +dropdowns-calendar('date dropdown2','date dropdown2')
-    //- .rating-star
-    //-     +rate-star('checked')
-    //- +toggle("Получать спецпредложения")
-    //- +like()
-
-    //- +button_gradient-background('click me')
-    //- +button_gradient-border('click me')
-    //- +simple-button('click me')
-    //- +button-arrow('перейти к оплате')
-    
-    //- +checkbox-rich('Широкий коридор','Ширина коридоров в номере не\u00A0менее 91 см.','hall')
-    //- +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист и\u00A0проводит до номера.','help')
-    
-    //- +checkbox('Можно курить','smoke')
-    //- +checkbox('Можно с питомцами','pet')
-    //- +checkbox('Можно пригласить гостей (до 10 человек)','guest')
-
-    //- .radio-buttons
-    //-     +radio('Мужчина','man','gender')
-    //-     +radio('Женщина','woman','gender')
-    //- .bullet
-    //-     +bullet-list("Нельзя с питомцами")
-    //-     +bullet-list("Без вечеринок и мероприятий")
-    //-     +bullet-list("Время прибытия — после 13:00, а\u00A0выезд до 12:00")
-    //- .wrap
-    //-     +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
-    //-     +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
-
-    //- +review('Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
-    //- +logo()
-    //- +text-field("Email")
-    //- +slider()
-    
-    //- .dropdowns
-    //-     .dropdown_width_s
-    //-         +dropdown('СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ', undefined, undefined, 'dropdown-items')
-    //-     .dropdown_width_m
-    //-         +dropdown('ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ','Сколько гостей','видно', 'dropdown-guest')
-        
-    //- +expandable-checklist('expandable checkbox list')
-    //- +dropdown-calendar()
-    
