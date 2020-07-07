@@ -1,7 +1,5 @@
 import "../../../node_modules/air-datepicker/src/js/air-datepicker";
 import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
-import {get
-} from "jquery";
 
 class Calendar {
     constructor(elem) {
@@ -69,3 +67,5 @@ $(document).ready(function() {
         let el = new Calendar(calendar);
     });
 });
+
+export {Calendar}

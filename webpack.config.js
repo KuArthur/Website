@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
@@ -10,7 +11,8 @@ module.exports = {
     entry: {
         index: './src/index.js',
         formElements: './src/pages/form-elements/form-elements.js',
-        colorAndTypes: './src/pages/color-and-types/color-and-types.js'
+        colorAndTypes: './src/pages/color-and-types/color-and-types.js',
+        cards :'./src/pages/cards/cards.js'
     },
     output: {
         filename: 'scripts/[name].js',
@@ -58,18 +60,18 @@ module.exports = {
                 test: /\.pug$/,
                 loader: 'pug-loader'
             },
-            // {
-            //     test: /\.(jpeg|jpg|png|gif|svg)$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         name: '[name].[ext]',
-            //         outputPath: 'img',
-            //         //publicPath: "./../img"
-            //     }
-            // },
+            {
+                test: /\.(jpeg|jpg|png|gif|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'img/',
+                    publicPath: "./../img"
+                }
+            },
 
             {
-                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
@@ -123,10 +125,27 @@ module.exports = {
             filename: "pages/color-and-types.html",
             template: './src/pages/color-and-types/color-and-types.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: "pages/cards.html",
+            template: './src/pages/cards/cards.pug'
+        }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         }),
-
+        new CopyWebpackPlugin({
+            patterns: [
+              { 
+                from:path.resolve(__dirname,'src/img/'),
+                to:path.resolve(__dirname,'dist/img') 
+            },
+            // { 
+            //     from:path.resolve(__dirname,'src/fonts/'),
+            //     to:path.resolve(__dirname,'dist/fonts') 
+            // },
+        
+            ],
+          }),
+        
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
