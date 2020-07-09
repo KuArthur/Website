@@ -1,0 +1,42 @@
+include \..\text-field/text-field.pug
+include \..\radio-buttons/radio-buttons.pug
+include \..\text-field/_masked/text-field_masked.pug
+include \..\checkbox/__toggle/checkbox__toggle.pug
+include \..\button-arrow/button-arrow.pug
+include \..\button/_gradient-border/button_gradient-border.pug
+mixin registration()
+    .registration
+        .registration__head.typo_opensans.typo_bold.typo_size_xl.typo_height_l Регистрация аккаунта
+        .registration__section
+            .registration__element
+                +text-field({placeholder:'Имя'})
+            
+            .registration__element
+                +text-field({placeholder:'Фамилия'})
+            
+            .registration__gender
+                .registration__gender_indent
+                    +radio('Мужчина','man','gender')
+                .registration__gender_indent
+                +radio('Женщина','woman','gender')
+        .registration__section
+            .registration__element
+                .registration__inscription.typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark ДАТА РОЖДЕНИЯ
+                +text-field-masked('ДД.ММ.ГГГГ')
+        .registration__section
+            .registration__element
+                .registration__inscription.typo_montserrat.typo_bold.typo_size_s.typo_height_s.typo_theme_dark ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС
+                +text-field({placeholder:'Email'})
+            
+            .registration__element
+                +text-field({placeholder:'Пароль',types:'password'})
+            .registration__element
+                +toggle('Получать спецпредложения')
+        .registration__section
+            +button-arrow('перейти к оплате')
+            
+        
+        .registration__login
+            .registration__login-text Уже есть аккаунт на Toxin
+            .registration__login-button
+                +button_gradient-border('войти')

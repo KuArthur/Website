@@ -1,0 +1,10 @@
+.registration__gender {
+    display:flex;
+    margin-top:10px;
+}
+
+@media (max-width:320px) {
+    .registration__gender {
+        justify-content: space-between;
+    }
+}

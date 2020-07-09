@@ -1,0 +1,39 @@
+.cards {
+    display:flex;
+    justify-content: space-between;
+    margin: 150px 140px 140px 140px;
+}
+.cards__element {
+    &_size_s {
+        width:270px;
+    }
+    &_size_m {
+        width:320px;
+    }
+    &_size_l {
+        width:380px;
+    }
+}
+
+@media (max-width:380px) {
+    .cards__element {
+        &_size_s {
+            max-width:270px;
+            width: 100%;
+        }
+        &_size_m {
+            max-width:320px;
+            width: 100%;
+        }
+        &_size_l {
+            max-width:380px;
+            width: 100%;
+        }
+    }
+    .cards {
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 0;
+    }
+}

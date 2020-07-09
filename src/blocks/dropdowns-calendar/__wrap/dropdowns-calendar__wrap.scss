@@ -5,3 +5,9 @@
     box-sizing: border-box;
     height: 64.44px;
 }
+
+@media (max-width:380px) {
+    .dropdowns-calendar__wrap:first-child {
+        margin-right:10px;
+    }
+}

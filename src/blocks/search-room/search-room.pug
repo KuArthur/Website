@@ -1,0 +1,13 @@
+include \..\dropdown/dropdown.pug
+include \..\dropdowns-calendar/dropdowns-calendar.pug
+include \..\button-arrow/button-arrow.pug
+
+mixin search-room()
+    .search-room
+        .search-room__head.typo_opensans.typo_bold.typo_size_xl.typo_height_l Найдём номера под ваши пожелания
+        .search-room__calendar
+            +dropdowns-calendar('прибытие','выезд')
+        .search-room__dropdown
+            +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
+        .search-room__button
+            +button-arrow('подобрать номер')

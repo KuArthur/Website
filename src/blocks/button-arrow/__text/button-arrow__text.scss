@@ -6,3 +6,12 @@
     text-align: center;
     text-transform: uppercase;
 }
+@media (max-width:380px) {
+    .button-arrow__text {
+        //padding-left: 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 44px;
+        //box-sizing: border-box;
+    }
+}

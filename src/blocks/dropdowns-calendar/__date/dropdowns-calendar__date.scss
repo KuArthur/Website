@@ -11,6 +11,14 @@
     padding-left: 15px;
 }
 
-input[value].dropdowns-calendar__date {
+// input[value].dropdowns-calendar__date {
+//     padding-left: 15px;
+// }
+
+input[placeholder].dropdowns-calendar__date {
     padding-left: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 44px;
+    box-sizing: border-box;
 }

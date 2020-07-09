@@ -1,0 +1,17 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Cards
+        include ../../blocks/search-room/search-room.pug
+        include ../../blocks/registration/registration.pug
+    body
+        .cards
+            .column
+                .cards__element.cards__element_size_l
+                    +search-room()
+                .cards__element.cards__element_size_l
+                    +registration()
+            .column
+            .column
+        
