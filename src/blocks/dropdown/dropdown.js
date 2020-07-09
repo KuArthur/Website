@@ -57,6 +57,8 @@ class Dropdown extends Block {
 
     drop() {
         this.dropdownContent.classList.toggle("dropdown__expanded_status_enabled");
+        this.dropdownButton.classList.toggle("dropdown__default_expanded");
+        
     }
 
     getNoun(number, one, two, five) {

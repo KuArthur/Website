@@ -9,4 +9,20 @@
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: $color_white;
+}
+
+.search-room__section {
+    margin-top: 20px;
+    &:last-child {
+        margin-top:30px;
+    }
+}
+
+// .search-room__head {
+//     margin-bottom: 20px;
+// }
+
+.search-room__inscription {
+    margin-bottom: 5px;
 }

@@ -9,6 +9,7 @@
     width: 20px;
     height: 20px;
     margin-right:10px;
+    
    // position: absolute;
     
     &::before {
@@ -27,14 +28,13 @@
     background: $gradient-color;
     border-radius: 10px;
     border-color:$color_purple;
-    
 }
 
 .radio-buttons__input:checked + .radio-buttons__circle {
     border-color:$color_purple;
-    
 }
 
 .radio-buttons__input:checked ~ .radio-buttons__addon {
     color:$dark-shade75;
+    transition: 0.3s;
 }
