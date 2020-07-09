@@ -3,17 +3,26 @@ import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
 
 class Calendar {
     constructor(elem) {
+        console.log('Calendar constructor');
+        console.log('bind elems ...');
+
+        
+        this.bindElems(elem);
+        this.initialize(this.start, this.end)
+    }
+
+    bindElems(elem) {
         this.elem = elem;
         this.start = this.elem.querySelector('.js-dropdowns-calendar__date-from');
         this.end = this.elem.querySelector('.js-dropdowns-calendar__date-to');
-        this.icon = this.elem.querySelector('.dropdowns-calendar__icon')
+        this.icon = this.elem.querySelector('.dropdowns-calendar__icon');
+        
         this.dateList;
         this.calendar;
-        this.initialize(this.start, this.end)
-
     }
 
     initialize(start, end) {
+        console.log('BASE');
         this.dateList = $(this.elem).find('.js-dropdowns-calendar__calendar').datepicker({
             minDate: new Date(),
             autoClose: true,
@@ -31,7 +40,7 @@ class Calendar {
             onSelect: function(formattedDate) {
                 $(start).val(formattedDate.split("-")[0]); // почему не работает $(this.start) Но работает .js-dropdowns-calendar__date-from
                 $(end).val(formattedDate.split("-")[1]); // почему не работает $(this.end) Но работает .js-dropdowns-calendar__date-to
-            },
+            }
 
         })
 
@@ -53,17 +62,17 @@ class Calendar {
     closeCalendar() {
         this.dateList.hide()
     }
-    closeCalendarOutside(e) {
-        let target = e.target;
-        if (!target === this.start) {
-            this.dateList.hide()
+        closeCalendarOutside(e) {
+            let target = e.target;
+            if (!target === this.start) {
+                this.dateList.hide()
+            }
         }
+
     }
 
-}
-
-$(document).ready(function() {
-    $('.js-dropdowns-calendar').each((i, calendar) => {
+    $(document).ready(function() {
+        $('.js-dropdowns-calendar').each((i, calendar) => {
         let el = new Calendar(calendar);
     });
 });

@@ -1,6 +1,8 @@
 @import '../../color.scss';
 
 .bullet-list__circle {
+    display:flex;
+    flex-shrink:0;
     width: 10px;
     height: 10px;
     background-color: $dark-shade25;

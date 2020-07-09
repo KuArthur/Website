@@ -129,3 +129,36 @@ document.addEventListener("DOMContentLoaded", function() {
         new Dropdown(domElem)
     }
 })
+
+
+class Person {
+
+    getFullName() {
+        // не зайдет
+        return this.name + ' ' + this.lastName;
+    }
+
+    getUserInfo() {
+        // 1
+        return {
+            fullname: this.getFullName()
+        }
+    }
+}
+
+
+class PersonB extends Person {
+    getFullName() {
+        // 2
+        return this.name;
+    }
+}
+
+class PersonC extends PersonB {
+    getFullName() { return '' }
+}
+
+const p = new PersonC();
+
+
+p.getUserInfo();

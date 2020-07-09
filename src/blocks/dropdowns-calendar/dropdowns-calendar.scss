@@ -3,22 +3,14 @@
     @import "./__icon/dropdowns-calendar__icon.scss";
     @import "./__name/dropdowns-calendar__name.scss";
     @import './__wrap/dropdowns-calendar__wrap.scss';
+    @import './__input/dropdowns-calendar__input.scss';
+    @import './__dropdowns/dropdowns-calendar__dropdowns.scss';
     .dropdowns-calendar {
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    .dropdowns-calendar__dropdowns {
-        width: 100%;
-        display: flex;
-        flex-shrink: 0;
-        justify-content: space-between;
-    }
-    
-    .dropdowns-calendar__input {
-        position: relative;
+        z-index:10000;
     }
     
     .datepicker--nav-action {
@@ -38,9 +30,9 @@
     }
     
     .datepicker[class] {
-        width: 320px;
+        width: inherit;
         box-sizing: border-box;
-        height: 369px;
+        min-height: 369px;
         
     }
     
@@ -109,7 +101,7 @@
     
     .datepicker--cells.datepicker--cells-days[class] {
         justify-content: center;
-        height: 200px;
+        min-height: 200px;
         padding-bottom: 5px;
     }
     

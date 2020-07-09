@@ -7,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
-
     entry: {
         index: './src/index.js',
         formElements: './src/pages/form-elements/form-elements.js',
@@ -15,16 +14,15 @@ module.exports = {
         cards :'./src/pages/cards/cards.js'
     },
     output: {
-        filename: 'scripts/[name].js',
+        filename: 'scripts/[name].js', // [name]
         path: path.resolve(__dirname, 'dist'),
-        //publicpath: '/dist'
-
     },
     module: {
         rules: [{
                 test: /\.css$/,
                 use: [
-                    'style-loader', {
+                    'style-loader', 
+                    {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     'css-loader',
@@ -113,19 +111,26 @@ module.exports = {
         overlay: true //вывод ошибок в браузере
     },
     plugins: [
+
+        // Функция которая пройдет по всем pages/**/*.pug возьмет имя файла как chunks и подставит 
         new HtmlWebpackPlugin({
-            filename: "index.html",
+            chunks: ['index'],
+            filename: "index.html", // pages
             template: './src/index.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: "pages/form-elements.html",
+            chunks: ['formElements'],
+            filename: "pages/form-elements.html", // pages => index.css => '../index.css
             template: './src/pages/form-elements/form-elements.pug'
         }),
         new HtmlWebpackPlugin({
+            chunks: ['colorAndTypes'],
             filename: "pages/color-and-types.html",
             template: './src/pages/color-and-types/color-and-types.pug'
         }),
         new HtmlWebpackPlugin({
+            // inject: false,
+            chunks: ['cards'],
             filename: "pages/cards.html",
             template: './src/pages/cards/cards.pug'
         }),

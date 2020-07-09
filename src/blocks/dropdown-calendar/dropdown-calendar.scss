@@ -4,6 +4,14 @@
     position: relative;
     width: inherit;
     height: 44px;
+    z-index: 100000;
+}
+
+.dropdown-calendar__calendar {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 49px;
 }
 
 // .dropdown-calendar__width {
