@@ -1,14 +1,13 @@
-.registration__element {
-    width:320px;
+.login__element {
+    width: 320px;
     margin-bottom:10px;
     &:last-child {
         margin-bottom: 0;
     }
-    
 }
 
 @media (max-width:380px) {
-    .registration__element {
+    .login__element {
         max-width:320px;
         width:100%;
     }

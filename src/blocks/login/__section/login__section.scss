@@ -1,0 +1,17 @@
+.login__section:first-child {
+    margin-bottom:20px;
+}
+
+@media (max-width:380px) {
+    .login__section {
+        margin-top:0;
+    
+    }
+}
+
+@media (max-width:320px) {
+    .login__section {
+        margin-top:10px;
+    
+    }
+}

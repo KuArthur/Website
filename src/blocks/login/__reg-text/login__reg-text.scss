@@ -1,9 +1,8 @@
 @import "../../typo/typo.scss";
 
-.registration__login-text {
+.login__reg-text {
     display: flex;
     align-items: center;
     text-align: center;
-    @include font-config_body($color:#000000,$height:24px)
+    @include font-config_body($color:#000000,$height:24px);
 }
-

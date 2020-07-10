@@ -5,6 +5,8 @@ html(lang="en")
         title Cards
         include ../../blocks/search-room/search-room.pug
         include ../../blocks/registration/registration.pug
+        include ../../blocks/reservation/reservation.pug
+        include ../../blocks/login/login.pug
     body
         .cards
             .column
@@ -13,6 +15,9 @@ html(lang="en")
                 .cards__element.cards__element_size_l
                     +registration()
             .column
-            
+                //- .cards__element.cards__element_size_l
+                //-     +reservation()
+                .cards__element.cards__element_size_l
+                    +login()
             .column
         

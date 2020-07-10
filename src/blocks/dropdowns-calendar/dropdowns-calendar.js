@@ -15,7 +15,9 @@ class Calendar {
         this.elem = elem;
         this.start = this.elem.querySelector('.js-dropdowns-calendar__date-from');
         this.end = this.elem.querySelector('.js-dropdowns-calendar__date-to');
-        this.icon = this.elem.querySelector('.dropdowns-calendar__icon');
+        //this.icon = this.elem.querySelector('.dropdowns-calendar__icon');
+        this.inputStart = this.elem.querySelector('.js-dropdowns-calendar__input-start');
+        this.inputEnd = this.elem.querySelector('.js-dropdowns-calendar__input-end');
         
         this.dateList;
         this.calendar;
@@ -45,9 +47,11 @@ class Calendar {
         })
 
         this.elem.querySelector(".datepicker--buttons").innerHTML = "<span class='dropdowns-calendar__button-apply js-dropdowns-calendar__button-apply'>Применить</span><span class='datepicker--button' data-action='clear'>Очистить</span>";
-        this.start.addEventListener('click', this.showCalendar.bind(this))
-        this.end.addEventListener('click', this.showCalendar.bind(this))
-        this.icon.addEventListener('click', this.showCalendar.bind(this))
+        // this.start.addEventListener('click', this.showCalendar.bind(this))
+        // this.end.addEventListener('click', this.showCalendar.bind(this))
+        // this.icon.addEventListener('click', this.showCalendar.bind(this))
+        this.inputStart.addEventListener('click', this.showCalendar.bind(this))
+        this.inputEnd.addEventListener('click', this.showCalendar.bind(this))
         this.elem.querySelector('.js-dropdowns-calendar__button-apply').addEventListener('click', this.closeCalendar.bind(this))
 
         this.dateList.hide()

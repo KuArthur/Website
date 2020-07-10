@@ -1,6 +1,7 @@
 @import "../../color.scss";
 
 .button-arrow {
+    cursor: pointer;
     position: relative;
     width: 100%;
     max-width: 320px;
@@ -8,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    box-sizing: border-box;
     background: $gradient-color;
     border-radius: 22px;
     

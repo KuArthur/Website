@@ -1,0 +1,5 @@
+@import "../../typo/typo.scss";
+
+.login__head {
+    @include font-config_h1();
+}

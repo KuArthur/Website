@@ -1,0 +1,18 @@
+include \..\text-field/text-field.pug
+include \..\button-arrow/button-arrow.pug
+include \..\button/_gradient-border/button_gradient-border.pug
+
+mixin login()
+    .login
+        .login__head Войти
+        .login__section
+            .login__element
+                +text-field({placeholder:'Email'})
+            .login__element
+                +text-field({placeholder:'Пароль',types:'password'})
+        .login__button-arrow
+            +button-arrow('войти')
+        
+        .login__reg
+            .login__reg-text Нет аккаунта на Toxin?
+            +button_gradient-border('создать')
