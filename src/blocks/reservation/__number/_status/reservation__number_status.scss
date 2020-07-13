@@ -1,0 +1,4 @@
+.reservation__number_status {
+    @include font-config_h3($color: $color_purple);
+    text-transform: uppercase;
+}

@@ -1,0 +1,4 @@
+.reservation__price-day_price {
+    @include font-config_h3 ($size:14px,$color:$dark-shade50,$height:18px);
+    margin-right: 5px;
+}

@@ -1,0 +1,30 @@
+@import "./__head/reservation__head.scss";
+@import "./__price-day/reservation__price-day.scss";
+@import "./__price-day/_day/reservation__price-day_day.scss";
+@import "./__price-day/_price/reservation__price-day_price.scss";
+@import "./__number/_number/reservation__number_number.scss";
+@import "./__number/_status/reservation__number_status.scss";
+@import "./__properties/reservation__properties.scss";
+@import "./__propertie/reservation__propertie.scss";
+@import "./__inscription/reservation__inscription.scss";
+@import "./__total/reservation__total.scss";
+@import "./__total-line/reservation__total-line.scss";
+@import "./__total-price/reservation__total-price.scss";
+@import "./__total-text/reservation__total-text.scss";
+@import "./__icon/reservation__icon.scss";
+@import "./__propertie-icon/reservation__propertie-icon.scss";
+@import "../typo/typo.scss";
+.reservation {
+    width: inherit;
+    height: 511px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $color_white;
+
+}

@@ -9,15 +9,15 @@ html(lang="en")
         include ../../blocks/login/login.pug
     body
         .cards
-            .column
-                .cards__element.cards__element_size_l
-                    +search-room()
-                .cards__element.cards__element_size_l
-                    +registration()
-            .column
+            //- .column
+            //-     .cards__element.cards__element_size_l
+            //-         +search-room()
+            //-     .cards__element.cards__element_size_l
+            //-         +registration()
+            //- .column
+            .cards__element.cards__element_size_l
+                +reservation()
                 //- .cards__element.cards__element_size_l
-                //-     +reservation()
-                .cards__element.cards__element_size_l
-                    +login()
+                //-     +login()
             .column
         

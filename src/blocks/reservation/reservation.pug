@@ -1,2 +1,37 @@
+include \..\button-arrow/button-arrow.pug
+include \..\dropdown/dropdown.pug
+include \..\dropdowns-calendar/dropdowns-calendar.pug
+
 mixin reservation()
     .reservation
+        .reservation__head
+            .reservation__number 
+                span.reservation__number_number № 888
+                span.reservation__number_status люкс
+            .reservation__price-day
+                span.reservation__price-day_price 9990&#8381
+                span.reservation__price-day_day в сутки
+        +dropdowns-calendar('прибытие','выезд')
+        .reservation__dropdown
+            .reservation__inscription гости
+            +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
+        .reservation__properties
+            .reservation__propertie
+                span.reservation__propertie_service 9 990&#8381 х 4 суток
+                span 39 960&#8381
+            .reservation__propertie
+                .reservation__propertie-icon
+                    span.reservation__propertie Сбор за услуги: скидка 2 179&#8381
+                    span.reservation__icon error_outline
+                span 0&#8381
+            .reservation__propertie
+                .reservation__propertie-icon
+                    span.reservation__propertie Сбор за дополнительные услуги
+                    span.reservation__icon error_outline
+                span 300&#8381
+        .reservation__total
+            .reservation__total-text Итого
+            .reservation__total-line
+            .reservation__total-price 38 081&#8381
+        +button-arrow('забронировать')
+
