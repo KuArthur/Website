@@ -1,8 +1,8 @@
-link(rel="stylesheet", href="index.scss")
-mixin review(name, date, comment)
+mixin review(user,name, date, comment)
     .review
         .review__first-line.typo_montserrat.typo_theme_default
-            .review__photo
+            
+            img.review__photo(src= require("../../img/user"+user+".png").default, alt="")
             .review__text-div
                 span.typo_bold.typo_size_m=name
                 span.typo_normal.typo_size_m=date

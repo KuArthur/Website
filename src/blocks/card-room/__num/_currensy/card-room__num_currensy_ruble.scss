@@ -1,0 +1,5 @@
+.card-room__num_currensy_ruble {
+    &::after {
+        content: "\20BD";
+    }
+}

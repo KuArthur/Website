@@ -1,4 +1,8 @@
 .reservation__propertie {
     display: flex;
     justify-content: space-between;
+    margin-bottom:10px;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

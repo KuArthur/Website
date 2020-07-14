@@ -1,6 +1,15 @@
 .reservation__propertie-icon {
     display: flex;
-    align-items: top;
+    align-items: flex-start;
     justify-content: space-between;
     text-align: left;
 }
+
+@media (max-width:340px) {
+    .reservation__propertie-icon {
+        max-width: 145px;
+        align-items: flex-end;
+        //justify-content:space-evenly;
+        box-sizing: border-box;
+    }
+} 

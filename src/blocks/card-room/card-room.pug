@@ -1,0 +1,25 @@
+include /../rate/rate.pug
+
+mixin card-room({ img=[],number,status,price,review })
+    .card-room
+        .card-room__img
+            each item in img
+                img(src=require("../../img/room"+ item +".png").default, alt="")
+        .card-room__info
+            .card-room__room-details
+                .card-room__number 
+                    -let sign= "№" + number
+                    span.card-room__number-number=sign
+                    span.card-room__number-status=status
+                .card-room__price-day
+                    span.card-room__num.card-room__num_currensy_ruble=price
+                    span.card-room__text в сутки
+            
+            .card-room__line
+            
+            .card-room__room-rate
+                +rate-star('card-room')
+                .card-room__reviews
+                    span.card-room__num=review
+                    span.card-room__text Отзывов
+                    

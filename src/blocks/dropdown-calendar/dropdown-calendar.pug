@@ -1,7 +1,6 @@
-link(rel='stylesheet' href='index.scss')
 link(href='/node_modules/air-datepicker/dist/css/datepicker.min.css' rel='stylesheet' type='text/css')
-//- script(src='/node_modules/air-datepicker/dist/js/datepicker.min.js')
-mixin dropdown-calendar()
+
+mixin dropdown-calendar(vis)
     .dropdown-calendar.js-dropdown-calendar
         input.dropdown-calendar__field.js-dropdown-calendar__field.typo_montserrat.typo_normal.typo_size_m.typo_height_m.typo_theme_default(type="text" placeholder='ДД.ММ.ГГГГ' readonly)
         .dropdown-calendar__icon keyboard_arrow_down

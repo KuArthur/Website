@@ -1,23 +1,32 @@
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Cards
-        include ../../blocks/search-room/search-room.pug
-        include ../../blocks/registration/registration.pug
-        include ../../blocks/reservation/reservation.pug
-        include ../../blocks/login/login.pug
-    body
-        .cards
-            //- .column
-            //-     .cards__element.cards__element_size_l
-            //-         +search-room()
-            //-     .cards__element.cards__element_size_l
-            //-         +registration()
-            //- .column
+extends \..\..\layout/__ui-kit/layout__ui-kit.pug
+
+block include
+    include ../../blocks/search-room/search-room.pug
+    include ../../blocks/registration/registration.pug
+    include ../../blocks/reservation/reservation.pug
+    include ../../blocks/login/login.pug
+    include ../../blocks/dropdown-calendar/dropdown-calendar.pug
+    include ../../blocks/card-room/card-room.pug
+    include \..\..\blocks/logo/logo.pug
+
+block content
+    .cards
+        .column
+            .cards__element.cards__element_size_l
+                +search-room()
+            .cards__element.cards__element_size_l
+                +registration()
+        .column
             .cards__element.cards__element_size_l
                 +reservation()
-                //- .cards__element.cards__element_size_l
-                //-     +login()
-            .column
+            .cards__element.cards__element_size_l
+                +login()
+        .column
+            .cards__element.cards__element_size_m
+                +dropdown-calendar()
+            .cards__element.cards__element_size_s
+                +card-room({img:['1','2','1','2'],number:'888',status:'люкс',price:'9 900',review:'145'})
+            .cards__element.cards__element_size_s
+                +card-room({img:['2','1','2','1'],number:'840',status:'',price:'9 900',review:'65'})
+            
         

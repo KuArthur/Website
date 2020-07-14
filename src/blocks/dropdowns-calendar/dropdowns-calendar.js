@@ -3,12 +3,8 @@ import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
 
 class Calendar {
     constructor(elem) {
-        console.log('Calendar constructor');
-        console.log('bind elems ...');
-
-        
         this.bindElems(elem);
-        this.initialize(this.start, this.end)
+        this.initialize()
     }
 
     bindElems(elem) {
@@ -23,8 +19,7 @@ class Calendar {
         this.calendar;
     }
 
-    initialize(start, end) {
-        console.log('BASE');
+    initialize() {
         this.dateList = $(this.elem).find('.js-dropdowns-calendar__calendar').datepicker({
             minDate: new Date(),
             autoClose: true,
@@ -39,10 +34,10 @@ class Calendar {
                 days: 'MM <i>yyyy</i>'
             },
 
-            onSelect: function(formattedDate) {
-                $(start).val(formattedDate.split("-")[0]); // почему не работает $(this.start) Но работает .js-dropdowns-calendar__date-from
-                $(end).val(formattedDate.split("-")[1]); // почему не работает $(this.end) Но работает .js-dropdowns-calendar__date-to
-            }
+            onSelect: (formattedDate) => {
+                $(this.start).val(formattedDate.split("-")[0]); // почему не работает $(this.start) Но работает .js-dropdowns-calendar__date-from
+                $(this.end).val(formattedDate.split("-")[1]); // почему не работает $(this.end) Но работает .js-dropdowns-calendar__date-to
+            } //уже работает красиво
 
         })
 
