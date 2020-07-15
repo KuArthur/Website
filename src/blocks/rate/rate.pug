@@ -1,17 +1,25 @@
 
-mixin rate-star(id)
+mixin rate-star(stars,id)
     .rate
-        input.rate__input(type="radio" value="5" id="star-5"+id)
-        label.rate__star(for="star-5"+id)
+        - let n = stars
+        while n > 0
+            .rate__star="star"
+            -n--
+        -n = 5 - stars
+        while n > 0
+            .rate__star="star_border"
+            -n--
+        //- input.rate__input(type="radio" value="5" id="star-5"+id)
+        //- label.rate__star(for="star-5"+id)
 
-        input.rate__input(type="radio" value="4" id="star-4"+id)
-        label.rate__star(for="star-4"+id)
+        //- input.rate__input(type="radio" value="4" id="star-4"+id)
+        //- label.rate__star(for="star-4"+id)
 
-        input.rate__input(type="radio" value="3" id="star-3"+id)
-        label.rate__star(for="star-3"+id)
+        //- input.rate__input(type="radio" value="3" id="star-3"+id)
+        //- label.rate__star(for="star-3"+id)
 
-        input.rate__input(type="radio" value="2" id="star-2"+id)
-        label.rate__star(for="star-2"+id)
+        //- input.rate__input(type="radio" value="2" id="star-2"+id)
+        //- label.rate__star(for="star-2"+id)
 
-        input.rate__input(type="radio" value="1" id="star-1"+id)
-        label.rate__star(for="star-1"+id)
+        //- input.rate__input(type="radio" value="1" id="star-1"+id)
+        //- label.rate__star(for="star-1"+id)

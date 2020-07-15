@@ -1,5 +1,35 @@
 @import "../../color.scss";
 
+// .rate__star {
+//   //position: absolute;
+//   cursor: pointer;
+//   font-family: Material Icons;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-size: 24px;
+//   line-height: 20px;
+//   display: flex;
+//   // justify-content: space-between;
+//   align-items: center;
+//   text-align: center;
+
+//   &::before {
+//     content: "star_border";
+//     //position: absolute;
+//     width: 24px;
+//     height: 24px;
+//     background: $gradient-color;
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+//   }
+// }
+
+// .rate__star:hover::before,
+// .rate__star:hover ~ .rate__star::before,
+// .rate__input:checked ~ .rate__star::before {
+//   content: "star";
+// }
+
 .rate__star {
   //position: absolute;
   cursor: pointer;
@@ -12,20 +42,10 @@
   // justify-content: space-between;
   align-items: center;
   text-align: center;
+  width: 24px;
+  height: 24px;
+  background: $gradient-color;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-  &::before {
-    content: "star_border";
-    //position: absolute;
-    width: 24px;
-    height: 24px;
-    background: $gradient-color;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-.rate__star:hover::before,
-.rate__star:hover ~ .rate__star::before,
-.rate__input:checked ~ .rate__star::before {
-  content: "star";
 }

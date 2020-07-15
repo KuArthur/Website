@@ -15,7 +15,49 @@
         border-color: $dark-shade50;
     }
     &::placeholder {
-        line-height: 18px;
+        
         color: $dark-shade25;
     }
+
+    // &::-webkit-input-placeholder
+    // {
+    //     color: $dark-shade25;
+    // }
+        
+    // &::-moz-placeholder
+    // {
+    //     color: $dark-shade25;
+    // }
+        
+    // &:-moz-placeholder
+    // {
+    //     color: $dark-shade25;
+    // }
+        
+    // &:-ms-input-placeholder
+    // {
+    //     color: $dark-shade25;
+    // }
+
+
+
+    // &:hover::-webkit-input-placeholder
+    // {
+    //     color: $dark-shade75;
+    // }
+        
+    // &:hover::-moz-placeholder
+    // {
+    //     color: $dark-shade75;
+    // }
+        
+    // &:hover:-moz-placeholder
+    // {
+    //     color: $dark-shade75;
+    // }
+        
+    // &:hover:-ms-input-placeholder
+    // {
+    //     color: $dark-shade75;
+    // }
 }

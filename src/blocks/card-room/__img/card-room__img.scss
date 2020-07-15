@@ -1,0 +1,95 @@
+.card-room__img {
+    width: inherit;
+    box-sizing: border-box;
+    &:hover {
+        .slick-dots[class] {
+            bottom: 0;
+            display: inline-block;
+            width: auto;
+            left: 214px;
+            top: 125px;
+            visibility: visible;
+        }
+        
+        .slick-dots[class] li {
+        
+            
+            width: 11px;
+            margin: 0;
+        }
+        
+        .slick-dots[class] li.slick-active button:before {
+            background-color: $color_white;
+            opacity: 1;
+        }
+        
+        .slick-dots[class] li button:before {
+            content: "";
+            border-radius: 50%;
+            border: 1px solid $color_white;
+            height: 8px;
+            width: 8px;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+        
+        .slick-dots[class] li button {
+            padding: 0;
+            width: 5px;
+        }
+        
+        .card-room__slick-next {
+    
+            font-family: Material Icons;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: $color_white;
+            border: none;
+            background-color: transparent;
+            display: inline-block !important;
+            position: absolute;
+            top: 0px;
+            left: 235px;
+            height: 100%;
+        
+                &:focus {
+                    outline: none;
+                }
+        }
+        
+        .card-room__slick-prev {
+            font-family: Material Icons;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            color: $color_white;
+            border: none;
+            background-color: transparent;
+            z-index: 1;
+            display: inline-block !important;
+            position: absolute;
+            top: 0px;
+            height: 100%;
+        
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
+}
+.card-room__slick-prev {
+    display:none !important;
+}
+.card-room__slick-next {
+    display:none !important;
+}
+.slick-dotted.slick-slider[class] {
+    margin-bottom: 0;
+}
+//override
+
+.slick-dots {
+    visibility: hidden;
+}

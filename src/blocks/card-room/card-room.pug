@@ -1,6 +1,6 @@
 include /../rate/rate.pug
 
-mixin card-room({ img=[],number,status,price,review })
+mixin card-room({ img=[],number,status,price,review,rate })
     .card-room
         .card-room__img
             each item in img
@@ -18,7 +18,7 @@ mixin card-room({ img=[],number,status,price,review })
             .card-room__line
             
             .card-room__room-rate
-                +rate-star('card-room')
+                +rate-star(rate)
                 .card-room__reviews
                     span.card-room__num=review
                     span.card-room__text Отзывов

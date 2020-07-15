@@ -55,7 +55,23 @@ body {
         align-items: center;
     }
 }
-@media (min-width: 500px) and (max-width: 1280px) {
+@media (min-width: 500px) and (max-width: 768px) {
+    .logo {
+        top: 5px;
+        left: 5px;
+    }
+    .cards {
+        margin:5px;
+    }
+    .column {
+        margin-right: 20px;
+        &:last-child {
+             margin-right:0;
+        } 
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 1440px) {
     .logo {
         top: 5px;
         left: 5px;
@@ -69,16 +85,6 @@ body {
             margin-right:0;
         }  
     }
-
-    // .form-elements__element.form-elements__element_size_s {
-    //     max-width: 266px;
-    //     width:100%;
-    // }
-    
-    // .form-elements__element.form-elements__element_size_m {
-    //     max-width: 320px;
-    //     width:100%;
-    // }
     
 }
 
@@ -89,37 +95,4 @@ body {
     .logo {
         display:none;
     }
-    // .row {
-    //     display: flex;
-    //     //justify-content: space-between;
-    //     // margin-bottom: 100px;
-    //     // &:last-child {
-    //     //     margin-bottom:0;
-    //     // }
-    //     flex-direction: column;
-    //     margin-bottom: 20px;
-    //     align-items: center;
-    // }
-    // .form-elements {
-    //     margin-top:15px;
-    // }
-    // .column {
-    //     margin-bottom: 20px;
-    // }
-
-    // .form-elements__rich-checkbox {
-    //     margin-top: 182px;
-    // }
-
-    // .form-elements__bullet-list {
-    //     margin-top: 182px;
-    // }
-
-    // .form-elements__expandable {
-    //     margin-top: 152px;
-    // }
-
-    // .form-elements__element_gap_l {
-    //     margin-bottom: 20px;
-    // }
 }
