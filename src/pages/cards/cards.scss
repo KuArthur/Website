@@ -8,6 +8,12 @@ body {
     
     align-items: flex-start;
 }
+
+.logo {
+    position: relative;
+    top:48px;
+    left:48px;
+}
 .cards__element {
     &:first-child {
         margin-bottom: 40px;

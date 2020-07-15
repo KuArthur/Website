@@ -27,6 +27,7 @@
 .card-room__img {
     width: inherit;
     box-sizing: border-box;
+    position: relative;
     &:hover {
         .slick-dots[class] {
             bottom: 0;
