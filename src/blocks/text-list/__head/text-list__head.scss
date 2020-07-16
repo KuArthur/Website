@@ -1,0 +1,5 @@
+.text-list__head {
+   @include font-config_h3();
+   text-transform: uppercase;
+   margin-bottom: 20px;
+}

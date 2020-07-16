@@ -1,0 +1,35 @@
+@import "./__text/footer__text.scss";
+@import "./__logo/footer__logo.scss";
+@import "./__field/footer__field.scss";
+@import "./__elem-size/footer__elem-size.scss";
+@import "./__copyright-bar/footer__copyright-bar.scss";
+@import "./__copyright-bar-info/footer__copyright-bar-info.scss";
+@import "./__copyright-bar-icon/footer__copyright-bar-icon.scss";
+@import "./__copyright-bar-icons/footer__copyright-bar-icons.scss";
+@import "../typo/typo.scss";
+
+.footer__info-bar {
+    position: relative;
+    height:372px;
+    background: $color-white;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
+    padding: 100px 140px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1280px) {
+    .footer__info-bar {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer__info-bar {
+        padding: 15px;
+    }
+    // .header__logo {
+    //     display: none;
+    // }
+}

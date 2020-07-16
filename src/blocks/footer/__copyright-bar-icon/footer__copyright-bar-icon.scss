@@ -1,0 +1,22 @@
+.footer__copyright-bar-icon {
+    width: 24px;
+    height: 24px;
+    font-family: Awesome;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 23px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    /* Primary Gradient */
+    background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}

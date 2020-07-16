@@ -1,0 +1,9 @@
+@import "./__head/text-list__head.scss";
+@import "./__item/text-list__item.scss";
+@import "../typo/typo.scss";
+
+.text-list {
+    display:flex;
+    flex-direction: column;
+}
+

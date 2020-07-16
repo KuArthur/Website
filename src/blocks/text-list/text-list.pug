@@ -1,0 +1,5 @@
+mixin text-list({head, items=[]})
+    .text-list
+        .text-list__head=head
+        each item in items
+            .text-list__item=item

@@ -1,0 +1,6 @@
+mixin expand-list( {title,items=[]} )
+    .expand-list
+        .expand-list__text=title
+        .expand-list__menu
+            each item in items
+                a.expand-list__menu-item(href="")=item

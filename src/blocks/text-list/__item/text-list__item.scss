@@ -1,0 +1,7 @@
+.text-list__item {
+    @include font-config_body($height:17px,$color:$dark-shade50);
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

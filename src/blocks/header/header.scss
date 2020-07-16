@@ -2,12 +2,11 @@
 @import "./__menu-element/header__menu-element.scss";
 @import "./__login/header__login.scss";
 @import "./__login-element/header__login-element.scss";
-@import "./__menu-expand-elem/header__menu-expand-elem.scss";
-@import "./__menu-expand-elem-icon/header__menu-expand-elem-icon.scss";
 @import "./__line/header__line.scss";
 @import "./__user/header__user.scss";
 @import "./__user-name/header__user-name.scss";
 @import "../typo/typo.scss";
+
 
 .header {
     display:flex;
@@ -18,8 +17,14 @@
     background: $color-white;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     flex-basis: max-content;
+    width: inherit;
+    box-sizing: border-box;
 }
 
+
+.header__hidden-menu {
+    // display: none;
+}
 
 
 
@@ -38,7 +43,7 @@
     .header {
         padding: 0 15px;
     }
-    .header__logo {
-        display: none;
-    }
+    // .header__logo {
+    //     display: none;
+    // }
 }

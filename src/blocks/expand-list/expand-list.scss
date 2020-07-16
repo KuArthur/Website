@@ -1,0 +1,82 @@
+@import "../typo/typo.scss";
+
+.expand-list {
+    display: flex;
+    position: relative;
+
+}
+
+.expand-list__icon {
+    width: 24px;
+    height: 21px;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 20px;
+    /* identical to box height */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(31, 32, 65, 0.5);
+}
+//transform: rotate(180deg);
+
+.expand-list__text {
+    cursor: pointer;
+    @include font-config_body($height:17px,$color:$dark-shade50);
+    display: flex;
+    &::after {
+        content: "keyboard_arrow_down";
+        width: 24px;
+        height: 21px;
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 20px;
+        /* identical to box height */
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: rgba(31, 32, 65, 0.5);
+    }
+}
+
+.expand-list__menu {
+    max-width: 266px;
+    position: absolute;
+    top: 20px;
+    visibility: hidden;
+    display:flex;
+    opacity: 0;
+    flex-direction: column;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+}
+
+.expand-list__menu-item {
+    text-decoration: none;
+    margin-bottom: 5px;
+    @include font-config_body($height:17px,$color:$dark-shade50);
+    &:last-child {
+        margin-bottom: 0;
+    }
+    white-space: normal;
+}
+ 
+ .expand-list:hover .expand-list__menu {
+    visibility: visible;
+    opacity: 1;
+ }
+ .expand-list:hover .expand-list__text::after {
+    transform: rotate(180deg);
+    transition: all 0.2s ease;
+ }
+ 

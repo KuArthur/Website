@@ -1,0 +1,3 @@
+.footer__copyright-bar-info {
+    @include font-config_body($height:17px,$color:$dark-shade75);
+}
