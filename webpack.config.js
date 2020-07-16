@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack = require('webpack')
 const autoprefixer = require('autoprefixer');
+const ghpages = require('gh-pages');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -11,7 +12,8 @@ module.exports = {
         index: './src/index.js',
         formElements: './src/pages/form-elements/form-elements.js',
         colorAndTypes: './src/pages/color-and-types/color-and-types.js',
-        cards :'./src/pages/cards/cards.js'
+        cards :'./src/pages/cards/cards.js',
+        headerAndFooter :'./src/pages/header-footer/header-footer.js'
     },
     output: {
         filename: 'scripts/[name].js', // [name]
@@ -129,10 +131,14 @@ module.exports = {
             template: './src/pages/color-and-types/color-and-types.pug'
         }),
         new HtmlWebpackPlugin({
-            // inject: false,
             chunks: ['cards'],
             filename: "pages/cards.html",
             template: './src/pages/cards/cards.pug'
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['headerAndFooter'],
+            filename: "pages/header-footer.html",
+            template: './src/pages/header-footer/header-footer.pug'
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
@@ -143,10 +149,6 @@ module.exports = {
                 from:path.resolve(__dirname,'src/img/'),
                 to:path.resolve(__dirname,'dist/img') 
             },
-            // { 
-            //     from:path.resolve(__dirname,'src/fonts/'),
-            //     to:path.resolve(__dirname,'dist/fonts') 
-            // },
         
             ],
           }),

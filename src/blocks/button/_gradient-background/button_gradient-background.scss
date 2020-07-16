@@ -3,6 +3,8 @@
     background: $gradient-color;
     border-style: none;
     color: $color_white;
+    width: 100%;
+    height: inherit;
 }
 
 .button_gradient-background:active {

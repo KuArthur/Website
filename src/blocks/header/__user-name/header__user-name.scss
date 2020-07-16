@@ -1,0 +1,4 @@
+.header__user-name {
+    @include font-config_body($height:17px,$color:$dark-shade50);
+    margin-left: 20px;
+}

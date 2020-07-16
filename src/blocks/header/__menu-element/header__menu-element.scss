@@ -1,0 +1,11 @@
+
+.header__menu-element {
+    display: block;
+    padding-right: 20px;
+    @include font-config_body($height:17px,$color:$dark-shade50);
+    text-decoration: none;
+    &:first-child {
+        @include font-config_body($weight:bold,$height:17px,$color:$dark-shade75);
+    }
+    white-space: nowrap;
+}

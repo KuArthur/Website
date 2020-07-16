@@ -28,12 +28,15 @@
 @import "blocks/expandable-checklist/expandable-checklist.scss";
 @import 'blocks/dropdown-calendar/dropdown-calendar.scss';
 @import "blocks/dropdowns-calendar/dropdowns-calendar.scss";
+@import "blocks/header-expand-list/header-expand-list.scss";
 //cards-block
 @import "./blocks/search-room/search-room.scss";
 @import "./blocks/registration/registration.scss";
 @import "./blocks/login/login.scss";
 @import "./blocks/reservation/reservation.scss";
 @import "./blocks/card-room/card-room.scss";
+//header-footer-block
+@import "./blocks/header/header.scss";
 //fonts
 @import "blocks/typography/typography.scss";
 @import "blocks/typo/typo.scss";

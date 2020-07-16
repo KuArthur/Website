@@ -1,4 +1,4 @@
-import "normalize.css";
+//import "normalize.css";
 import "../../index.scss";
 import "./cards.scss";
 import "../../blocks/counter/counter";

@@ -1,0 +1,14 @@
+extends \..\..\layout/__ui-kit/layout__ui-kit.pug
+
+block realize
+    -title = "Form elements"
+block include
+    include /../../blocks/logo/logo.pug
+    include /../../blocks/header/header.pug
+block content
+    .header-footer
+        .header-footer__element
+            +header()
+        .header-footer__element
+            +header('auth')
+    

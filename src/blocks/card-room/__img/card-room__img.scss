@@ -2,41 +2,6 @@
     width: inherit;
     box-sizing: border-box;
     &:hover {
-        .slick-dots[class] {
-            bottom: 0;
-            display: inline-block;
-            width: auto;
-            left: 214px;
-            top: 125px;
-            visibility: visible;
-        }
-        
-        .slick-dots[class] li {
-        
-            
-            width: 11px;
-            margin: 0;
-        }
-        
-        .slick-dots[class] li.slick-active button:before {
-            background-color: $color_white;
-            opacity: 1;
-        }
-        
-        .slick-dots[class] li button:before {
-            content: "";
-            border-radius: 50%;
-            border: 1px solid $color_white;
-            height: 8px;
-            width: 8px;
-            box-sizing: border-box;
-            opacity: 1;
-        }
-        
-        .slick-dots[class] li button {
-            padding: 0;
-            width: 5px;
-        }
         
         .card-room__slick-next {
     
@@ -88,8 +53,39 @@
 .slick-dotted.slick-slider[class] {
     margin-bottom: 0;
 }
-//override
 
-.slick-dots {
-    visibility: hidden;
-}
+.slick-dots[class] {
+            bottom: 0;
+            display: inline-block;
+            width: auto;
+            left: 214px;
+            top: 125px;
+            visibility: visible;
+        }
+        
+        .slick-dots[class] li {
+        
+            
+            width: 11px;
+            margin: 0;
+        }
+        
+        .slick-dots[class] li.slick-active button:before {
+            background-color: $color_white;
+            opacity: 1;
+        }
+        
+        .slick-dots[class] li button:before {
+            content: "";
+            border-radius: 50%;
+            border: 1px solid $color_white;
+            height: 8px;
+            width: 8px;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+        
+        .slick-dots[class] li button {
+            padding: 0;
+            width: 5px;
+        }
