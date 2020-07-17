@@ -4,10 +4,8 @@
     "description": "my project",
     "main": "index.js",
     "scripts": {
-        "test": "This utility will walk you through creating a package.json file.",
         "build": "webpack --mode production",
-        "dev": "webpack-dev-server --open --mode development",
-        "deploy": "gh-pages -d dist"
+        "dev": "webpack-dev-server --open --mode development"
     },
     "repository": {
         "type": "git",

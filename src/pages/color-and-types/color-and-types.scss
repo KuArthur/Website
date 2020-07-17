@@ -3,19 +3,73 @@ body {
 }
 
 .logo {
-    position: absolute;
-    left:30px;
-    top:30px;
+    position: relative;
+    top:48px;
+    left:48px;
+    width: 48px;
 }
 
-.rectangle {
-    position: absolute;
-    left: 150px;
-    top: 145px;
+.color-and-types {
+    display: flex;
+    justify-content: space-between;
+    margin: 145px 191px 145px 150px;
 }
+
+
 
 .typograph {
-    position: absolute;
-    right: 191px;
-    top: 145px;
+    
+}
+
+@media (min-width: 500px) and (max-width: 1280px) {
+    .logo {
+        top: 15px;
+        left: 15px;
+    }
+
+    .color-and-types {
+        margin: 75px 70px 75px 70px;
+    }
+   
+}
+
+@media (max-width: 768px) {
+    .color-and-types {
+        margin: 30px;
+    }
+    .logo {
+        display:none;
+    }
+}
+
+@media (max-width: 660px) {
+    .color-and-types {
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+    }
+    .rectangle {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .color-and-types {
+        //flex-direction: column;
+    }
+
+    .rectangle {
+        margin-right: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    body {
+        margin:0;
+    }
+    .logo {
+        display:none;
+    }
+
 }
