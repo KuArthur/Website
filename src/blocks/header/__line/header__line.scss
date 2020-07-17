@@ -3,3 +3,9 @@
     height: 30px;
     background: $dark-shade10;
 }
+
+@media (max-width:1000px) {
+    .header__line {
+        display: none;
+    }
+}

@@ -3,6 +3,7 @@
 .expand-list {
     display: flex;
     position: relative;
+    align-items: center;
 
 }
 
@@ -13,7 +14,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 20px;
+    line-height: 23px;
     /* identical to box height */
     box-sizing: border-box;
     display: flex;
@@ -28,6 +29,7 @@
     cursor: pointer;
     @include font-config_body($height:17px,$color:$dark-shade50);
     display: flex;
+    align-items: center;
     &::after {
         content: "keyboard_arrow_down";
         width: 24px;
@@ -36,7 +38,7 @@
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
-        line-height: 20px;
+        line-height: 23px;
         /* identical to box height */
         box-sizing: border-box;
         display: flex;
@@ -80,3 +82,21 @@
     transition: all 0.2s ease;
  }
  
+ @media(max-width:1000px) {
+    // .expand-list {
+    //     display: inline-block;
+        
+    // }
+    
+    // .expand-list__menu {
+    //     position: static;
+    //     display:block;
+    // }
+
+    // .expand-list__menu-item {
+    //     display: block;
+    // }
+    .expand-list__menu {
+        background: rgba(255, 255, 255, 0.9);
+    }
+ }

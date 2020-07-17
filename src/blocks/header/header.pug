@@ -1,27 +1,32 @@
 include \..\button/_gradient-border/button_gradient-border.pug
 include \..\button/_gradient-background/button_gradient-background.pug
 include \..\expand-list/expand-list.pug
+include \..\simple-button/simple-button.pug
 mixin header(auth)
     header
         .header
             .header__logo
                 img(src=require("../../img/logoHead.svg").default, alt="")
-            .header__hidden-menu
-                nav.header__menu
-                    a.header__menu-element(href="") О нас
-                    .header__menu-element
-                        +expand-list({title:'Услуги', items: ['Ресторан','SPA','Спортивный зал','Оздоровительный центр']})
-                    a.header__menu-element(href="") Вакансии
-                    a.header__menu-element(href="") Новости
-                    .header__menu-element
-                        +expand-list({title:'Соглашения', items: ['первое','второе','третье','четвертое']})
-            if auth
-                .header__user
-                    .header__line
-                    .header__user-name Юлий Цезарь
-
-            else
-                .header__login
-                    +button_gradient-border({text:'войти',width:'s',height:'s'})
-                    .header__login-element
-                        +button_gradient-background({text:'зарегистрироваться',height:'s'})
+            .header__menu-icon.js-header__menu-icon menu    
+            nav.header__menu
+                .header__menu-icon.js-header__close-icon  close
+                a.header__menu-element(href="") О нас
+                .header__menu-element
+                    +expand-list({title:'Услуги', items: ['Ресторан','SPA','Спортивный зал','Оздоровительный центр']})
+                a.header__menu-element(href="") Вакансии
+                a.header__menu-element(href="") Новости
+                .header__menu-element
+                    +expand-list({title:'Соглашения', items: ['первое','второе','третье','четвертое']})
+            
+                if auth
+                    .header__user
+                        .header__line
+                        .header__user-name Юлий Цезарь
+                        .header__user-out
+                            +simple-button('выйти','typo_theme_default')
+                else
+                    .header__login
+                        +button_gradient-border({text:'войти',width:'s',height:'s'})
+                        .header__login-element
+                            +button_gradient-background({text:'зарегистрироваться',height:'s'})
+                        a.header__menu-element(href="") Нет аккаунта?

@@ -10,3 +10,15 @@
     align-items: center;
     justify-content: space-between;
 }
+
+@media (max-width: 1280px) {
+    .footer__copyright-bar {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__copyright-bar {
+        padding: 0 15px;
+    }
+}

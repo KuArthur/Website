@@ -1,0 +1,14 @@
+@media (max-width: 1024px) {
+    .footer__logo-info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__logo-info {
+        margin-bottom: 0;
+    }
+}

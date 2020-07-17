@@ -1,0 +1,29 @@
+@import "./__text/footer-creative__text.scss";
+@import "./__icon/footer-creative__icon.scss";
+@import "./__icons/footer-creative__icons.scss";
+@import "../typo/typo.scss";
+
+.footer-creative {
+    max-width: 768px;
+    height: 367px;
+    background: $color-white;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 120px 0 120px 0;
+    margin-right: 0;
+
+}
+
+.footer-creative__elem {
+    margin-bottom: 20px;
+    &:nth-child(2) {
+        margin-bottom: 25px;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+

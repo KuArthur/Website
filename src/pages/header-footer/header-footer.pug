@@ -6,6 +6,7 @@ block include
     include /../../blocks/logo/logo.pug
     include /../../blocks/header/header.pug
     include /../../blocks/footer/footer.pug
+    include /../../blocks/footer-creative/footer-creative.pug
 block content
     .header-footer
         .header-footer__element
@@ -14,4 +15,6 @@ block content
             +header('auth')
         .header-footer__element
             +footer()
+        .header-footer__element
+            +footer-creative()
     

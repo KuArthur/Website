@@ -2,4 +2,11 @@
    @include font-config_h3();
    text-transform: uppercase;
    margin-bottom: 20px;
+   white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+   .text-list__head {
+      margin-bottom: 15px;
+   }
 }

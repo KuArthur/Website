@@ -1,0 +1,9 @@
+.header__user-out {
+    display: none;
+}
+
+@media(max-width:1000px) {
+    .header__user-out {
+        display: inline;
+    }
+}

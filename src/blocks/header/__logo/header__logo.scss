@@ -1,0 +1,10 @@
+.header__logo {
+    display: flex;
+    flex-grow: 1;
+}
+
+@media (max-width:1000px) {
+    .header__logo {
+        flex-grow: 0;
+    }
+}

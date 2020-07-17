@@ -6,6 +6,8 @@
 @import "./__copyright-bar-info/footer__copyright-bar-info.scss";
 @import "./__copyright-bar-icon/footer__copyright-bar-icon.scss";
 @import "./__copyright-bar-icons/footer__copyright-bar-icons.scss";
+@import "./__lists/footer__lists.scss";
+@import "./__logo-info/footer__logo-info.scss";
 @import "../typo/typo.scss";
 
 .footer__info-bar {
@@ -13,7 +15,7 @@
     height:372px;
     background: $color-white;
     box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);
-    padding: 100px 140px;
+    padding: 104px 140px 100px 140px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -21,15 +23,27 @@
 
 @media (max-width: 1280px) {
     .footer__info-bar {
-        padding: 30px;
+        padding: 80px 30px 30px 60px;
     }
 }
 
 @media (max-width: 1024px) {
     .footer__info-bar {
-        padding: 15px;
+        padding: 50px 30px 15px 30px;
+        flex-direction: column-reverse;
+        //box-sizing: content-box;
     }
-    // .header__logo {
-    //     display: none;
-    // }
+
+}
+
+@media (max-width: 600px) {
+    .footer__info-bar {
+        padding: 50px 15px 15px 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .footer__info-bar {
+        padding: 50px 5px 15px 5px;
+    }
 }

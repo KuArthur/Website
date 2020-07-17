@@ -1,0 +1,4 @@
+.footer-creative__text {
+    @include font-config_body($height:17px,$color:$dark-shade75);
+    text-align: center;
+}

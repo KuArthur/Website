@@ -1,3 +1,9 @@
 .footer__text {
     @include font-config_body();
 }
+
+@media (max-width: 375px) {
+    .footer__logo-info .footer__text {
+        display: none;
+    }
+}

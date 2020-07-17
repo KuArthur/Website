@@ -7,3 +7,21 @@
     flex-direction: column;
 }
 
+@media (max-width: 768px) {
+    .text-list {
+        
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .text-list {
+        
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+}
+

@@ -6,15 +6,16 @@ mixin footer()
             .footer__logo-info
                 img.footer__logo(src=require("../../img/logoHead.svg").default, alt="")
                 .footer__elem-size.footer__text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-            +text-list({head:'Навигация',items:['О нас', 'Новости', 'Служба поддержки', 'Услуги']})
-            +text-list({head:'О нас',items:['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']})
-            +text-list({head:'Служба поддержки',items:['Соглашения', 'Сообщества', 'Связь с нами']})
-            .footer__sub
-                .footer__elem-size
-                    +text-list({head:'Подписка'})
-                    .footer__text Получайте специальные предложения и новости сервиса
-                .footer__field.footer__elem-size
-                    +text-field_subscription('Email')
+            .footer__lists
+                +text-list({head:'Навигация',items:['О нас', 'Новости', 'Служба поддержки', 'Услуги']})
+                +text-list({head:'О нас',items:['О сервисе', 'Наша команда', 'Вакансии', 'Инвесторы']})
+                +text-list({head:'Служба поддержки',items:['Соглашения', 'Сообщества', 'Связь с нами']})
+                .footer__sub
+                    .footer__elem-size
+                        +text-list({head:'Подписка'})
+                        .footer__text Получайте специальные предложения и новости сервиса
+                    .footer__field.footer__elem-size
+                        +text-field_subscription('Email')
         .footer__copyright-bar
             .footer__copyright-bar-info Copyright &copy 2018 Toxin отель. Все права зачищены.
             .footer__copyright-bar-icons
