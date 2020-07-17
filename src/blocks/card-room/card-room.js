@@ -12,8 +12,8 @@ class cardRoom {
         $(document).ready(function () {
             $('.card-room__img').slick({
                 dots: true,
-                nextArrow: "<button class='card-room__slick-next'>chevron_right</button>",
-                prevArrow: '<button type = "button" class = "card-room__slick-prev">chevron_left</button>' ,
+                nextArrow: '<span class="card-room__slick-next">chevron_right</span>',
+                prevArrow: '<span class ="card-room__slick-prev">chevron_left</span>' ,
             });
         });
     }

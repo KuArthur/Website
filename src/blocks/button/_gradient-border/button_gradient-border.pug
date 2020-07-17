@@ -4,6 +4,6 @@ mixin button_gradient-border({text,active,width,height})
         button.button.button_gradient-border_active.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s
             span.button__wrap=text
     else
-        button(class='button_width_'+width+' button_height_'+height).button.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s
+        button.button.button_gradient-border.typo_montserrat.typo_size_s.typo_bold.typo_height_s(class='button_width_'+width+' button_height_'+height)
             span.button__wrap=text
         

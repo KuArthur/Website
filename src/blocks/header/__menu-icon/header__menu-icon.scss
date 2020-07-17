@@ -1,15 +1,12 @@
 .header__menu-icon {
     cursor: pointer;
-    width: 44px;
-    height: 44px;
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 24px;
     display: none;
-    justify-content: flex-start;
-    align-items: center;
+    text-align: center;
     background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_blue 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -19,12 +16,12 @@
 
 @media (max-width:1000px) {
     .header__menu-icon {
-        display: flex;
+        display: inline-block;
     }
+    
     .header__menu .header__menu-icon {
-        height: 70px;
-        width:100%;
-        justify-content: flex-end;
-        margin-right: 20px;
+        position: absolute;
+        right: 15px;
+        top: 23px;
     }
 }

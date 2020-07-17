@@ -4,6 +4,12 @@
     align-items: center;
 }
 
+.header__menu-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width:1000px) {
     .header__menu {
         display: none;
@@ -15,8 +21,13 @@
         background: $color-white;
         top: 0;
         z-index: 9999;
-        padding: 0 35px 35px 35px;
+        box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.2);
         box-sizing: border-box;
+    }
+    .header__menu-elements {
+        padding: 0 35px 35px 35px;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .header__menu_status_visible {
         display:block;

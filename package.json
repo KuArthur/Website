@@ -66,8 +66,18 @@
         "resolve-url-loader": "^3.1.1",
         "slick-carousel": "^1.8.1"
     },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions"
-    ]
+    "browserslist": {
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all",
+          "iOS >= 8"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version",
+          "last 1 ie version"
+        ]
+      }
 }
