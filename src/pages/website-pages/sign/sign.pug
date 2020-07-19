@@ -1,0 +1,9 @@
+extends /../../../layout/__reg-or-log/layout__reg-or-log.pug
+block realize
+    -title = "Sign in"
+block include
+    include /../../../blocks/login/login.pug
+block element
+    .sign
+        .sign__element
+            +login()

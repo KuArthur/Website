@@ -1,0 +1,18 @@
+.reg__element {
+    max-width: 380px;
+}
+
+.reg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+@media (max-width:320px) {
+    .reg__element {
+        margin: 0 5px;
+    }
+}

@@ -1,0 +1,22 @@
+//- extends /../../../layout/__website/layout__website.pug
+
+//- block realize
+//-     -title = "Registration"
+//- block include
+//-     include /../../../blocks/registration/registration.pug
+//- block content
+//-     .bg-img
+//-         block element
+//-             .reg
+//-                 .reg__element
+//-                     +registration()
+
+extends /../../../layout/__reg-or-log/layout__reg-or-log.pug
+block realize
+    -title = "Registration"
+block include
+    include /../../../blocks/registration/registration.pug
+block element
+    .reg
+        .reg__element
+            +registration()

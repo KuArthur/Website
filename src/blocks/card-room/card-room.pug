@@ -4,7 +4,7 @@ mixin card-room({ img=[],number,status,price,review,rate })
     .card-room
         .card-room__img
             each item in img
-                img(src=require("../../img/room"+ item +".png").default, alt="")
+                img(src="../../img/room"+ item +".png", alt="")
         .card-room__info
             .card-room__room-details
                 .card-room__number 

@@ -1,0 +1,19 @@
+block realize
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        block links
+        title #{title}
+        
+        include /../../blocks/header/header.pug
+        include /../../blocks/footer/footer.pug
+        block include
+            
+    body
+        block header
+            +header()
+        block content
+        block footer
+            +footer()

@@ -1,0 +1,12 @@
+extends /../../../layout/__website/layout__website.pug
+
+block realize
+    -title = "Landing page"
+block include
+    include /../../../blocks/search-room/search-room.pug
+block content
+    .landing
+        .landing__element
+            +search-room()
+        .landing__inscription
+            span.landing__text Лучшие номера для вашей работы,<br> отдыха и просто вдохновения

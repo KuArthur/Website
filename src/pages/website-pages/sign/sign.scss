@@ -1,0 +1,15 @@
+.sign__element {
+    max-width: 380px;
+}
+
+.sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+@media (max-width:320px) {
+    .sign__element {
+        margin: 0 5px;
+    }
+}

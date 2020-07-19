@@ -1,0 +1,49 @@
+@import "../../../blocks/typo/typo.scss";
+@import "../../../color.scss";
+
+.landing {
+    background: no-repeat url(../../../img/bg_landing.png);
+    background-size:cover;
+    min-height: 830px;
+    background-position: center center;
+    padding: 70px 140px 18px 140px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.landing__element {
+    max-width: 380px;
+}
+.landing__inscription {
+    display: flex;
+    justify-content: flex-end;
+}
+.landing__text {
+    @include font-config_body();
+    text-align: right;
+}
+
+@media (max-width:1024px) {
+    .landing {
+        padding: 35px 70px 18px 70px;
+    }
+}
+
+@media (max-width:768px) {
+    .landing {
+        padding: 15px;
+    }
+    .landing__element {
+        margin:0 auto;
+    }
+}
+
+@media (max-width:425px) {
+    .landing {
+        padding: 5px;
+    }
+    .landing__element {
+        margin:0;
+    }
+}
