@@ -16,7 +16,8 @@ module.exports = {
         headerAndFooter :'./src/pages/ui-kit/header-footer/header-footer.js',
         landing: './src/pages/website-pages/landing/landing.js',
         registration: './src/pages/website-pages/registration/registration.js',
-        login: './src/pages/website-pages/sign/sign.js'
+        login: './src/pages/website-pages/sign/sign.js',
+        roomDetails: './src/pages/website-pages/room-details/room-details.js'
     },
     output: {
         filename: 'scripts/[name].js', // [name]
@@ -165,6 +166,11 @@ module.exports = {
             chunks: ['login'],
             filename: "pages/website-pages/login.html",
             template: './src/pages/website-pages/sign/sign.pug'
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['roomDetails'],
+            filename: "pages/website-pages/room-details.html",
+            template: './src/pages/website-pages/room-details/room-details.pug'
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css",

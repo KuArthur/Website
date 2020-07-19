@@ -1,0 +1,8 @@
+.room-details__img {
+    width: inherit;
+    display: flex;
+    background-size: cover;
+    // image-rendering: -moz-crisp-edges; /* Firefox */
+    // -ms-interpolation-mode: nearest-neighbor;  /* IE */
+    // image-rendering: crisp-edges;
+}

@@ -1,0 +1,15 @@
+extends /../../../layout/__website/layout__website.pug
+
+block realize
+    -title = "Room details"
+block include
+    include /../../../blocks/card-room/card-room.pug
+block content
+    .room-details
+        .room-details__img-group
+            img.room-details__img(src="../../../img/room1.jpg", alt="")
+            .room-details__img-column
+                .room-details__img.room-details__img_size_s
+                    img(src="../../../img/room1_1.jpg", alt="")
+                .room-details__img.room-details__img_size_s
+                    img(src="../../../img/room1_2.jpg", alt="")
