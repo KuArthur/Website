@@ -1,3 +1,4 @@
+
 @import "blocks/button/_gradient-background/button_gradient-background.scss";
 @import "blocks/button/_gradient-border/button_gradient-border.scss";
 @import "blocks/button/button.scss";
@@ -42,7 +43,7 @@
 @import "./blocks/footer-creative/footer-creative.scss";
 //fonts
 @import "blocks/typography/typography.scss";
-@import "blocks/typo/typo.scss";
+@import "./blocks/typo/typo.scss";
 @import "blocks/typo/_bold/typo_bold.scss";
 @import "blocks/typo/_normal/typo_normal.scss";
 @import "blocks/typo/_size/typo_size_m.scss";
@@ -57,6 +58,8 @@
 @import "blocks/typo/_height/typo_height_s.scss";
 @import "blocks/typo/_height/typo_height_m.scss";
 @import "blocks/typo/_height/typo_height_l.scss";
+//colors
+@import "./color.scss";
 //fonts style
 @import "fonts/Montserrat/style-montserrat.scss";
 @import "fonts/Quicksand/style-quicksand.scss";
@@ -64,8 +67,7 @@
 @import "fonts/MaterialIcons/icons-style.scss";
 @import "fonts/Awesome/style-awesome.scss";
 @import "fonts/Awesome/fontawesome.min.css";
-//colors
-@import "blocks/color.scss";
+
 
 // body {
 //     background-color: lightgray;

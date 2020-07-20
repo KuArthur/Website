@@ -1,16 +1,15 @@
-@import"./src/blocks/icon-text-list/__icon/icon-text-list__icon.scss";
-@import"./src/blocks/icon-text-list/__text-div/icon-text-list__text-div.scss";
-@import"./src/blocks/icon-text-list/__line/icon-text-list__line.scss";
+@import "./__icon/icon-text-list__icon.scss";
+@import "./__text-div/icon-text-list__text-div.scss";
+@import "./__line/icon-text-list__line.scss";
+@import "./__wrap/icon-text-list__wrap.scss";
 
 .icon-text-list {
     display: block;
+    &:nth-child(2n) {
+    margin:23px 0;
+    }
     &:last-child {
-    margin-top:23px;
+        margin:0;
     }
-    &__wrap {
-        display:inline-flex;
-        align-items: center;
-    }
-
 }
 

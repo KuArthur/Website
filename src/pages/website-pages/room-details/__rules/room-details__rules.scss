@@ -1,0 +1,9 @@
+.room-details__rules {
+    max-width: 270px;
+}
+
+@media (max-width:650px) {
+    .room-details__rules {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,37 @@
+.room-details__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.room-details__reviews .room-details__row {
+    align-items: center;
+}
+
+@media (max-width:1280px) {
+    // .room-details__block .room-details__row {
+    //     flex-direction: column;
+
+    // }
+    .room-details__reviews .room-details__row {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:850px) {
+    // .room-details__block .room-details__row {
+    //     flex-direction: column;
+
+    // }
+    .room-details__row {
+        width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .room-details__reviews .room-details__row {
+        flex-direction: row;
+    }
+    .room-details__row {
+        flex-direction: column;
+    }
+}

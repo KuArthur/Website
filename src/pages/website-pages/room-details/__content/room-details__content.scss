@@ -1,0 +1,23 @@
+.room-details__content {
+    margin: 70px 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:1024px) {
+    .room-details__content {
+       margin:70px 70px; 
+    }
+}
+
+@media (max-width:768px) {
+    .room-details__content {
+       margin:50px 30px; 
+    }
+}
+
+@media (max-width:425px) {
+    .room-details__content {
+       margin:30px 5px; 
+    }
+}

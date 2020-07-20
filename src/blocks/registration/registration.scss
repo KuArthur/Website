@@ -25,16 +25,14 @@
 
 }
 
-@media (max-width:380px) {
-    .registration__section {
-        margin-top:0;
-    
-    }
-}
 
 @media (max-width:320px) {
     .registration__section {
         margin-top:10px;
     
     }
+    .registration {
+        padding: 40px 5px 5px 10px;
+    }
 }
+

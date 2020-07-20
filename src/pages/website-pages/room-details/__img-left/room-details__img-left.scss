@@ -1,0 +1,12 @@
+.room-details__img-left {
+    display: flex;
+    max-width: 981px;
+    flex-grow: 1;
+}
+@media(min-width:1440px){
+    .room-details__img-left {
+        max-width: 100%;
+        height: auto;
+        justify-content: flex-end;
+    }
+}

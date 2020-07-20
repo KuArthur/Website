@@ -1,0 +1,14 @@
+.room-details__inscription {
+    @include font-config_h2();
+    margin-bottom: 20px;
+}
+
+.room-details__rules .room-details__inscription {
+    margin-left: 15px;
+}
+
+@media(max-width:425px) {
+    .room-details__rules .room-details__inscription {
+        margin-left: 0;
+    }
+}

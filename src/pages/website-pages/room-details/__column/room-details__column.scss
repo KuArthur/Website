@@ -1,0 +1,25 @@
+.room-details__column {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media (max-width:1280px) {
+    .room-details__column {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:850px) {
+    .room-details__column {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:650px) {
+    .room-details__column {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,3 +1,45 @@
+@import "../../../blocks/typo/typo.scss";
 @import "./__img-column/room-details__img-column.scss";
 @import "./__img-group/room-details__img-group.scss";
 @import "./__img/room-details__img.scss";
+@import "./__slider-img/room-details__slider-img.scss";
+@import "./__img-left/room-details__img-left.scss";
+@import "./__inscription/room-details__inscription.scss";
+@import "./__inscription/_quantity/room-details__inscription_quantity.scss";
+@import "./__impressions/room-details__impressions.scss";
+@import "./__content/room-details__content.scss";
+@import "./__elem/room-details__elem.scss";
+@import "./__cancel-text/room-details__cancel-text.scss";
+@import "./__reserve/room-details__reserve.scss";
+@import "./__reviews/room-details__reviews.scss";
+@import "./__row/room-details__row.scss";
+@import "./__rules/room-details__rules.scss";
+@import "./__column/room-details__column.scss";
+
+.room-details__block {
+   margin-bottom: 30px;
+   &:last-child {
+       margin-bottom: 0;
+   }
+}
+
+@media(max-width:1280px) {
+    .room-details__block:first-child {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+     }
+     .room-details__info {
+         width: 100%;
+     }
+}
+
+@media(max-width:850px) {
+    .room-details__block:first-child {
+        flex-direction: column-reverse;
+        align-items: center;
+     }
+}
+
+
+

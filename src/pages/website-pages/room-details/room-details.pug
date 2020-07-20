@@ -3,13 +3,62 @@ extends /../../../layout/__website/layout__website.pug
 block realize
     -title = "Room details"
 block include
+    include /../../../blocks/review/review.pug
+    include /../../../blocks/bullet-list/bullet-list.pug
+    include /../../../blocks/icon-text-list/icon-text-list.pug
+    include /../../../blocks/reservation/reservation.pug
     include /../../../blocks/card-room/card-room.pug
 block content
     .room-details
+        .room-details__slider-img
+            +slider-room(['1','1_1','1_2'])
         .room-details__img-group
-            img.room-details__img(src="../../../img/room1.jpg", alt="")
+            .room-details__img-left
+                img.room-details__img(src="../../../img/room1.jpg", alt="")
             .room-details__img-column
-                .room-details__img.room-details__img_size_s
-                    img(src="../../../img/room1_1.jpg", alt="")
-                .room-details__img.room-details__img_size_s
-                    img(src="../../../img/room1_2.jpg", alt="")
+                img.room-details__img(src="../../../img/room1_1.png", alt="")
+                img.room-details__img(src="../../../img/room1_2.jpg", alt="")
+        
+        .room-details__content
+            .room-details__info
+                .room-details__block
+                    .room-details__row
+                        .room-details__column
+                            .room-details__elem
+                                .room-details__inscription Сведения о номере
+                                .room-details__room-info
+                                    +icon-text-list("insert_emoticon","Комфорт","Шумопоглощающие стены")
+                                    +icon-text-list("location_cityicon","Удобство","Окно в каждой из спален")
+                                    +icon-text-list("whatshot","Уют","Номер оснащен камином")
+                            .room-details__elem
+                                .room-details__inscription Впечатления от номера
+                                .room-details__impressions
+                                    img(src="../../../../img/PieChart.svg", alt="")
+                    .room-details__reserve-media
+                        +reservation()
+                
+                .room-details__block    
+                    .room-details__reviews
+                        .room-details__row
+                            .room-details__inscription Отзывы посетителей номера
+                            .room-details__inscription.room-details__inscription_quantity 2 отзыва
+                        .room-details__elem
+                            +review('1','Мурад Сарафанов','5 дней назад','Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.')
+                        .room-details__elem
+                            +review('2','Патрисия Стёклышкова','неделю назад','Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент')
+                
+                
+                .room-details__row
+                    .room-details__rules
+                        .room-details__inscription Правила
+                        +bullet-list("Нельзя с питомцами")
+                        +bullet-list("Без вечеринок и мероприятий")
+                        +bullet-list("Время прибытия — после 13:00, а\u00A0выезд до 12:00")
+
+                    .room-details__cancel
+                        .room-details__inscription Отмена
+                        .room-details__cancel-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+                
+            .room-details__reserve
+                +reservation()
