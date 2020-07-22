@@ -1,5 +1,4 @@
-
-mixin bullet-list(text)
-    .bullet-list
-        .bullet-list__circle
-        span.bullet-list__text.typo_montserrat.typo_normal.typo_size_m.typo_theme_default.typo_height_m=text
+mixin bullet-list(text,color,status)
+    div.bullet-list(class="bullet-list__" + status)
+        div.bullet-list__circle(class="bullet-list__circle_color_"+color)
+        span.bullet-list__text=text

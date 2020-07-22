@@ -1,4 +1,6 @@
 .counter__text {
+    @include font-config_h3();
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }

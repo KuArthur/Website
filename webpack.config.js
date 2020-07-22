@@ -42,25 +42,22 @@ module.exports = {
                     // Creates `style` nodes from JS strings
                     {
                         loader: 'style-loader'
-                    }, {
+                    },
+                    {
                         loader: MiniCssExtractPlugin.loader,
                     },
                     // Translates CSS into CommonJS
                     {
                         loader: 'css-loader'
-                    }, {
+                    },
+                    {
                         loader: 'postcss-loader',
-                    //         options: {
-                    //         plugins: [
-                    //             autoprefixer({
-                    //                 browsers:['ie >= 8', 'last 4 version']
-                    //             })
-                    //         ],
-                    //     sourceMap: true
-                    // }
-                    }, {
+                    
+                    },
+                    {
                         loader: 'resolve-url-loader'
-                    }, {
+                    },
+                    {
                         // Compiles Sass to CSS
                         loader: 'sass-loader',
                         options: {
@@ -74,11 +71,12 @@ module.exports = {
             },
             {
                 test: /\.(jpeg|jpg|png|gif|svg)$/,
-                loader: 'file-loader',
+                loader: 'url-loader',
                 options: {
-                    name: '[name].[ext]',
-                    outputPath: 'img/',
-                    publicPath: "./../img"
+                    name: '[path][name].[ext]',
+                    esModule: false
+                    // outputPath: 'img/',
+                    // publicPath: "./../img"
                 }
             },
 
@@ -93,14 +91,6 @@ module.exports = {
                 }
             },
 
-            // {
-            //     test: /\.svg$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         name: '[path][name].[ext]',
-            //         publicPath: "./src/icons"
-            //     }
-            // }, 
             {
                 // ESLint
                 enforce: 'pre',

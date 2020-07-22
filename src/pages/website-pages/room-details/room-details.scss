@@ -15,12 +15,17 @@
 @import "./__row/room-details__row.scss";
 @import "./__rules/room-details__rules.scss";
 @import "./__column/room-details__column.scss";
-
 .room-details__block {
    margin-bottom: 30px;
    &:last-child {
        margin-bottom: 0;
    }
+}
+
+.room-details__donut {
+    width: 120px;
+    height: 121px;
+    margin-right: 30px;
 }
 
 @media(max-width:1280px) {

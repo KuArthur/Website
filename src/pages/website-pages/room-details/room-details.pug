@@ -8,16 +8,17 @@ block include
     include /../../../blocks/icon-text-list/icon-text-list.pug
     include /../../../blocks/reservation/reservation.pug
     include /../../../blocks/card-room/card-room.pug
+    include /../../../blocks/donut-chart/donut-chart.pug
 block content
     .room-details
         .room-details__slider-img
             +slider-room(['1','1_1','1_2'])
         .room-details__img-group
             .room-details__img-left
-                img.room-details__img(src="../../../img/room1.jpg", alt="")
+                img.room-details__img(src=require("../../../img/room1.jpg"), alt="")
             .room-details__img-column
-                img.room-details__img(src="../../../img/room1_1.png", alt="")
-                img.room-details__img(src="../../../img/room1_2.jpg", alt="")
+                img.room-details__img(src=require("../../../img/room1_1.jpg"), alt="")
+                img.room-details__img(src=require("../../../img/room1_2.jpg"), alt="")
         
         .room-details__content
             .room-details__info
@@ -33,7 +34,14 @@ block content
                             .room-details__elem
                                 .room-details__inscription Впечатления от номера
                                 .room-details__impressions
-                                    img(src="../../../../img/PieChart.svg", alt="")
+                                    .room-details__donut
+                                        +donut-chart()
+                                    .room-details__imp-list
+                                        +bullet-list("Великолепно","orange","grad")
+                                        +bullet-list("Хорошо","green","grad")
+                                        +bullet-list("Удовлетворительно","purple","grad")
+                                        +bullet-list("Разочарован","gray","grad")
+                                    .room-details_impressions-list
                     .room-details__reserve-media
                         +reservation()
                 
@@ -62,3 +70,4 @@ block content
                 
             .room-details__reserve
                 +reservation()
+

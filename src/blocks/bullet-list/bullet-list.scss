@@ -1,12 +1,12 @@
-@import"./src/blocks/bullet-list/__circle/bullet-list__circle.scss";
-@import"./src/blocks/bullet-list/__text/bullet-list__text.scss";
+@import"./__circle/bullet-list__circle.scss";
+@import"./__text/bullet-list__text.scss";
+@import "./__grad/bullet-list__grad.scss";
 
 .bullet-list {
     display: flex;
     align-items: baseline;
     margin-bottom:10px;
     flex-shrink: 0;
-
     &:last-child {
         margin-bottom: 0;
     }

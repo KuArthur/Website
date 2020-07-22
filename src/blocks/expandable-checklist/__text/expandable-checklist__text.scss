@@ -1,4 +1,5 @@
 .expandable-checklist__text {
+    @include font-config_h3();
     display: inline-flex;
     text-transform: uppercase;
 }

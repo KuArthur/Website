@@ -1,6 +1,6 @@
 
 mixin button_gradient-background({text,active,width,height})
     if active
-        button.button.button_gradient-background_active.button_gradient-background.typo_montserrat.typo_size_s.typo_bold.typo_height_s=text
+        button.button.button_gradient-background_active.button_gradient-background=text
     else
-        button(class='button_width_'+width+' button_height_'+height).button.button_gradient-background.typo_montserrat.typo_size_s.typo_bold.typo_height_s=text   
+        button(class='button_width_'+width+' button_height_'+height).button.button_gradient-background=text   

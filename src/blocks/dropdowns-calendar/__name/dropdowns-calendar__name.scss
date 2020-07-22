@@ -1,4 +1,5 @@
 .dropdowns-calendar__name {
+    @include font-config_h3();
     text-transform: uppercase;
     margin-bottom: 5px;
 }

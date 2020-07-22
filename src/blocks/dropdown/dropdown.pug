@@ -3,7 +3,7 @@ include /../../blocks/simple-button/simple-button.pug
 
 mixin dropdown({items=[],text, vis, mix, expanded})
     div.dropdown(class=mix)
-        input.dropdown__default.js-dropdown__default.typo_montserrat.typo_size_m.typo_normal.typo_theme_default.typo_height_m(value='' readonly placeholder=text)
+        input.dropdown__default.js-dropdown__default(value='' readonly placeholder=text)
         .dropdown__icon.js-dropdown__icon keyboard_arrow_down
         if expanded
             .dropdown__expanded.js-dropdown__expanded.dropdown__expanded_status_enabled
@@ -11,9 +11,9 @@ mixin dropdown({items=[],text, vis, mix, expanded})
                     +counter(item)
                 if vis
                     .dropdown__buttons.js-dropdown__buttons
-                        .dropdown__buttons_clear.js-dropdown__buttons_clear.typo_theme_light
+                        .dropdown__buttons_clear.js-dropdown__buttons_clear
                             +simple-button('очистить')
-                        .js-dropdown__buttons_apply.typo_theme_purple
+                        .js-dropdown__buttons_apply.dropdown__buttons_apply
                             +simple-button('применить')
         else
             .dropdown__expanded.js-dropdown__expanded
@@ -21,8 +21,8 @@ mixin dropdown({items=[],text, vis, mix, expanded})
                     +counter(item)
                 if vis
                     .dropdown__buttons.js-dropdown__buttons
-                        .dropdown__buttons_clear.js-dropdown__buttons_clear.typo_theme_light
+                        .dropdown__buttons_clear.js-dropdown__buttons_clear
                             +simple-button('очистить')
-                        .js-dropdown__buttons_apply.typo_theme_purple
+                        .js-dropdown__buttons_apply.dropdown__buttons_apply
                             +simple-button('применить')
     

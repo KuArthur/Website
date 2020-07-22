@@ -1,4 +1,5 @@
 .icon-text-list__text-div {
+    @include font-config_body();
     display: flex;
     flex-direction: column;
     margin-left:10px;

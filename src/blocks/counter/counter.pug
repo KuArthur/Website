@@ -1,7 +1,7 @@
 mixin counter(text)
     .counter(data-type=text)
-        .counter__text.typo_montserrat.typo_bold.typo_theme_dark.typo_height_s.typo_size_s=text
+        .counter__text=text
         .counter__wrap
-            button.counter__button.js-counter__button_type_minus.counter__button_status-disabled.js-counter__button_status-disabled.typo.typo_normal(title='Down' data-input-id=id data-delta=-1) -
-            input.counter__input.js-counter__input.typo_montserrat.typo_bold.typo_theme_dark.typo_height_s(readonly type='text' value='0')
-            button.counter__button.js-counter__button_type_plus.typo.typo_normal(title='Up' data-input-id=id data-delta=1) +
+            button.counter__button.js-counter__button_type_minus.counter__button_status-disabled.js-counter__button_status-disabled(title='Down' data-input-id=id data-delta=-1) -
+            input.counter__input.js-counter__input(readonly type='text' value='0')
+            button.counter__button.js-counter__button_type_plus(title='Up' data-input-id=id data-delta=1) +

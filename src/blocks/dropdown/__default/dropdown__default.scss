@@ -1,5 +1,6 @@
 @import "../../color.scss";
 .dropdown__default {
+    @include font-config_body($height:18px, );
     cursor: pointer;
     max-width: 320px;
     width: 100%;

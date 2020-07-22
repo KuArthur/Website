@@ -1,7 +1,6 @@
 .checkbox-buttons-rich__text {
     padding-left: 30px;
     //padding-top: 5px;
-    
-    line-height: 14px;
+    @include font-config_h3($height:14px,$color:$dark-shade50,$weight:normal);
     
  }

@@ -56,10 +56,8 @@ class HeaderMenu {
 
 document.addEventListener("DOMContentLoaded", function() {
     const arr = document.querySelectorAll('.header');
-    console.log(arr);
 
     for (let domElem of arr) {
-        console.log(domElem)
         new HeaderMenu(domElem)
     }
 })

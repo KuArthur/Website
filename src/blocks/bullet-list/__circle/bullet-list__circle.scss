@@ -1,15 +1,15 @@
 @import '../../color.scss';
+@import "./_color/bullet-list__circle_color_gray.scss";
+@import "./_color/bullet-list__circle_color_green.scss";
+@import "./_color/bullet-list__circle_color_orange.scss";
+@import "./_color/bullet-list__circle_color_purple.scss";
 
 .bullet-list__circle {
     display:flex;
     flex-shrink:0;
     width: 10px;
     height: 10px;
-    background-color: $dark-shade25;
+    background: $dark-shade25;
     border-radius: 50%;
     margin-right: 10px;
-    // margin-bottom: 24px;
-    // &:last-child {
-    //     margin-bottom: 0;
-    // }
 }

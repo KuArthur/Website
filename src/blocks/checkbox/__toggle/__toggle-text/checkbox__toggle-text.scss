@@ -1,3 +1,4 @@
 .checkbox__toggle-text {
     margin-left: 10px;
+    @include font-config_body();
 }

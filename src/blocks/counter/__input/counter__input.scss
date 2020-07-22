@@ -1,4 +1,5 @@
 .counter__input {
+    @include font-config_h3();
     border: none;
     width: 92px;
     height: 15px;
@@ -6,4 +7,5 @@
     box-sizing: border-box;
     text-align: center;
     outline: none;
+    
 }

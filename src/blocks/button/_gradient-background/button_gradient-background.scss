@@ -1,8 +1,8 @@
 @import "../../color.scss";
 .button_gradient-background {
+    @include font-config_h3($color:$color_white);
     background: $gradient-color;
     border-style: none;
-    color: $color_white;
     width: 100%;
     height: inherit;
 }

@@ -1,5 +1,6 @@
 @import "../../color.scss";
 .dropdown-calendar__field {
+    @include font-config_body($height:18px);
     position: absolute;
     cursor: pointer;
     width: inherit;

@@ -1,5 +1,9 @@
 import "../../../index.scss";
 import "../../../blocks/header/header";
 import "../../../blocks/card-room/card-room";
+import "../../../blocks/counter/counter";
+import "../../../blocks/dropdown/dropdown";
+import "../../../blocks/dropdown-calendar/dropdown-calendar";
+import "../../../blocks/donut-chart/donut-chart"
 import "./room-details.scss";
 import "normalize.css";

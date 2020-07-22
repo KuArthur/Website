@@ -4,7 +4,8 @@
         background: $gradient-color;
         position: relative;
     }
-    &__wrap {
+    &__text {
+        @include font-config_h3($color:$color_purple);
         background-color: $color_white;
         position: absolute;
         display: flex;
@@ -14,11 +15,10 @@
         left: 2px;
         right: 2px;
         bottom: 2px;
-        color: $color_purple;
     }
 }
 
-.button_gradient-border>.button__wrap {
+.button_gradient-border>.button__text {
     border-radius: 22px;
 }
 

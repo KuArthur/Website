@@ -1,4 +1,7 @@
-
+.room-details__impressions {
+    display: flex;
+    align-items: flex-end;
+}
 
 @media (max-width:1280px) {
     .room-details__impressions {
