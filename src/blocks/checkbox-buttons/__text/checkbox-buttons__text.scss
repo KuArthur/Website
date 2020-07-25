@@ -1,0 +1,19 @@
+.checkbox-buttons__text {
+    @include font-config_body($height: 18px,$color:$dark-shade50);
+    cursor: pointer;
+    display: flex;
+    line-height: 18px;
+    width: auto;
+    &::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        margin-right: 9px;
+        min-width: 20px;
+        min-height: 20px;
+        /* Dark 25% */
+        border: 1px solid $dark-shade25;
+        box-sizing: border-box;
+        border-radius: 4px;
+    }
+}

@@ -4,7 +4,7 @@
     outline: none;
 }
 
-.checkbox-buttons__input:checked+.checkbox-buttons__div::before {
+.checkbox-buttons__input:checked+.checkbox-buttons__text::before {
     background: url(../../../img/done.svg) no-repeat center 3px;
     border-color: $color_purple;
 }

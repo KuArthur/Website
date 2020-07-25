@@ -1,6 +1,8 @@
 @import "../../color.scss";
-@import "./__div/checkbox-buttons__div.scss";
+@import "./__text/checkbox-buttons__text.scss";
 @import "./__input/checkbox-buttons__input.scss";
+@import "./_rich/checkbox-buttons_rich_description.scss";
+@import "./_rich/checkbox-buttons_rich_head.scss";
 .checkbox-buttons {
     display: flex;
     flex-direction: column;

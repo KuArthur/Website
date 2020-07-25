@@ -1,0 +1,10 @@
+
+.search-room__inscription_mobile {
+    display: none !important;
+}
+@media (max-width:605px) {
+    .search-room__inscription_mobile {
+        display: inline-block !important;
+        @include font-config_h2();
+    }
+}

@@ -1,0 +1,29 @@
+.search-room__inscription {
+    @include font-config_h3();
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.search-room__checkbox .search-room__inscription {
+    margin-bottom: 16px;
+}
+
+.search-room__rooms .search-room__inscription {
+    display: inline-block;
+    align-self: flex-start;
+    @include font-config_h1();
+    text-transform: none;
+    margin-bottom: 21px;
+}
+
+@media (max-width:940px) {
+    .search-room__rooms .search-room__inscription {
+        align-self: center;
+    }
+}
+
+@media (max-width:605px) {
+    .search-room__rooms .search-room__inscription {
+        display: none;
+    }
+}

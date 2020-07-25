@@ -1,0 +1,16 @@
+.search-room__filter-icon {
+    font-family: Material Icons;
+    font-size: 24px;
+    background: -webkit-linear-gradient(180deg, $color_purple 0%, $color_blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: none;
+}
+
+@media(max-width:1200px) {
+    .search-room__filter-icon {
+        display: inline;
+        
+    }
+
+}

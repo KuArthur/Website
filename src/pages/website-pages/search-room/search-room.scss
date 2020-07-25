@@ -1,0 +1,45 @@
+@import "../../../blocks/typo/typo.scss";
+@import "./__filter/search-room__filter.scss";
+@import "./__filter/_status/search-room__filter_status_visible.scss";
+@import "./__rooms/search-room__rooms.scss";
+@import "./__pagination/search-room__pagination.scss";
+@import "./__room/search-room__room.scss";
+@import "./__elem/search-room__elem.scss";
+@import "./__inscription/search-room__inscription.scss";
+@import "./__inscription/_mobile/search-room__inscription_mobile.scss";
+@import "./__filter-icon/search-room__filter-icon.scss";
+
+.search-room {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 140px 70px 140px;
+}
+
+@media(max-width:1400px) {
+    .search-room {
+        margin: 30px 70px 70px 70px;
+    }    
+
+}
+
+@media(max-width:1280px) {
+    .search-room {
+        margin: 30px 35px 70px 35px;
+    }    
+
+}
+
+@media(max-width:425px) {
+    .search-room {
+        margin: 30px 15px;
+    }    
+
+}
+
+@media(max-width:320px) {
+    .search-room {
+        margin: 30px 5px;
+    }    
+
+}
+

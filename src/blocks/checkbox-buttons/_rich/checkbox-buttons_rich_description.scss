@@ -1,0 +1,4 @@
+.checkbox-buttons_rich_description {
+    @include font-config_h3($height:14px, $color:$dark-shade50,$weight: normal);
+    margin-left: 29px;
+}

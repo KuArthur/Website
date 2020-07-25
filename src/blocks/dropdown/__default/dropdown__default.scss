@@ -2,7 +2,6 @@
 .dropdown__default {
     @include font-config_body($height:18px, );
     cursor: pointer;
-    max-width: 320px;
     width: 100%;
     height: 44px;
     box-sizing: border-box;

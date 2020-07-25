@@ -1,0 +1,7 @@
+.pagination__text {
+    @include font-config_body();
+    text-align: justify;
+    display: inline-block;
+    width: 100%;
+    text-align-last: justify;
+}

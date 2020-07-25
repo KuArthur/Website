@@ -3,7 +3,7 @@
     @include font-config_body($height:18px);
     position: absolute;
     cursor: pointer;
-    width: inherit;
+    width: 100%;
     height: inherit;
     box-sizing: border-box;
     border: 1px solid $dark-shade25;

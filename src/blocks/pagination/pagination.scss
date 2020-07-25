@@ -1,18 +1,12 @@
 @import "./__arrow/pagination__arrow.scss";
 @import "./__link/pagination__link.scss";
+@import "./__text/pagination__text.scss";
 .pagination {
     display: block;
-    //flex-direction: column;
-    // align-items: center;
-    // flex-basis: auto;
     width: inherit;
 }
 
 .pagination__link-wrap {
     display: flex;
-}
-
-.pagination__text {
-    text-align: justify;
-    display: flex;
+    @include font-config_h3($color: $dark-shade50, $weight:normal);
 }

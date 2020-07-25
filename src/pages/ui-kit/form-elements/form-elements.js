@@ -7,3 +7,4 @@ import "../../../blocks/expandable-checklist/expandable-checklist";
 import "../../../blocks/dropdowns-calendar/dropdowns-calendar";
 import "../../../blocks/dropdown-calendar/dropdown-calendar";
 import "../../../blocks/text-field/_masked/masked-field";
+import "normalize.css";

@@ -1,0 +1,60 @@
+extends /../../../layout/__website/layout__website.pug
+
+block realize
+    -title = "Search room"
+block include
+    include /../../../blocks/checkbox-buttons/checkbox-buttons.pug
+    include /../../../blocks/pagination/pagination.pug
+    include /../../../blocks/checkbox-buttons/_rich/checkbox-buttons_rich.pug
+    include /../../../blocks/review/review.pug
+    include /../../../blocks/slider/slider.pug
+    include /../../../blocks/dropdown/dropdown.pug
+    include /../../../blocks/expandable-checklist/expandable-checklist.pug
+    include /../../../blocks/pagination/pagination.pug
+    include /../../../blocks/card-room/card-room.pug
+    
+    include /../../../blocks/dropdown-calendar/dropdown-calendar.pug
+block content
+    .search-room
+        .search-room__filter-icon.js-search-room__filter-icon filter_list
+        .search-room__filter
+            .search-room__filter-icon.js-search-room__filter-icon-close clear
+            .search-room__elem
+                .search-room__inscription Даты пребывания в отеле
+                +dropdown-calendar()
+            
+            .search-room__elem
+                .search-room__inscription гости
+                +dropdown({items:['ВЗРОСЛЫЕ','ДЕТИ','МЛАДЕНЦЫ'],text:'Сколько гостей',vis:'видно', mix:'dropdown-guest'})
+                
+            .search-room__elem
+                +slider("ДИАПАЗОН ЦЕНЫ")
+            
+            .search-room__elem.search-room__checkbox
+                .search-room__inscription checkbox buttons
+                +checkbox('Можно курить')
+                +checkbox('Можно с питомцами')
+                +checkbox('Можно пригласить\u00A0гостей (до 10 человек)')
+            
+            .search-room__elem.search-room__checkbox
+                .search-room__inscription Доступность
+                +checkbox-rich('Широкий коридор','Ширина коридоров в номере не\u00A0менее 91 см.')
+                +checkbox-rich('Помощник для инвалидов','На 1 этаже вас встретит специалист и\u00A0проводит до номера.')
+
+            .search-room__elem
+                .search-room__inscription Удобства номера
+                +dropdown({items:['СПАЛЬНИ','КРОВАТИ','ВАННЫЕ КОМНАТЫ'], mix:'dropdown-items'})
+            
+            .search-room__elem
+                +expandable-checklist({items:['завтрак','Письменный стол','Стул для кормления','Кроватка','Телевизор','Шампунь'],text:'дополнительные удобства'})
+          
+        .search-room__rooms
+            .search-room__inscription Номера, которые мы для вас подобрали
+            .search-room__inscription.search-room__inscription_mobile Подобранные номера
+            
+            .search-room__rooms-grid
+                - for (let n = 0; n < 12; n++)
+                    .search-room__room
+                        +card-room({img:['1-s','2-s','1-s','2-s'],number:'888',status:'люкс',price:'9 900',review:'145',rate:5})
+            .search-room__pagination
+                +pagination()

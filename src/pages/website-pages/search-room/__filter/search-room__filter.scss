@@ -1,0 +1,21 @@
+.search-room__filter {
+    max-width: 266px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width:1200px) {
+    .search-room__filter {
+        
+        display: none;
+        max-width: 280px;
+        position: absolute;
+        flex-direction: column;
+        background-color: $color_white;
+        z-index:999999;
+        padding: 7px;
+        justify-content: flex-start;
+
+    }
+
+}

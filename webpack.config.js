@@ -17,7 +17,8 @@ module.exports = {
         landing: './src/pages/website-pages/landing/landing.js',
         registration: './src/pages/website-pages/registration/registration.js',
         login: './src/pages/website-pages/sign/sign.js',
-        roomDetails: './src/pages/website-pages/room-details/room-details.js'
+        roomDetails: './src/pages/website-pages/room-details/room-details.js',
+        searchRoom: './src/pages/website-pages/search-room/search-room.js'
     },
     output: {
         filename: 'scripts/[name].js', // [name]
@@ -75,8 +76,6 @@ module.exports = {
                 options: {
                     name: '[path][name].[ext]',
                     esModule: false
-                    // outputPath: 'img/',
-                    // publicPath: "./../img"
                 }
             },
 
@@ -161,6 +160,11 @@ module.exports = {
             chunks: ['roomDetails'],
             filename: "pages/website-pages/room-details.html",
             template: './src/pages/website-pages/room-details/room-details.pug'
+        }),
+        new HtmlWebpackPlugin({
+            chunks: ['searchRoom'],
+            filename: "pages/website-pages/search-room.html",
+            template: './src/pages/website-pages/search-room/search-room.pug'
         }),
         new MiniCssExtractPlugin({
             filename: "css/[name].css",

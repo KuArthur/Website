@@ -3,7 +3,7 @@ extends /../../../layout/__ui-kit/layout__ui-kit.pug
 block realize
     -title = "Cards"
 block include
-    include /../../../blocks/search-room/search-room.pug
+    include /../../../blocks/card-search/card-search.pug
     include /../../../blocks/registration/registration.pug
     include /../../../blocks/reservation/reservation.pug
     include /../../../blocks/login/login.pug
@@ -14,7 +14,7 @@ block content
     .cards
         .column
             .cards__element.cards__element_size_l
-                +search-room()
+                +card-search()
             .cards__element.cards__element_size_l
                 +registration()
         .column
